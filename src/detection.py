@@ -10,6 +10,24 @@ from .edge_detection import canny, sobel
 from .preprocessing import enhance
 
 
+def _has_plate_border(gray_roi: np.ndarray) -> bool:
+    """Quick border check: dark rectangular outline around plate region."""
+    if gray_roi.size < 400:
+        return False
+    # Blackhat highlights dark structures (border) on bright background
+    blackhat = cv2.morphologyEx(gray_roi, cv2.MORPH_BLACKHAT, cv2.getStructuringElement(cv2.MORPH_RECT, (5, 5)))
+    _, th = cv2.threshold(blackhat, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    contours, _ = cv2.findContours(th, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    for cnt in contours:
+        x, y, w, h = cv2.boundingRect(cnt)
+        area = cv2.contourArea(cnt)
+        if w > 15 and h > 10 and area / max(1, w * h) > 0.5:
+            ratio = w / max(1, h)
+            if 1.5 < ratio < 6 or 0.8 < ratio < 1.5:
+                return True
+    return False
+
+
 @dataclass
 class Candidate:
     bbox: tuple[int, int, int, int]
@@ -65,7 +83,7 @@ def find_candidates(image: np.ndarray, max_candidates: int = 10) -> list[Candida
                 continue
             area_fraction = bw * bh / (w * h)
             ratio = bw / bh
-            if not (0.0015 <= area_fraction <= 0.30 and 0.65 <= ratio <= 6.5):
+            if not (0.0015 <= area_fraction <= 0.30 and (0.65 <= ratio <= 6.5 or (0.8 <= ratio <= 1.5))):
                 continue
             rect_area = cv2.contourArea(contour) / (bw * bh)
             if rect_area < 0.20:
@@ -83,15 +101,21 @@ def find_candidates(image: np.ndarray, max_candidates: int = 10) -> list[Candida
             edge_score = min(1.0, edge_density / 0.13)
             size_score = min(1.0, area_fraction / 0.10)
             color_score = min(1.0, color_coverage / 0.55)
-            score = float(0.26 * shape_score + 0.23 * edge_score + 0.24 * size_score + 0.17 * color_score + 0.10 * min(1.0, rect_area / 0.7))
+            # Character density (before scoring)
+            chars = cv2.countNonZero(cv2.morphologyEx(gray, cv2.MORPH_CLOSE, np.ones((3, 3), np.uint8)))
+            char_density = chars / max(1, (y2 - y1) * (x2 - x1))
+            char_score = min(1.0, char_density / 0.08)
+            color_boost = 0.08 if source in ("white", "yellow", "blue") else 0.0
+            # Border highlight (viền biển) — mới thêm cho WP1
+            border_ok = _has_plate_border(gray[y1:y2, x1:x2])
+            border_boost = 0.06 if border_ok else 0.0
+            score = float(0.23 * shape_score + 0.18 * edge_score + 0.19 * size_score + 0.13 * color_score + 0.08 * min(1.0, rect_area / 0.7) + 0.10 * char_score + 0.05 * color_boost + border_boost)
             center_x = (x1 + x2) / (2 * w)
             center_y = (y1 + y2) / (2 * h)
             score += 0.06 * (1 - 2 * abs(center_x - 0.5))
             score += 0.06 * (1 - 2 * abs(center_y - 0.55))
             if x1 == 0 or y1 == 0 or x2 == w or y2 == h:
                 score -= 0.08
-            if source in ("white", "yellow", "blue", "red"):
-                score += 0.02
             epsilon = 0.025 * cv2.arcLength(contour, True)
             approx = cv2.approxPolyDP(contour, epsilon, True)
             corners = approx.reshape(4, 2).astype(np.float32) if len(approx) == 4 else cv2.boxPoints(cv2.minAreaRect(contour))

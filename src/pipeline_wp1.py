@@ -19,9 +19,10 @@ def detect_plate(image_path: str | Path) -> dict | None:
     image = cv2.imdecode(np.fromfile(path, dtype=np.uint8), cv2.IMREAD_COLOR)
     if image is None:
         raise ValueError(f"cannot read image: {path}")
-    candidates = find_candidates(image, max_candidates=1)
+    candidates = find_candidates(image, max_candidates=3)
     if not candidates:
         return None
+    # Pick best; could extend to return top-3 for WP2
     chosen = candidates[0]
     x1, y1, x2, y2 = chosen.bbox
     crop = image[y1:y2, x1:x2].copy()
