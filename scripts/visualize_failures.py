@@ -6,6 +6,7 @@ from collections import defaultdict
 import json
 
 import cv2
+import numpy as np
 
 from src.pipeline_wp1 import detect_plate
 

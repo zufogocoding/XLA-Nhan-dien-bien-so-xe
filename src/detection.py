@@ -101,10 +101,14 @@ def find_candidates(image: np.ndarray, max_candidates: int = 10) -> list[Candida
             edge_score = min(1.0, edge_density / 0.13)
             size_score = min(1.0, area_fraction / 0.10)
             color_score = min(1.0, color_coverage / 0.55)
-            # Character density (before scoring)
-            chars = cv2.countNonZero(cv2.morphologyEx(gray, cv2.MORPH_CLOSE, np.ones((3, 3), np.uint8)))
-            char_density = chars / max(1, (y2 - y1) * (x2 - x1))
-            char_score = min(1.0, char_density / 0.08)
+            # Character density: minority-class fraction after Otsu on the ROI.
+            # Plates mix dark glyphs with a light background (~0.15-0.40 minority);
+            # solid regions (lights, plain panels) stay near zero.
+            roi_gray = gray[y1:y2, x1:x2]
+            _, roi_th = cv2.threshold(roi_gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+            fg = cv2.countNonZero(roi_th)
+            char_density = min(fg, roi_th.size - fg) / max(1, roi_th.size)
+            char_score = min(1.0, char_density / 0.45)
             color_boost = 0.08 if source in ("white", "yellow", "blue") else 0.0
             # Border highlight (viền biển) — mới thêm cho WP1
             border_ok = _has_plate_border(gray[y1:y2, x1:x2])
