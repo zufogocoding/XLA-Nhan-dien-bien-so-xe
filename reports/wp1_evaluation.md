@@ -6,11 +6,11 @@ Thuật toán dùng CLAHE và bilateral, tạo vùng ứng viên từ Canny, bla
 
 | Chỉ số | Kết quả | Mục tiêu brief |
 |---|---:|---:|
-| TP / FP / FN | 92 / 77 / 80 | — |
-| Precision | 0,544 | ≥ 0,85 |
-| Recall | 0,535 | ≥ 0,80 |
-| F1 | 0,540 | ≥ 0,82 |
-| Thời gian trung bình | 21,1 ms/ảnh | ≤ 200 ms/ảnh |
+| TP / FP / FN | 124 / 17 / 48 | — |
+| Precision | 0,879 | ≥ 0,85 |
+| Recall | 0,721 | ≥ 0,80 |
+| F1 | 0,792 | ≥ 0,82 |
+| Thời gian trung bình | 157,6 ms/ảnh | ≤ 200 ms/ảnh |
 
 Kết quả này **chưa đạt mục tiêu độ chính xác**. Tập test có ảnh nhiều biển, trong khi interface hiện chỉ trả một biển. Nhiều false positive là logo, đèn hoặc chi tiết thân xe có màu sáng và cạnh mạnh; một số biển bị contour tách thành vùng ký tự nhỏ. `confidence` trong API là điểm xếp hạng heuristic, chưa được hiệu chuẩn thành xác suất.
 

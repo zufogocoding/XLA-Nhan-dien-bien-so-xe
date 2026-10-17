@@ -8,10 +8,10 @@ Pipeline **đã chạy được**, nhưng **độ chính xác trên tập test c
 
 | Chỉ số | Kết quả (test 169 ảnh) | Mục tiêu |
 |---|---:|---:|
-| Precision | 0,544 | ≥ 0,85 |
-| Recall | 0,535 | ≥ 0,80 |
-| F1 | 0,540 | ≥ 0,82 |
-| Latency trung bình | 21,1 ms/ảnh | ≤ 200 ms/ảnh |
+| Precision | 0,879 | ≥ 0,85 |
+| Recall | 0,721 | ≥ 0,80 |
+| F1 | 0,792 | ≥ 0,82 |
+| Latency trung bình | 157,6 ms/ảnh | ≤ 200 ms/ảnh |
 
 Chi tiết đánh giá: [reports/wp1_evaluation.md](reports/wp1_evaluation.md)
 
