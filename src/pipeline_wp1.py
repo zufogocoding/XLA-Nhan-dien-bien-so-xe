@@ -27,22 +27,7 @@ def detect_plate(image_path: str | Path) -> dict | None:
     x1, y1, x2, y2 = chosen.bbox
     crop = image[y1:y2, x1:x2].copy()
     local_corners = chosen.corners - np.array([x1, y1], dtype=np.float32)
-    normalized = crop
-    angle = 0.0
-    corner_area = cv2.contourArea(local_corners.astype(np.float32))
-    can_warp = corner_area >= 0.60 * crop.shape[0] * crop.shape[1]
-    try:
-        if can_warp:
-            warped = warp_plate(crop, local_corners)
-            if warped.shape[0] >= 12 and warped.shape[1] >= 18 and 0.45 < warped.shape[1] / warped.shape[0] < 7:
-                normalized = warped
-                ordered = order_points(local_corners)
-                top = ordered[1] - ordered[0]
-                raw_angle = float(np.degrees(np.arctan2(top[1], top[0])))
-                angle = (raw_angle + 90) % 180 - 90
-    except (ValueError, cv2.error):
-        contour = local_corners.astype(np.int32).reshape(-1, 1, 2)
-        normalized, angle = deskew_plate(crop, contour)
+    normalized, angle = _normalize(crop, local_corners)
     return {
         "plate_crop": crop,
         "plate_normalized": normalized,
@@ -50,3 +35,22 @@ def detect_plate(image_path: str | Path) -> dict | None:
         "angle": angle,
         "confidence": min(1.0, chosen.score),
     }
+
+
+def _normalize(crop: np.ndarray, local_corners: np.ndarray) -> tuple[np.ndarray, float]:
+    """Perspective-warp when corners are reliable; otherwise fall back to deskew."""
+    corner_area = cv2.contourArea(local_corners.astype(np.float32))
+    can_warp = corner_area >= 0.60 * crop.shape[0] * crop.shape[1]
+    if can_warp:
+        try:
+            warped = warp_plate(crop, local_corners)
+            if warped.shape[0] >= 12 and warped.shape[1] >= 18 and 0.45 < warped.shape[1] / warped.shape[0] < 7:
+                ordered = order_points(local_corners)
+                top = ordered[1] - ordered[0]
+                raw_angle = float(np.degrees(np.arctan2(top[1], top[0])))
+                angle = (raw_angle + 90) % 180 - 90
+                return warped, angle
+        except (ValueError, cv2.error):
+            pass
+    contour = local_corners.astype(np.int32).reshape(-1, 1, 2)
+    return deskew_plate(crop, contour)
