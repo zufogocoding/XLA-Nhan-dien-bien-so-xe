@@ -1,0 +1,346 @@
+{
+  "split": "valid",
+  "images": 150,
+  "seed": 2026,
+  "trials": [
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": 128,
+        "adaptive_block_size": 11
+      },
+      "precision": 0.9250972762645915,
+      "recall": 0.7744299674267101,
+      "f1": 0.8430851063829787,
+      "line_accuracy": 0.96
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": 160,
+        "adaptive_block_size": 11
+      },
+      "precision": 0.924198250728863,
+      "recall": 0.7744299674267101,
+      "f1": 0.8427115640230396,
+      "line_accuracy": 0.9533333333333334
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": [
+          3,
+          3
+        ],
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": 160,
+        "adaptive_block_size": 11
+      },
+      "precision": 0.9250243427458618,
+      "recall": 0.7736156351791531,
+      "f1": 0.8425720620842573,
+      "line_accuracy": 0.9533333333333334
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": [
+          1,
+          3
+        ],
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": 160,
+        "adaptive_block_size": 11
+      },
+      "precision": 0.9230769230769231,
+      "recall": 0.7719869706840391,
+      "f1": 0.8407982261640798,
+      "line_accuracy": 0.9533333333333334
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": [
+          1,
+          3
+        ],
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": 128,
+        "adaptive_block_size": 11
+      },
+      "precision": 0.920388349514563,
+      "recall": 0.7719869706840391,
+      "f1": 0.8396811337466785,
+      "line_accuracy": 0.96
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "adaptive",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": 128,
+        "adaptive_block_size": 51
+      },
+      "precision": 0.914505283381364,
+      "recall": 0.7752442996742671,
+      "f1": 0.8391361833406786,
+      "line_accuracy": 0.9333333333333333
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": 96,
+        "adaptive_block_size": 11
+      },
+      "precision": 0.9225490196078432,
+      "recall": 0.7662866449511401,
+      "f1": 0.8371886120996442,
+      "line_accuracy": 0.9466666666666667
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": [
+          3,
+          3
+        ],
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": 128,
+        "adaptive_block_size": 11
+      },
+      "precision": 0.9224730127576055,
+      "recall": 0.7654723127035831,
+      "f1": 0.8366711170449488,
+      "line_accuracy": 0.96
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": [
+          1,
+          3
+        ],
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": 96,
+        "adaptive_block_size": 11
+      },
+      "precision": 0.9197651663405088,
+      "recall": 0.7654723127035831,
+      "f1": 0.8355555555555555,
+      "line_accuracy": 0.9466666666666667
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": null,
+        "adaptive_block_size": 11
+      },
+      "precision": 0.9171539961013645,
+      "recall": 0.7662866449511401,
+      "f1": 0.8349600709849158,
+      "line_accuracy": 0.96
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "adaptive",
+        "segmentation_method": "components",
+        "broken_kernel": [
+          3,
+          3
+        ],
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": 128,
+        "adaptive_block_size": 51
+      },
+      "precision": 0.9128305582761999,
+      "recall": 0.758957654723127,
+      "f1": 0.8288128056914185,
+      "line_accuracy": 0.9266666666666666
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": [
+          1,
+          3
+        ],
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": null,
+        "adaptive_block_size": 11
+      },
+      "precision": 0.9118511263467189,
+      "recall": 0.75814332247557,
+      "f1": 0.82792352156514,
+      "line_accuracy": 0.9533333333333334
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": [
+          3,
+          3
+        ],
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": null,
+        "adaptive_block_size": 11
+      },
+      "precision": 0.9116781157998037,
+      "recall": 0.756514657980456,
+      "f1": 0.82688028482421,
+      "line_accuracy": 0.9533333333333334
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": [
+          3,
+          3
+        ],
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": 96,
+        "adaptive_block_size": 11
+      },
+      "precision": 0.9098922624877571,
+      "recall": 0.756514657980456,
+      "f1": 0.8261449533125835,
+      "line_accuracy": 0.9466666666666667
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "adaptive",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": 128,
+        "adaptive_block_size": 31
+      },
+      "precision": 0.8967495219885278,
+      "recall": 0.7638436482084691,
+      "f1": 0.8249780123131045,
+      "line_accuracy": 0.92
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "adaptive",
+        "segmentation_method": "components",
+        "broken_kernel": [
+          3,
+          3
+        ],
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": 128,
+        "adaptive_block_size": 31
+      },
+      "precision": 0.889763779527559,
+      "recall": 0.7361563517915309,
+      "f1": 0.8057040998217468,
+      "line_accuracy": 0.9266666666666666
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "adaptive",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": 128,
+        "adaptive_block_size": 11
+      },
+      "precision": 0.7798165137614679,
+      "recall": 0.6229641693811075,
+      "f1": 0.6926210955183342,
+      "line_accuracy": 0.9133333333333333
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "adaptive",
+        "segmentation_method": "components",
+        "broken_kernel": [
+          3,
+          3
+        ],
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false,
+        "working_height": 128,
+        "adaptive_block_size": 11
+      },
+      "precision": 0.7324913892078071,
+      "recall": 0.5195439739413681,
+      "f1": 0.6079085278704145,
+      "line_accuracy": 0.8133333333333334
+    }
+  ]
+}

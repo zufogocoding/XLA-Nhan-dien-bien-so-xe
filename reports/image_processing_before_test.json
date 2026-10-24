@@ -1,0 +1,230 @@
+{
+  "images": 478,
+  "gt_characters": 3834,
+  "matched_characters": 2944,
+  "false_proposals": 228,
+  "segmentation_accuracy_at_iou_0_5": 0.7678664580073031,
+  "segmentation_precision": 0.9281210592686002,
+  "line_count_accuracy": 0.9184100418410042,
+  "line_count_images": 478,
+  "excluded_more_than_two_lines": 0,
+  "mean_segmentation_ms": 23.34835083668291,
+  "sequence_accuracy": 0.4874476987447699,
+  "cer": 0.23369848721961398,
+  "wer_one_token_per_plate": 0.5125523012552301,
+  "model": "svm_hog_lbp.pkl",
+  "scope": "held-out annotated plate crops; WP1/full-scene detection not included; mixed-country source",
+  "line_labels": "derived from GT box centers with 0.65*median-height clustering, not manual line annotations",
+  "sample_failures": [
+    {
+      "image": "10xemay2192.jpg",
+      "expected": "70B155132",
+      "predicted": "5519342",
+      "matched_characters": 5,
+      "gt_characters": 9
+    },
+    {
+      "image": "11xemay1003.jpg",
+      "expected": "71B197914",
+      "predicted": "7197914",
+      "matched_characters": 6,
+      "gt_characters": 9
+    },
+    {
+      "image": "11xemay702.jpg",
+      "expected": "76G111649",
+      "predicted": "0",
+      "matched_characters": 0,
+      "gt_characters": 9
+    },
+    {
+      "image": "12xemay488.jpg",
+      "expected": "59Y164831",
+      "predicted": "59Y104831",
+      "matched_characters": 7,
+      "gt_characters": 9
+    },
+    {
+      "image": "12xemay638.jpg",
+      "expected": "59K143840",
+      "predicted": "59KI43840",
+      "matched_characters": 8,
+      "gt_characters": 9
+    },
+    {
+      "image": "12xemay965.jpg",
+      "expected": "59P188847",
+      "predicted": "59188847",
+      "matched_characters": 8,
+      "gt_characters": 9
+    },
+    {
+      "image": "13xemay494.jpg",
+      "expected": "59T164417",
+      "predicted": "59164417",
+      "matched_characters": 7,
+      "gt_characters": 9
+    },
+    {
+      "image": "1xemay1064.jpg",
+      "expected": "59V234815",
+      "predicted": "13815",
+      "matched_characters": 4,
+      "gt_characters": 9
+    },
+    {
+      "image": "1xemay1423.jpg",
+      "expected": "33M73521",
+      "predicted": "33M23521",
+      "matched_characters": 7,
+      "gt_characters": 8
+    },
+    {
+      "image": "1xemay1681.jpg",
+      "expected": "59L160778",
+      "predicted": "0L160778",
+      "matched_characters": 7,
+      "gt_characters": 9
+    },
+    {
+      "image": "1xemay1865.jpg",
+      "expected": "60FP1469",
+      "predicted": "R7",
+      "matched_characters": 0,
+      "gt_characters": 8
+    },
+    {
+      "image": "1xemay1960.jpg",
+      "expected": "63B222794",
+      "predicted": "22794",
+      "matched_characters": 5,
+      "gt_characters": 9
+    },
+    {
+      "image": "1xemay2316.jpg",
+      "expected": "51U83423",
+      "predicted": "555",
+      "matched_characters": 1,
+      "gt_characters": 8
+    },
+    {
+      "image": "1xemay319.jpg",
+      "expected": "72E101515",
+      "predicted": "725901515",
+      "matched_characters": 6,
+      "gt_characters": 9
+    },
+    {
+      "image": "1xemay374.jpg",
+      "expected": "59S153418",
+      "predicted": "59S13418",
+      "matched_characters": 8,
+      "gt_characters": 9
+    },
+    {
+      "image": "1xemay537.jpg",
+      "expected": "72F135507",
+      "predicted": "",
+      "matched_characters": 0,
+      "gt_characters": 9
+    },
+    {
+      "image": "1xemay587.jpg",
+      "expected": "59H154289",
+      "predicted": "59154289",
+      "matched_characters": 8,
+      "gt_characters": 9
+    },
+    {
+      "image": "1xemay718.jpg",
+      "expected": "83C117111",
+      "predicted": "83C717177",
+      "matched_characters": 8,
+      "gt_characters": 9
+    },
+    {
+      "image": "1xemay793.jpg",
+      "expected": "51P98308",
+      "predicted": "83U8",
+      "matched_characters": 4,
+      "gt_characters": 8
+    },
+    {
+      "image": "1xemay808.jpg",
+      "expected": "51L38385",
+      "predicted": "",
+      "matched_characters": 0,
+      "gt_characters": 8
+    },
+    {
+      "image": "2PlateBaza116.jpg",
+      "expected": "BJ818CN",
+      "predicted": "BJ87802",
+      "matched_characters": 7,
+      "gt_characters": 7
+    },
+    {
+      "image": "2PlateBaza286.jpg",
+      "expected": "G88LFB",
+      "predicted": "G888LFB",
+      "matched_characters": 6,
+      "gt_characters": 6
+    },
+    {
+      "image": "2PlateBaza310.jpg",
+      "expected": "ZG9707K",
+      "predicted": "0",
+      "matched_characters": 0,
+      "gt_characters": 7
+    },
+    {
+      "image": "2PlateBaza34.jpg",
+      "expected": "SGD3164",
+      "predicted": "S8560",
+      "matched_characters": 2,
+      "gt_characters": 7
+    },
+    {
+      "image": "2PlateBaza407.jpg",
+      "expected": "ZG6983AG",
+      "predicted": "ZG",
+      "matched_characters": 2,
+      "gt_characters": 8
+    },
+    {
+      "image": "2xemay1188.jpg",
+      "expected": "59V185584",
+      "predicted": "591185584",
+      "matched_characters": 9,
+      "gt_characters": 9
+    },
+    {
+      "image": "2xemay1253.jpg",
+      "expected": "59T179742",
+      "predicted": "5179742",
+      "matched_characters": 7,
+      "gt_characters": 9
+    },
+    {
+      "image": "2xemay1290.jpg",
+      "expected": "54L53913",
+      "predicted": "54L59913",
+      "matched_characters": 8,
+      "gt_characters": 8
+    },
+    {
+      "image": "2xemay1342.jpg",
+      "expected": "59V256589",
+      "predicted": "59V246589",
+      "matched_characters": 9,
+      "gt_characters": 9
+    },
+    {
+      "image": "2xemay1416.jpg",
+      "expected": "47C105644",
+      "predicted": "4C165644",
+      "matched_characters": 7,
+      "gt_characters": 9
+    }
+  ]
+}

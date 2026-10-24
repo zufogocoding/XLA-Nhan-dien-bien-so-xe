@@ -1,0 +1,223 @@
+{
+  "split": "valid",
+  "images": 150,
+  "seed": 2026,
+  "trials": [
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false
+      },
+      "matched": 900,
+      "gt": 1228,
+      "proposals": 994,
+      "precision": 0.9054325955734407,
+      "recall": 0.7328990228013029,
+      "f1": 0.8100810081008101,
+      "line_accuracy": 0.9333333333333333
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.12,
+        "max_aspect": 1.0,
+        "clean_long_borders": false
+      },
+      "matched": 901,
+      "gt": 1228,
+      "proposals": 1003,
+      "precision": 0.8983050847457628,
+      "recall": 0.7337133550488599,
+      "f1": 0.8077095472882116,
+      "line_accuracy": 0.9333333333333333
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.08,
+        "max_aspect": 1.0,
+        "clean_long_borders": false
+      },
+      "matched": 875,
+      "gt": 1228,
+      "proposals": 964,
+      "precision": 0.9076763485477178,
+      "recall": 0.7125407166123778,
+      "f1": 0.7983576642335766,
+      "line_accuracy": 0.92
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": true
+      },
+      "matched": 567,
+      "gt": 1228,
+      "proposals": 1115,
+      "precision": 0.5085201793721973,
+      "recall": 0.46172638436482083,
+      "f1": 0.4839948783610755,
+      "line_accuracy": 0.9133333333333333
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.12,
+        "max_aspect": 1.0,
+        "clean_long_borders": true
+      },
+      "matched": 542,
+      "gt": 1228,
+      "proposals": 1140,
+      "precision": 0.47543859649122805,
+      "recall": 0.44136807817589574,
+      "f1": 0.45777027027027023,
+      "line_accuracy": 0.9133333333333333
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "otsu",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.08,
+        "max_aspect": 1.0,
+        "clean_long_borders": true
+      },
+      "matched": 517,
+      "gt": 1228,
+      "proposals": 1149,
+      "precision": 0.44995648389904264,
+      "recall": 0.4210097719869707,
+      "f1": 0.43500210349179635,
+      "line_accuracy": 0.9133333333333333
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "adaptive",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": false
+      },
+      "matched": 310,
+      "gt": 1228,
+      "proposals": 398,
+      "precision": 0.7788944723618091,
+      "recall": 0.252442996742671,
+      "f1": 0.3813038130381304,
+      "line_accuracy": 0.8866666666666667
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "adaptive",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.12,
+        "max_aspect": 1.0,
+        "clean_long_borders": false
+      },
+      "matched": 311,
+      "gt": 1228,
+      "proposals": 434,
+      "precision": 0.716589861751152,
+      "recall": 0.253257328990228,
+      "f1": 0.37424789410348974,
+      "line_accuracy": 0.88
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "adaptive",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.08,
+        "max_aspect": 1.0,
+        "clean_long_borders": false
+      },
+      "matched": 311,
+      "gt": 1228,
+      "proposals": 446,
+      "precision": 0.6973094170403588,
+      "recall": 0.253257328990228,
+      "f1": 0.3715651135005974,
+      "line_accuracy": 0.8666666666666667
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "adaptive",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.08,
+        "max_aspect": 1.0,
+        "clean_long_borders": true
+      },
+      "matched": 280,
+      "gt": 1228,
+      "proposals": 548,
+      "precision": 0.5109489051094891,
+      "recall": 0.2280130293159609,
+      "f1": 0.3153153153153153,
+      "line_accuracy": 0.7066666666666667
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "adaptive",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.12,
+        "max_aspect": 1.0,
+        "clean_long_borders": true
+      },
+      "matched": 274,
+      "gt": 1228,
+      "proposals": 526,
+      "precision": 0.5209125475285171,
+      "recall": 0.22312703583061888,
+      "f1": 0.31242873432155077,
+      "line_accuracy": 0.7266666666666667
+    },
+    {
+      "config": {
+        "character_size": 32,
+        "threshold_method": "adaptive",
+        "segmentation_method": "components",
+        "broken_kernel": null,
+        "min_aspect": 0.2,
+        "max_aspect": 1.0,
+        "clean_long_borders": true
+      },
+      "matched": 262,
+      "gt": 1228,
+      "proposals": 482,
+      "precision": 0.5435684647302904,
+      "recall": 0.21335504885993486,
+      "f1": 0.3064327485380117,
+      "line_accuracy": 0.7133333333333334
+    }
+  ]
+}

@@ -1,0 +1,1042 @@
+{
+  "images": 169,
+  "split": "Vietnam License Plate.v2i.coco/test",
+  "model_version": "wp3-svm_hog_lbp-5a21413aa546",
+  "wp1": {
+    "mean_ms": 165.92333550293193,
+    "median_ms": 164.29369999968912,
+    "p95_ms": 254.81313999771373,
+    "max_ms": 327.7456999931019
+  },
+  "pipeline": {
+    "mean_ms": 176.9372550291891,
+    "median_ms": 177.60360000102082,
+    "p95_ms": 282.5440999964485,
+    "max_ms": 377.5263999996241
+  },
+  "persisted_records": 169,
+  "statuses": {
+    "recognized": 76,
+    "no_plate": 28,
+    "needs_review": 57,
+    "segmentation_empty": 8
+  },
+  "scope": "warm single-process local latency; WP1 includes decode, detection and warp/deskew; pipeline includes decode, WP1-WP4, crop/glyph writes and SQLite, excluding HTTP/upload; original test has no OCR text labels, so statuses are not accuracy",
+  "samples": [
+    {
+      "file": "Tgmt_0675_png.rf.ac29b2affc7c0923e81c32180c5d2f7c.jpg",
+      "wp1_ms": 234.46019999391865,
+      "pipeline_ms": 346.38730000006035,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0716_png.rf.6c8b39d0649480e734d438a1b16c0c1a.jpg",
+      "wp1_ms": 327.7456999931019,
+      "pipeline_ms": 377.5263999996241,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0616_png.rf.3805c9908f62bae023cd12894b3bcd8f.jpg",
+      "wp1_ms": 50.92539999895962,
+      "pipeline_ms": 43.972799998300616,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0608_png.rf.f502b8f9c904b8572d9540e63e20e2d7.jpg",
+      "wp1_ms": 80.15380000142613,
+      "pipeline_ms": 73.03590000083204,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0579_png.rf.3bf10f99b21af3897378cd9060606af9.jpg",
+      "wp1_ms": 321.38100000156555,
+      "pipeline_ms": 234.61319999478292,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0728_png.rf.ac802f4b563fcf310e796a6c389758c9.jpg",
+      "wp1_ms": 247.48489999910817,
+      "pipeline_ms": 224.97239999938756,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0705_png.rf.ef0c24af9a84254f919626b355217387.jpg",
+      "wp1_ms": 147.33960000012303,
+      "pipeline_ms": 178.70489999768324,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0580_png.rf.705bbe7b6276fc706f5f0493d0dd8b35.jpg",
+      "wp1_ms": 224.03630000189878,
+      "pipeline_ms": 244.48280000069644,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0750_png.rf.1b0371bb860b9585387d76f5ab60832e.jpg",
+      "wp1_ms": 230.48189999826718,
+      "pipeline_ms": 251.7461000024923,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0647_png.rf.914e94160fc78e5115afa34f65e15fd9.jpg",
+      "wp1_ms": 116.38480000692653,
+      "pipeline_ms": 147.98049999808427,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0628_png.rf.55ae379bd68516e3c1c98c0540af8f7c.jpg",
+      "wp1_ms": 71.48149999557063,
+      "pipeline_ms": 58.223799998813774,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0597_png.rf.90026861a41bb8d693df831565b5eb24.jpg",
+      "wp1_ms": 142.871500000183,
+      "pipeline_ms": 158.87020000081975,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0789_png.rf.1531dbba2f9ab53f3c8e359880eb5711.jpg",
+      "wp1_ms": 243.16570000519278,
+      "pipeline_ms": 274.59649999946123,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0629_png.rf.46f2164f35e2baff21425452c36c3fce.jpg",
+      "wp1_ms": 152.91550000256393,
+      "pipeline_ms": 165.97139999794308,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0666_png.rf.3344539639bc6c8e4c76eb34cfd3e40b.jpg",
+      "wp1_ms": 68.96949999645585,
+      "pipeline_ms": 51.60720000276342,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0734_png.rf.3afa6e4b9285693d925820e0fbe5214a.jpg",
+      "wp1_ms": 90.55310000258032,
+      "pipeline_ms": 76.97579999512527,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0589_png.rf.761b920a1a737153f1726feb5bc4734a.jpg",
+      "wp1_ms": 128.8968000008026,
+      "pipeline_ms": 150.5094999956782,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0761_png.rf.14d0fac205393c8e2aa90893f8db808c.jpg",
+      "wp1_ms": 184.6032000030391,
+      "pipeline_ms": 196.1481000034837,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0741_png.rf.32e1ec29d644a90c7c28e42d438349e6.jpg",
+      "wp1_ms": 135.82250000035856,
+      "pipeline_ms": 144.65939999354305,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0622_png.rf.2dd8a9ff95b4b0c42ef14ddaf33edd15.jpg",
+      "wp1_ms": 133.35889999871142,
+      "pipeline_ms": 179.1198999999324,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0605_png.rf.f84091cfff4768c8ad846af3eee9629c.jpg",
+      "wp1_ms": 140.1153000042541,
+      "pipeline_ms": 203.61379999667406,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0627_png.rf.4d209a8cb7c5317a49939d9834c45e5d.jpg",
+      "wp1_ms": 148.02910000435077,
+      "pipeline_ms": 177.60360000102082,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0746_png.rf.f23c0114587046d38615e13e8d453c7a.jpg",
+      "wp1_ms": 210.45430000231136,
+      "pipeline_ms": 219.10310000384925,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0578_png.rf.0beb5c618c224c87471c03fc86fdd5fb.jpg",
+      "wp1_ms": 170.1976000040304,
+      "pipeline_ms": 157.81190000416245,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0600_png.rf.34c3f58a63c83ded306a12c1d4c5338d.jpg",
+      "wp1_ms": 82.75549999962095,
+      "pipeline_ms": 92.92770000320161,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0590_png.rf.36f928c866307f5f5e1dff029f81cc14.jpg",
+      "wp1_ms": 116.51549999805866,
+      "pipeline_ms": 163.27949999686098,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0662_png.rf.907c1f6274e18eedc4129c6b2df2833b.jpg",
+      "wp1_ms": 280.77670000493526,
+      "pipeline_ms": 331.3218999974197,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0656_png.rf.52105e18f93aeda4c2f37dd7e2257a45.jpg",
+      "wp1_ms": 145.4059000025154,
+      "pipeline_ms": 127.26970000221627,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0585_png.rf.4840fe7eac099753f988756b741507fb.jpg",
+      "wp1_ms": 119.5713999986765,
+      "pipeline_ms": 123.38810000073863,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0770_png.rf.760e292dcf9ed4c4eb16c7be7470bdac.jpg",
+      "wp1_ms": 207.85759999853326,
+      "pipeline_ms": 203.0531999989762,
+      "status": "segmentation_empty"
+    },
+    {
+      "file": "Tgmt_0892_png.rf.f211da0741ed54157b4c74cbb1c3af91.jpg",
+      "wp1_ms": 190.16019999980927,
+      "pipeline_ms": 191.1368000000948,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0765_png.rf.56680250df00beb94883a95afda840ff.jpg",
+      "wp1_ms": 230.31920000357786,
+      "pipeline_ms": 233.35539999970933,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0566_png.rf.f651584218c0258c699b6d700ce0eb63.jpg",
+      "wp1_ms": 234.45290000381647,
+      "pipeline_ms": 171.75660000066273,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0607_png.rf.54cee3d196191346d7c42c4ac66e9cd2.jpg",
+      "wp1_ms": 254.29479999729665,
+      "pipeline_ms": 305.9981999977026,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0651_png.rf.6339e326007b1533fd1129c3f19dac1b.jpg",
+      "wp1_ms": 220.6443000031868,
+      "pipeline_ms": 244.1294000018388,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0604_png.rf.1f2370111509ed796a41726a4ea98f37.jpg",
+      "wp1_ms": 80.85810000193305,
+      "pipeline_ms": 109.27290000108769,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0610_png.rf.478dcc54d6d4b8c92b034e94f4f2ebcc.jpg",
+      "wp1_ms": 237.99440000584582,
+      "pipeline_ms": 297.9451999999583,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0639_png.rf.70bd5f4861919396b0615dcc713f226f.jpg",
+      "wp1_ms": 155.34099999786122,
+      "pipeline_ms": 126.013499997498,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0634_png.rf.9df78fc7dd1770ae0b7c479343fe8e9f.jpg",
+      "wp1_ms": 162.7812000006088,
+      "pipeline_ms": 166.477799997665,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0845_png.rf.86b7906b54b1f6c1ccd11b919a99b005.jpg",
+      "wp1_ms": 278.68210000451654,
+      "pipeline_ms": 321.3705000016489,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0756_png.rf.eff88642facd491f382cb2bf83b25281.jpg",
+      "wp1_ms": 202.8688000063994,
+      "pipeline_ms": 249.52379999740515,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0729_png.rf.07d5edd0c59bdd770294ea2cfa32781e.jpg",
+      "wp1_ms": 275.7188000032329,
+      "pipeline_ms": 267.46019999700366,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0655_png.rf.fdd26b130bf1d1cb7811673fe4acfea9.jpg",
+      "wp1_ms": 143.00350000121398,
+      "pipeline_ms": 157.77519999392098,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0668_png.rf.e958075f1cabbcb4bef92e2152054c9f.jpg",
+      "wp1_ms": 197.20349999988684,
+      "pipeline_ms": 216.12129999994067,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0583_png.rf.d26e622ae46968fa6edd3c11cd7879d7.jpg",
+      "wp1_ms": 214.46379999542842,
+      "pipeline_ms": 230.43609999876935,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0682_png.rf.7ed18bf46381fe67f85b069795cb3b2d.jpg",
+      "wp1_ms": 275.59280000423314,
+      "pipeline_ms": 281.5296999979182,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0763_png.rf.06ac4e64bca4c629a8e3e716bc3a58ee.jpg",
+      "wp1_ms": 81.44280000124127,
+      "pipeline_ms": 61.02590000227792,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0649_png.rf.7200ee4d65a8bd7e90f75bc85463f540.jpg",
+      "wp1_ms": 128.39099999837345,
+      "pipeline_ms": 155.04220000002533,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0767_png.rf.7a39a2b605b837defb5e65e6f8038cec.jpg",
+      "wp1_ms": 193.26990000263322,
+      "pipeline_ms": 210.49330000096234,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0556_png.rf.88568269425947b8ba638a4b3bc6298c.jpg",
+      "wp1_ms": 120.93309999909252,
+      "pipeline_ms": 127.38109999918379,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0678_png.rf.b9994f2d22fcfac94b5b3333183f0637.jpg",
+      "wp1_ms": 155.41559999837773,
+      "pipeline_ms": 172.3827000023448,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0680_png.rf.a3691de9371ec234c87e9e9c4f3c14c2.jpg",
+      "wp1_ms": 181.91809999552788,
+      "pipeline_ms": 150.47100000083447,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0764_png.rf.30bdda9fa5921c309dc4f831ddf8eca2.jpg",
+      "wp1_ms": 138.6562999978196,
+      "pipeline_ms": 144.17930000490742,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0558_png.rf.e13610194e1a2779f07acdd0924a6674.jpg",
+      "wp1_ms": 38.135099995997734,
+      "pipeline_ms": 28.74829999927897,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0636_png.rf.dd37ed39219ad247763d066bb75e9cbd.jpg",
+      "wp1_ms": 83.65760000015143,
+      "pipeline_ms": 65.14640000386862,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0646_png.rf.01fd559f826eb65d1ca02870b1b6d286.jpg",
+      "wp1_ms": 199.07979999698,
+      "pipeline_ms": 243.30010000267066,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0582_png.rf.5599f78ac4cc78474d45a48ca7955d14.jpg",
+      "wp1_ms": 230.63079999701586,
+      "pipeline_ms": 240.506699999969,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0631_png.rf.94715748eca878c2da7ca95c6c36c103.jpg",
+      "wp1_ms": 125.48030000471044,
+      "pipeline_ms": 161.8594999963534,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0659_png.rf.525c456c29fe6cffc8f5b3c38d5e670b.jpg",
+      "wp1_ms": 185.90599999879487,
+      "pipeline_ms": 205.90369999990799,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0591_png.rf.b802ffd2e0c5813fd43315271bc3a6ad.jpg",
+      "wp1_ms": 101.37150000082329,
+      "pipeline_ms": 111.52829999628011,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0694_png.rf.3d9445a732bf7cf39a6aae1f6d31d437.jpg",
+      "wp1_ms": 111.04679999698419,
+      "pipeline_ms": 142.00939999864204,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0732_png.rf.1169ae7649e2832c288e72d75aab90e0.jpg",
+      "wp1_ms": 220.18589999788674,
+      "pipeline_ms": 212.79510000022128,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0602_png.rf.00958940829cec00b9025a992250d2d1.jpg",
+      "wp1_ms": 143.60989999840967,
+      "pipeline_ms": 145.2934999979334,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0573_png.rf.89f7f6b78e15452cf75ff12f3edb5365.jpg",
+      "wp1_ms": 159.83580000465736,
+      "pipeline_ms": 177.8799000021536,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0563_png.rf.6058b4e95fa85bd669317acdf2de22a7.jpg",
+      "wp1_ms": 191.9728000066243,
+      "pipeline_ms": 204.00420000078157,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0661_png.rf.9494431bd4103d4bc44571bdd781fa09.jpg",
+      "wp1_ms": 207.96629999676952,
+      "pipeline_ms": 185.65769999986514,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0574_png.rf.275924dae7d5ad0ec9088da8ebc2852f.jpg",
+      "wp1_ms": 123.54100000084145,
+      "pipeline_ms": 139.77700000395998,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0653_png.rf.0a3ef0db2edc0cc93a0fadad76670f03.jpg",
+      "wp1_ms": 91.42460000293795,
+      "pipeline_ms": 118.53899999550777,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0559_png.rf.23ba0498a7f683345cb7f2a38e0413bd.jpg",
+      "wp1_ms": 251.67909999436233,
+      "pipeline_ms": 270.8305999985896,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0771_png.rf.e1eeb152e4bfccdeb7f3506f28994d81.jpg",
+      "wp1_ms": 192.73460000113118,
+      "pipeline_ms": 190.6795000031707,
+      "status": "segmentation_empty"
+    },
+    {
+      "file": "Tgmt_0714_png.rf.ba15fe0479f15674ef868d1033695963.jpg",
+      "wp1_ms": 160.97779999836348,
+      "pipeline_ms": 177.06829999951879,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0795_png.rf.aa6c557eb54c97ffcd045d4d6d76183c.jpg",
+      "wp1_ms": 233.9490999947884,
+      "pipeline_ms": 246.5091999983997,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0670_png.rf.d9a95dbe58ca25cca48a94e433cf63f0.jpg",
+      "wp1_ms": 150.18569999665488,
+      "pipeline_ms": 164.15199999755714,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0614_png.rf.b9bd288fdcb58327be91628843647b47.jpg",
+      "wp1_ms": 320.43369999883,
+      "pipeline_ms": 323.4946000011405,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0671_png.rf.9c4a9bfd6258f81fc0bae258eaae28be.jpg",
+      "wp1_ms": 148.44620000076247,
+      "pipeline_ms": 162.03130000212695,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0701_png.rf.5f39ac967d9a6415461e6f27ba603d31.jpg",
+      "wp1_ms": 103.0735000022105,
+      "pipeline_ms": 97.10989999439334,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0561_png.rf.79bfae552c76511920ea4be742c57423.jpg",
+      "wp1_ms": 133.28700000420213,
+      "pipeline_ms": 126.11770000512479,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0794_png.rf.b78b7bb1c94276c4198bb34c19551da7.jpg",
+      "wp1_ms": 157.70180000254186,
+      "pipeline_ms": 183.9901999992435,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0587_png.rf.877c46f93c85d3e31739c1d1b87ebf14.jpg",
+      "wp1_ms": 200.17290000396315,
+      "pipeline_ms": 235.00380000041332,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0691_png.rf.9f196ebc5e71786e2fc04f31fa0accc2.jpg",
+      "wp1_ms": 225.22339999704855,
+      "pipeline_ms": 236.27980000310345,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0660_png.rf.feac247c0a58250caafce7fbc7cfbb71.jpg",
+      "wp1_ms": 229.12689999793656,
+      "pipeline_ms": 228.35640000266721,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0735_png.rf.a8a55689d247092771b007647653abcb.jpg",
+      "wp1_ms": 145.40900000429247,
+      "pipeline_ms": 137.0757999975467,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0721_png.rf.f192132748ed2cd42ce287b495e758e4.jpg",
+      "wp1_ms": 146.29389999754494,
+      "pipeline_ms": 134.63610000326298,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0567_png.rf.7df0da3df73851fafb00a11aa9003862.jpg",
+      "wp1_ms": 90.65839999675518,
+      "pipeline_ms": 64.760599998408,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0744_png.rf.5fa9408ba9fd69d2f8e871302471f8e8.jpg",
+      "wp1_ms": 185.72480000148062,
+      "pipeline_ms": 158.10709999641404,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0810_png.rf.bbd91fa0ee519acbf5f0e8b1743a5ae7.jpg",
+      "wp1_ms": 240.03459999948973,
+      "pipeline_ms": 265.25300000503194,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0606_png.rf.6dbf42625e3baa34ea854bbe80e3eaa5.jpg",
+      "wp1_ms": 166.53729999961797,
+      "pipeline_ms": 177.1913999982644,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0640_png.rf.6799687d2315e37d13b3185aaf89131f.jpg",
+      "wp1_ms": 132.6617999948212,
+      "pipeline_ms": 153.0782000045292,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0755_png.rf.faf4ecca89c2bb18c7de816337d76f61.jpg",
+      "wp1_ms": 87.18819999921834,
+      "pipeline_ms": 70.24509999610018,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0637_png.rf.31f7ddf3dcaba80af7527b58741b0cf2.jpg",
+      "wp1_ms": 144.24590000271564,
+      "pipeline_ms": 119.0948999937973,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0686_png.rf.878b49c9f54bb6315b3143f9e46a6e75.jpg",
+      "wp1_ms": 224.41819999949075,
+      "pipeline_ms": 234.16480000014417,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0674_png.rf.f8d442b7a641763108b0931af9cb14e1.jpg",
+      "wp1_ms": 87.0613000006415,
+      "pipeline_ms": 115.13279999780934,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0673_png.rf.e165425d7296af9e7797cb6f314b007a.jpg",
+      "wp1_ms": 188.56080000114162,
+      "pipeline_ms": 193.3668999990914,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0854_png.rf.7c74fbbec5f4a9f2dc2ee59aeb09a05f.jpg",
+      "wp1_ms": 215.27510000305483,
+      "pipeline_ms": 238.17940000299131,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0690_png.rf.50dba95c4d6a0c6c9d71f9a1dc0d65c7.jpg",
+      "wp1_ms": 146.850799996173,
+      "pipeline_ms": 126.82019999920158,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0601_png.rf.aaf2f1bda69f16a8212f146533e6ede4.jpg",
+      "wp1_ms": 128.7945000003674,
+      "pipeline_ms": 128.25560000055702,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0743_png.rf.0fe5cea33ca81daaf23373b978be3fce.jpg",
+      "wp1_ms": 121.1611000035191,
+      "pipeline_ms": 131.60500000230968,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0581_png.rf.166f73b3d898f412536e637a90ba1bfe.jpg",
+      "wp1_ms": 246.68679999740561,
+      "pipeline_ms": 264.0196000065771,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0592_png.rf.99b58064710149799feb1f275f0fcb60.jpg",
+      "wp1_ms": 129.95049999881303,
+      "pipeline_ms": 180.3321999977925,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0619_png.rf.60b2e60fd9e5192fd74254dd8f6a71b0.jpg",
+      "wp1_ms": 100.1310999999987,
+      "pipeline_ms": 90.57110000139801,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0598_png.rf.5a9fe7726661afe80ae4bda61ebb8368.jpg",
+      "wp1_ms": 112.82579999533482,
+      "pipeline_ms": 134.3230999991647,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0565_png.rf.4e11828f29980a35e04dd1a2558522c6.jpg",
+      "wp1_ms": 181.4818999991985,
+      "pipeline_ms": 210.43549999740208,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0652_png.rf.f6e364b771e3fc5358e1af46f92fa662.jpg",
+      "wp1_ms": 208.40619999944465,
+      "pipeline_ms": 232.99260000203503,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0707_png.rf.12e40df8b5d68932ca3402846a20359e.jpg",
+      "wp1_ms": 251.36100000236183,
+      "pipeline_ms": 273.06269999826327,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0613_png.rf.c274fd6166de451f524ddf28c76cdffa.jpg",
+      "wp1_ms": 124.81219999608584,
+      "pipeline_ms": 131.2141000016709,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0727_png.rf.6f47e147d7bc4aeb82b929dfd3b571ad.jpg",
+      "wp1_ms": 142.53560000361176,
+      "pipeline_ms": 194.911200000206,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0560_png.rf.7cc1bbc24f630d8b279962c3915563b2.jpg",
+      "wp1_ms": 112.55820000224048,
+      "pipeline_ms": 144.8612000021967,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0586_png.rf.fb652bccb44ad88f53626aab7247b19f.jpg",
+      "wp1_ms": 250.20519999816315,
+      "pipeline_ms": 309.2084999952931,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0658_png.rf.4ce03e35f71d12d66d609d46c4d33fa4.jpg",
+      "wp1_ms": 164.29369999968912,
+      "pipeline_ms": 165.50509999797214,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0722_png.rf.744cc2ba426cbbfaf1895a9a1f6421ea.jpg",
+      "wp1_ms": 166.07729999668663,
+      "pipeline_ms": 148.98740000353428,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0758_png.rf.58d5bfadea79b9d52dc2ed1e41296424.jpg",
+      "wp1_ms": 196.23900000442518,
+      "pipeline_ms": 261.3197999962722,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0626_png.rf.601e1e7d679b49f0f07fc06ad189ef89.jpg",
+      "wp1_ms": 246.03339999885065,
+      "pipeline_ms": 212.27109999745153,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0615_png.rf.2d4ca95b1ec4160d43ad13b75f886824.jpg",
+      "wp1_ms": 235.3584000011324,
+      "pipeline_ms": 218.6805999954231,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0710_png.rf.f2aad001b9f974180c44cad2a97827ff.jpg",
+      "wp1_ms": 125.80889999662759,
+      "pipeline_ms": 209.2149000018253,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0569_png.rf.5ab02d41ce91f1a1bb69b01e022e04bf.jpg",
+      "wp1_ms": 87.2079999971902,
+      "pipeline_ms": 89.47520000219811,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0749_png.rf.7c61c2bec31e5485c05c50a8f9afb7cb.jpg",
+      "wp1_ms": 150.89679999800865,
+      "pipeline_ms": 148.76900000672322,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0754_png.rf.439db65e229b6d1d96cb7a26bd0b768f.jpg",
+      "wp1_ms": 231.95330000453396,
+      "pipeline_ms": 226.52869999728864,
+      "status": "segmentation_empty"
+    },
+    {
+      "file": "Tgmt_0739_png.rf.757b238f6603cf374af2ebc66847de80.jpg",
+      "wp1_ms": 263.4338999996544,
+      "pipeline_ms": 282.0205999960308,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0568_png.rf.f02d32c0e3e3da4f3bbb1ed26253c3bf.jpg",
+      "wp1_ms": 89.01449999393662,
+      "pipeline_ms": 96.01949999341741,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0657_png.rf.cf06ef53126c36b6d5db16f6217fc506.jpg",
+      "wp1_ms": 93.89139999984764,
+      "pipeline_ms": 118.83050000324147,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0667_png.rf.37ddf9cc7b9ea91fa30202128d02d15b.jpg",
+      "wp1_ms": 223.48179999971762,
+      "pipeline_ms": 228.7034999972093,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0676_png.rf.3c426baeb44425df7bcfe3b3152c67d8.jpg",
+      "wp1_ms": 132.308499996725,
+      "pipeline_ms": 149.79789999779314,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0725_png.rf.434fcc5cc9f199fbcc0e8aa13759163e.jpg",
+      "wp1_ms": 227.19090000464348,
+      "pipeline_ms": 239.52380000264384,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0847_png.rf.2c1907fe45e230bd1579f20b5ec067bc.jpg",
+      "wp1_ms": 215.44830000493675,
+      "pipeline_ms": 207.23960000032093,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0748_png.rf.f98d1c797c1388290d51981a6503efdb.jpg",
+      "wp1_ms": 239.91830000159098,
+      "pipeline_ms": 279.8333000027924,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0745_png.rf.809afb6ff899f1722566dc917eae3258.jpg",
+      "wp1_ms": 53.643300001567695,
+      "pipeline_ms": 45.69439999613678,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0564_png.rf.c6d63f3994c1b947575fdffcd9f3040c.jpg",
+      "wp1_ms": 172.25909999979194,
+      "pipeline_ms": 163.91709999879822,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0650_png.rf.a12c67ecce46f80f18e5e0a2630957a0.jpg",
+      "wp1_ms": 28.148999997938517,
+      "pipeline_ms": 27.868600001966115,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0645_png.rf.10cf810f265a7ecd64825de5bf70571d.jpg",
+      "wp1_ms": 79.62160000170115,
+      "pipeline_ms": 68.82700000278419,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0699_png.rf.a1cabad0882bee43f9cb5ecc0949f6d0.jpg",
+      "wp1_ms": 157.2184999968158,
+      "pipeline_ms": 204.9817000006442,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0733_png.rf.50b2caeccd4e7dc156922b65e8dec6d0.jpg",
+      "wp1_ms": 162.02099999645725,
+      "pipeline_ms": 175.28039999888279,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0571_png.rf.0db7dacde06e40f7dff195f21f83a208.jpg",
+      "wp1_ms": 85.10479999677045,
+      "pipeline_ms": 109.45360000187065,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0677_png.rf.5579d37c83c75d4171a738bb2113f5dc.jpg",
+      "wp1_ms": 92.77310000470607,
+      "pipeline_ms": 112.44449999503559,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0760_png.rf.a0f75779a56b265e6c89bf8f15227a03.jpg",
+      "wp1_ms": 255.1586999979918,
+      "pipeline_ms": 282.89309999672696,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0621_png.rf.4fff8d902fe52a133672b70421dd65e8.jpg",
+      "wp1_ms": 123.03670000255806,
+      "pipeline_ms": 111.28720000124304,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0664_png.rf.73f181e17a8b1cbe7bf518ef029e07a2.jpg",
+      "wp1_ms": 176.7785999982152,
+      "pipeline_ms": 195.87549999414477,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0747_png.rf.63c04fd4312b802678b057b57285732d.jpg",
+      "wp1_ms": 153.46399999543792,
+      "pipeline_ms": 152.87410000019008,
+      "status": "segmentation_empty"
+    },
+    {
+      "file": "Tgmt_0599_png.rf.09091d8af666429cb002bce9465a5b14.jpg",
+      "wp1_ms": 173.4816999960458,
+      "pipeline_ms": 172.76770000171382,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0759_png.rf.6127677efbcbd3342750ddbf44175695.jpg",
+      "wp1_ms": 103.7995000006049,
+      "pipeline_ms": 97.3429000005126,
+      "status": "segmentation_empty"
+    },
+    {
+      "file": "Tgmt_0804_png.rf.6c03a3957d72282c3ec1cc442e967d40.jpg",
+      "wp1_ms": 227.59729999961564,
+      "pipeline_ms": 228.03819999535335,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0706_png.rf.72a187f1a89b6b90acadb7e5b12e6c59.jpg",
+      "wp1_ms": 203.987099994265,
+      "pipeline_ms": 211.3437999942107,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0630_png.rf.3736a2f074b8eabc9f4e5311d8573c79.jpg",
+      "wp1_ms": 165.0826000040979,
+      "pipeline_ms": 198.6077999972622,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0570_png.rf.1b0133f993737716ee5a90279bdd55ee.jpg",
+      "wp1_ms": 100.81309999804944,
+      "pipeline_ms": 118.86009999579983,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0632_png.rf.dda6d3c8773d23ba6dbfa982111f1a02.jpg",
+      "wp1_ms": 181.49390000326093,
+      "pipeline_ms": 187.47179999627406,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0738_png.rf.539a24f4937cecf610fd7d0ddfeb14f2.jpg",
+      "wp1_ms": 222.61879999859957,
+      "pipeline_ms": 228.4118999959901,
+      "status": "segmentation_empty"
+    },
+    {
+      "file": "Tgmt_0762_png.rf.4316711e7d8c8e2d55c7010e1d380cd8.jpg",
+      "wp1_ms": 186.5646000005654,
+      "pipeline_ms": 237.42379999748664,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0827_png.rf.b074c239dda92c1bb07c14d11595ebdd.jpg",
+      "wp1_ms": 197.89970000419999,
+      "pipeline_ms": 233.36229999404168,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0575_png.rf.a3771c0822eaee771acab10b4cf54293.jpg",
+      "wp1_ms": 177.06960000214167,
+      "pipeline_ms": 188.75839999964228,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0669_png.rf.3ad70db0027f9402ba2e64e61623722d.jpg",
+      "wp1_ms": 90.04979999735951,
+      "pipeline_ms": 108.78470000170637,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0681_png.rf.5ac8b10333d560fde56f060a2bacc724.jpg",
+      "wp1_ms": 49.677800001518335,
+      "pipeline_ms": 34.688600004301406,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0731_png.rf.6ab6db7a3f6af0a0f7e39cc0524693a1.jpg",
+      "wp1_ms": 139.81280000007246,
+      "pipeline_ms": 164.96299999562325,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0643_png.rf.a04e2e6ff1a430d7617af47b43e19b37.jpg",
+      "wp1_ms": 71.04529999924125,
+      "pipeline_ms": 82.53989999502664,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0689_png.rf.f438e486d63e1e6c3e7ed4d9651a71fe.jpg",
+      "wp1_ms": 251.0993999967468,
+      "pipeline_ms": 250.19890000112355,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0635_png.rf.88f4b917c42754677d7a8525f9b29b47.jpg",
+      "wp1_ms": 49.50239999743644,
+      "pipeline_ms": 36.99969999433961,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0700_png.rf.2dd35fdbb6ef007242233dda0358c639.jpg",
+      "wp1_ms": 178.96710000059102,
+      "pipeline_ms": 203.20599999831757,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0695_png.rf.7a80286ecab14dde21365abc52ce3d56.jpg",
+      "wp1_ms": 70.21779999922728,
+      "pipeline_ms": 55.397799995262176,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0696_png.rf.5dd99d784f1f1698a133806f87db1b3f.jpg",
+      "wp1_ms": 181.12939999991795,
+      "pipeline_ms": 182.27420000039274,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0638_png.rf.752e6c53f772e34b422e6567bf623489.jpg",
+      "wp1_ms": 184.85800000053132,
+      "pipeline_ms": 184.74479999713367,
+      "status": "segmentation_empty"
+    },
+    {
+      "file": "Tgmt_0618_png.rf.8337ae330c0828bcb067039c062915e4.jpg",
+      "wp1_ms": 214.5916999943438,
+      "pipeline_ms": 227.00950000580633,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0588_png.rf.dfd3ff73f956deecb5d278cd1b049158.jpg",
+      "wp1_ms": 183.25220000406262,
+      "pipeline_ms": 182.22579999564914,
+      "status": "segmentation_empty"
+    },
+    {
+      "file": "Tgmt_0595_png.rf.2ad8ea4e813acb14fba7535340a4f1a7.jpg",
+      "wp1_ms": 144.0426000044681,
+      "pipeline_ms": 165.5998000060208,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0623_png.rf.b9abf8738c52c3bc383530069c146f0a.jpg",
+      "wp1_ms": 104.98319999896921,
+      "pipeline_ms": 83.31840000028023,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0715_png.rf.4febaae333501c41262063223dde2526.jpg",
+      "wp1_ms": 179.62619999889284,
+      "pipeline_ms": 171.96960000001127,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0624_png.rf.7c76f6cfe67edfe5998f040e96ae5a0a.jpg",
+      "wp1_ms": 180.6702000030782,
+      "pipeline_ms": 203.7560000026133,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0719_png.rf.21f5a0c795ed7629a3d7474c66fe7d62.jpg",
+      "wp1_ms": 188.35050000052433,
+      "pipeline_ms": 218.74880000541452,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0736_png.rf.46a481151161859333c622211a235506.jpg",
+      "wp1_ms": 165.02329999639187,
+      "pipeline_ms": 201.0383000015281,
+      "status": "needs_review"
+    },
+    {
+      "file": "Tgmt_0766_png.rf.ee99173570c4132defd182b31ea76ba2.jpg",
+      "wp1_ms": 190.29809999483405,
+      "pipeline_ms": 222.59670000494225,
+      "status": "recognized"
+    },
+    {
+      "file": "Tgmt_0768_png.rf.174786843c1e3db49736923a783dc0a1.jpg",
+      "wp1_ms": 209.75769999495242,
+      "pipeline_ms": 201.20170000154758,
+      "status": "no_plate"
+    },
+    {
+      "file": "Tgmt_0572_png.rf.f668e2edd6abe56dc3bf9f5887d881cb.jpg",
+      "wp1_ms": 104.11249999742722,
+      "pipeline_ms": 76.4019999987795,
+      "status": "no_plate"
+    }
+  ],
+  "historical_note": "Before the multithreshold application changes; retained only as a historical baseline, not current performance."
+}

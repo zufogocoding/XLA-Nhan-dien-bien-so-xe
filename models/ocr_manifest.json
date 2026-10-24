@@ -1,0 +1,7 @@
+{
+  "selected": "svm_hog_lbp",
+  "artifact": "svm_hog_lbp.pkl",
+  "selection": "maximum validation macro F1 over 36 classes; test unused for selection",
+  "data_sha256": "5a21413aa54614af2112a9acdb591c2941cae27fa22ad5648d91a0493b5309b6",
+  "character_size": 32
+}

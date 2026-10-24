@@ -19,21 +19,30 @@ def detect_plate(image_path: str | Path) -> dict | None:
     image = cv2.imdecode(np.fromfile(path, dtype=np.uint8), cv2.IMREAD_COLOR)
     if image is None:
         raise ValueError(f"cannot read image: {path}")
+    return detect_plate_image(image)
+
+
+def detect_plate_image(image: np.ndarray, *, classifier=None) -> dict | None:
+    """Run standalone WP1, independently of segmentation and OCR.
+
+    The optional classifier keyword is retained for compatibility with the
+    earlier application wrapper; new application code calls the explicit
+    recognition selector. The default matches the WP1 branch's top proposal.
+    """
+    if classifier is not None:
+        from .recognition_selection import select_plate_for_recognition
+        return select_plate_for_recognition(image, classifier)
     candidates = find_candidates(image, max_candidates=3)
     if not candidates:
         return None
-    # Pick best; could extend to return top-3 for WP2
     chosen = candidates[0]
     x1, y1, x2, y2 = chosen.bbox
     crop = image[y1:y2, x1:x2].copy()
-    local_corners = chosen.corners - np.array([x1, y1], dtype=np.float32)
-    normalized, angle = _normalize(crop, local_corners)
+    normalized, angle = _normalize(crop, chosen.corners - np.array([x1, y1], np.float32))
     return {
-        "plate_crop": crop,
-        "plate_normalized": normalized,
-        "bbox": [x1, y1, x2, y2],
-        "angle": angle,
-        "confidence": min(1.0, chosen.score),
+        'plate_crop': crop, 'plate_normalized': normalized,
+        'bbox': list(chosen.bbox), 'angle': angle,
+        'confidence': min(1., chosen.score),
     }
 
 

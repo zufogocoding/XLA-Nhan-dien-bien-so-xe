@@ -1,0 +1,3836 @@
+{
+  "split": "valid",
+  "images": 478,
+  "gt_characters": 3891,
+  "proposals": 3302,
+  "matched": 3050,
+  "accuracy_at_iou_0_5": 0.7838601901824723,
+  "precision": 0.9236826165960024,
+  "derived_line_count_accuracy": 0.9393305439330544,
+  "cases": [
+    {
+      "name": "10PlateBaza299.jpg",
+      "gt": 8,
+      "pred": 2,
+      "matched": 1,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "10xemay112.jpg",
+      "gt": 8,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "10xemay330.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "10xemay990.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "11xemay1553.jpg",
+      "gt": 9,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "11xemay308.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "11xemay679.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "12xemay1142.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "12xemay1241.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "12xemay130.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "12xemay1302.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "12xemay1605.jpg",
+      "gt": 9,
+      "pred": 5,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "12xemay1692.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "12xemay389.jpg",
+      "gt": 9,
+      "pred": 5,
+      "matched": 3,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "12xemay703.jpg",
+      "gt": 9,
+      "pred": 10,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "12xemay894.jpg",
+      "gt": 9,
+      "pred": 10,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "12xemay91.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "12xemay95.jpg",
+      "gt": 9,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "13xemay1168.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "13xemay1343.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "13xemay359.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "13xemay592.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1PlateBaza477.jpg",
+      "gt": 7,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1PlateBaza485.jpg",
+      "gt": 7,
+      "pred": 1,
+      "matched": 1,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "1PlateBaza502.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "1xemay1094.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay1358.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay1366.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay1404.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay1458.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay1542.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay1544.jpg",
+      "gt": 9,
+      "pred": 4,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay1599.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay1611.jpg",
+      "gt": 9,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay1620.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay1649.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay1715.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay1803.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay1907.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay1943.jpg",
+      "gt": 8,
+      "pred": 3,
+      "matched": 2,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay2248.jpg",
+      "gt": 8,
+      "pred": 6,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay233.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay2335.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 6,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay2343.jpg",
+      "gt": 9,
+      "pred": 6,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay2359.jpg",
+      "gt": 9,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay2468.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay291.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay322.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay495.jpg",
+      "gt": 8,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay693.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay723.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay745.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "1xemay791.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2PlateBaza110.jpg",
+      "gt": 7,
+      "pred": 5,
+      "matched": 5,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "2PlateBaza118.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "2PlateBaza13.jpg",
+      "gt": 7,
+      "pred": 13,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "2PlateBaza166.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "2PlateBaza17.jpg",
+      "gt": 8,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "2PlateBaza236.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "2PlateBaza242.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "2PlateBaza256.jpg",
+      "gt": 6,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "2PlateBaza274.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "2PlateBaza303.jpg",
+      "gt": 7,
+      "pred": 1,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "2PlateBaza336.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "2PlateBaza396.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 6,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2PlateBaza501.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "2xemay1021.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay104.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay1098.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay113.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay1156.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay1189.jpg",
+      "gt": 8,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay1266.jpg",
+      "gt": 9,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay1381.jpg",
+      "gt": 8,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay1585.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay162.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay1698.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay1791.jpg",
+      "gt": 9,
+      "pred": 2,
+      "matched": 0,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay1794.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay183.jpg",
+      "gt": 9,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay1839.jpg",
+      "gt": 9,
+      "pred": 5,
+      "matched": 2,
+      "gt_lines": 2,
+      "pred_lines": 1
+    },
+    {
+      "name": "2xemay1872.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay1906.jpg",
+      "gt": 9,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 2,
+      "pred_lines": 1
+    },
+    {
+      "name": "2xemay1912.jpg",
+      "gt": 9,
+      "pred": 7,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay1929.jpg",
+      "gt": 9,
+      "pred": 7,
+      "matched": 2,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay1932.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay1941.jpg",
+      "gt": 9,
+      "pred": 7,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay1969.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay1985.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2013.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2039.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2061.jpg",
+      "gt": 9,
+      "pred": 12,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2064.jpg",
+      "gt": 9,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 2,
+      "pred_lines": 1
+    },
+    {
+      "name": "2xemay2112.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2114.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2135.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2146.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2149.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2183.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 6,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay221.jpg",
+      "gt": 9,
+      "pred": 1,
+      "matched": 0,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2220.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2228.jpg",
+      "gt": 8,
+      "pred": 5,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2232.jpg",
+      "gt": 9,
+      "pred": 10,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2276.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2277.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2279.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2321.jpg",
+      "gt": 8,
+      "pred": 3,
+      "matched": 3,
+      "gt_lines": 2,
+      "pred_lines": 1
+    },
+    {
+      "name": "2xemay2342.jpg",
+      "gt": 9,
+      "pred": 5,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2347.jpg",
+      "gt": 9,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2354.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2366.jpg",
+      "gt": 9,
+      "pred": 5,
+      "matched": 3,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2443.jpg",
+      "gt": 8,
+      "pred": 4,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2469.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay2479.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay273.jpg",
+      "gt": 9,
+      "pred": 3,
+      "matched": 3,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay363.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay385.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay410.jpg",
+      "gt": 9,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay412.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay519.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay55.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay599.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay675.jpg",
+      "gt": 9,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay778.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "2xemay923.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3CarLongPlate236.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate253.jpg",
+      "gt": 8,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "3CarLongPlate255.jpg",
+      "gt": 8,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate261.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate284.jpg",
+      "gt": 7,
+      "pred": 10,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "3CarLongPlate306.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate329.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate331.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate339.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate356.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate401.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate409.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate424.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate475.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate476.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate494.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate511.jpg",
+      "gt": 8,
+      "pred": 15,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "3CarLongPlate524.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate532.jpg",
+      "gt": 8,
+      "pred": 9,
+      "matched": 5,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate534.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate539.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate557.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate565.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate599.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate619.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "3CarLongPlate670.jpg",
+      "gt": 7,
+      "pred": 5,
+      "matched": 5,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate681.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate692.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate705.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate731.jpg",
+      "gt": 8,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate759.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate806.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate853.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate877.jpg",
+      "gt": 8,
+      "pred": 1,
+      "matched": 1,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate881.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate892.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate920.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3CarLongPlate941.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3PlateBaza149.jpg",
+      "gt": 7,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3PlateBaza164.jpg",
+      "gt": 6,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3PlateBaza253.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3PlateBaza27.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3PlateBaza294.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3PlateBaza295.jpg",
+      "gt": 7,
+      "pred": 1,
+      "matched": 1,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3PlateBaza329.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3PlateBaza335.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3PlateBaza351.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3PlateBaza37.jpg",
+      "gt": 7,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3PlateBaza436.jpg",
+      "gt": 6,
+      "pred": 5,
+      "matched": 5,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "3PlateBaza472.jpg",
+      "gt": 7,
+      "pred": 6,
+      "matched": 5,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "3xemay1019.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1050.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1055.jpg",
+      "gt": 9,
+      "pred": 5,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1087.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1154.jpg",
+      "gt": 9,
+      "pred": 4,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1269.jpg",
+      "gt": 8,
+      "pred": 1,
+      "matched": 0,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay127.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay128.jpg",
+      "gt": 7,
+      "pred": 8,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1281.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1330.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1339.jpg",
+      "gt": 9,
+      "pred": 2,
+      "matched": 2,
+      "gt_lines": 2,
+      "pred_lines": 1
+    },
+    {
+      "name": "3xemay1374.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1385.jpg",
+      "gt": 9,
+      "pred": 5,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1398.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1525.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1546.jpg",
+      "gt": 8,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1574.jpg",
+      "gt": 8,
+      "pred": 9,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1613.jpg",
+      "gt": 9,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1711.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay173.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1730.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1749.jpg",
+      "gt": 8,
+      "pred": 2,
+      "matched": 0,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1928.jpg",
+      "gt": 8,
+      "pred": 5,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay1934.jpg",
+      "gt": 9,
+      "pred": 4,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 1
+    },
+    {
+      "name": "3xemay2154.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay2176.jpg",
+      "gt": 9,
+      "pred": 6,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay2242.jpg",
+      "gt": 9,
+      "pred": 4,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay2296.jpg",
+      "gt": 8,
+      "pred": 4,
+      "matched": 2,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay2467.jpg",
+      "gt": 8,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay2486.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay254.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay258.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay260.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 6,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay270.jpg",
+      "gt": 8,
+      "pred": 4,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 1
+    },
+    {
+      "name": "3xemay276.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay36.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay373.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay396.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay598.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay671.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay694.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay708.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay744.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay765.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay771.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay781.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay80.jpg",
+      "gt": 8,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay835.jpg",
+      "gt": 9,
+      "pred": 14,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay846.jpg",
+      "gt": 9,
+      "pred": 6,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay898.jpg",
+      "gt": 9,
+      "pred": 5,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay925.jpg",
+      "gt": 9,
+      "pred": 5,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay945.jpg",
+      "gt": 9,
+      "pred": 4,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay947.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay968.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay975.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "3xemay98.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4CarLongPlate105.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4CarLongPlate112.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4CarLongPlate193.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4CarLongPlate319.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4CarLongPlate380.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4CarLongPlate430.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4CarLongPlate510.jpg",
+      "gt": 8,
+      "pred": 1,
+      "matched": 1,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4CarLongPlate556.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4CarLongPlate68.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4CarLongPlate749.jpg",
+      "gt": 8,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4CarLongPlate778.jpg",
+      "gt": 8,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4CarLongPlate791.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4CarLongPlate822.jpg",
+      "gt": 8,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4CarLongPlate835.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4CarLongPlate846.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4CarLongPlate896.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4CarLongPlate984.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4PlateBaza32.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "4xemay1958.jpg",
+      "gt": 9,
+      "pred": 7,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay1998.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2031.jpg",
+      "gt": 7,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2047.jpg",
+      "gt": 8,
+      "pred": 7,
+      "matched": 6,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2080.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2118.jpg",
+      "gt": 9,
+      "pred": 4,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2126.jpg",
+      "gt": 9,
+      "pred": 5,
+      "matched": 3,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2134.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2155.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2159.jpg",
+      "gt": 9,
+      "pred": 5,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2163.jpg",
+      "gt": 9,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2205.jpg",
+      "gt": 8,
+      "pred": 6,
+      "matched": 3,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2209.jpg",
+      "gt": 8,
+      "pred": 9,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2234.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 6,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2243.jpg",
+      "gt": 9,
+      "pred": 5,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2252.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2256.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2300.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2329.jpg",
+      "gt": 8,
+      "pred": 1,
+      "matched": 0,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "4xemay2399.jpg",
+      "gt": 9,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5CarLongPlate173.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "5CarLongPlate179.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "5CarLongPlate30.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "5CarLongPlate302.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "5CarLongPlate344.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "5CarLongPlate419.jpg",
+      "gt": 8,
+      "pred": 1,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "5CarLongPlate555.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "5CarLongPlate634.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "5CarLongPlate75.jpg",
+      "gt": 8,
+      "pred": 15,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "5CarLongPlate91.jpg",
+      "gt": 8,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "5CarLongPlate935.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "5CarLongPlate939.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "5CarLongPlate980.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "5PlateBaza219.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "5PlateBaza36.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "5PlateBaza417.jpg",
+      "gt": 7,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay1030.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay1040.jpg",
+      "gt": 8,
+      "pred": 7,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay1082.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay1120.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay117.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay1173.jpg",
+      "gt": 9,
+      "pred": 3,
+      "matched": 0,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay1207.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay1347.jpg",
+      "gt": 9,
+      "pred": 3,
+      "matched": 3,
+      "gt_lines": 2,
+      "pred_lines": 1
+    },
+    {
+      "name": "5xemay1459.jpg",
+      "gt": 8,
+      "pred": 7,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay1487.jpg",
+      "gt": 9,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay1493.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay1535.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay1561.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay1592.jpg",
+      "gt": 9,
+      "pred": 10,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay1602.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay1735.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay1993.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay1996.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay2008.jpg",
+      "gt": 8,
+      "pred": 4,
+      "matched": 2,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay2106.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay2120.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay2177.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay253.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay255.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay295.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay342.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay394.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay4.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay40.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay492.jpg",
+      "gt": 8,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay531.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay541.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay606.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay695.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay733.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay734.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay753.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay889.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay969.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "5xemay996.jpg",
+      "gt": 8,
+      "pred": 4,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 1
+    },
+    {
+      "name": "6CarLongPlate11.jpg",
+      "gt": 8,
+      "pred": 4,
+      "matched": 2,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "6CarLongPlate22.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "6CarLongPlate412.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "6CarLongPlate445.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "6CarLongPlate638.jpg",
+      "gt": 8,
+      "pred": 3,
+      "matched": 1,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "6CarLongPlate755.jpg",
+      "gt": 8,
+      "pred": 7,
+      "matched": 3,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "6CarLongPlate843.jpg",
+      "gt": 9,
+      "pred": 11,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6CarLongPlate890.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "6CarLongPlate944.jpg",
+      "gt": 8,
+      "pred": 5,
+      "matched": 2,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "6CarLongPlate948.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 5,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "6PlateBaza306.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "6PlateBaza347.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "6PlateBaza438.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "6xemay151.jpg",
+      "gt": 9,
+      "pred": 2,
+      "matched": 0,
+      "gt_lines": 2,
+      "pred_lines": 1
+    },
+    {
+      "name": "6xemay199.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay2.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay201.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay215.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay22.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay223.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay240.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay336.jpg",
+      "gt": 8,
+      "pred": 5,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay343.jpg",
+      "gt": 8,
+      "pred": 6,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay345.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 6,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay37.jpg",
+      "gt": 9,
+      "pred": 12,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay382.jpg",
+      "gt": 9,
+      "pred": 6,
+      "matched": 3,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay419.jpg",
+      "gt": 8,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay421.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay554.jpg",
+      "gt": 9,
+      "pred": 5,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay582.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay588.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay603.jpg",
+      "gt": 9,
+      "pred": 1,
+      "matched": 0,
+      "gt_lines": 2,
+      "pred_lines": 1
+    },
+    {
+      "name": "6xemay627.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay68.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay686.jpg",
+      "gt": 9,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "6xemay84.jpg",
+      "gt": 9,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "7xemay1814.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "7xemay1973.jpg",
+      "gt": 9,
+      "pred": 5,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "7xemay2042.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "7xemay2045.jpg",
+      "gt": 9,
+      "pred": 6,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "7xemay2273.jpg",
+      "gt": 8,
+      "pred": 1,
+      "matched": 0,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "8CarLongPlate373.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "8CarLongPlate738.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "8xemay1182.jpg",
+      "gt": 9,
+      "pred": 1,
+      "matched": 0,
+      "gt_lines": 2,
+      "pred_lines": 1
+    },
+    {
+      "name": "8xemay1220.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "8xemay189.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "8xemay1978.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "8xemay2293.jpg",
+      "gt": 8,
+      "pred": 5,
+      "matched": 2,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "8xemay2439.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "8xemay462.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "8xemay8.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "8xemay979.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 4,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "9CarLongPlate132.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "9CarLongPlate57.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "9CarLongPlate814.jpg",
+      "gt": 8,
+      "pred": 5,
+      "matched": 5,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "9xemay1046.jpg",
+      "gt": 8,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "9xemay1427.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "9xemay1474.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "9xemay1533.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "9xemay1644.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "9xemay1700.jpg",
+      "gt": 9,
+      "pred": 8,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "9xemay1813.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "9xemay1963.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 8,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "9xemay285.jpg",
+      "gt": 9,
+      "pred": 5,
+      "matched": 5,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "9xemay953.jpg",
+      "gt": 9,
+      "pred": 9,
+      "matched": 9,
+      "gt_lines": 2,
+      "pred_lines": 2
+    },
+    {
+      "name": "iwt11.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt116.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt211.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt22.jpg",
+      "gt": 7,
+      "pred": 2,
+      "matched": 1,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt228.jpg",
+      "gt": 7,
+      "pred": 1,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt230.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt242.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 3,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt252.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt26.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt260.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt261.jpg",
+      "gt": 7,
+      "pred": 13,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "iwt264.jpg",
+      "gt": 7,
+      "pred": 1,
+      "matched": 1,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt267.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 2,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "iwt27.jpg",
+      "gt": 3,
+      "pred": 1,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "iwt270.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt31.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt3104.jpg",
+      "gt": 7,
+      "pred": 2,
+      "matched": 2,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt3108.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt3119.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt3120.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt3121.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt321.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt328.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt342.jpg",
+      "gt": 7,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt347.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt352.jpg",
+      "gt": 7,
+      "pred": 4,
+      "matched": 4,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt356.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 5,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt363.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt375.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt376.jpg",
+      "gt": 7,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt378.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt387.jpg",
+      "gt": 7,
+      "pred": 1,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt389.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "iwt392.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "iwt41.jpg",
+      "gt": 7,
+      "pred": 5,
+      "matched": 5,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt416.jpg",
+      "gt": 7,
+      "pred": 1,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt418.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt422.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt428.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt435.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "iwt444.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt45.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt464.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt468.jpg",
+      "gt": 7,
+      "pred": 5,
+      "matched": 5,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "iwt473.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt474.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt477.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt478.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt510.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt519.jpg",
+      "gt": 7,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt57.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt611.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt626.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt662.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt7101.jpg",
+      "gt": 7,
+      "pred": 5,
+      "matched": 2,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt7103.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt7104.jpg",
+      "gt": 6,
+      "pred": 1,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt7121.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt7126.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt7137.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt714.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt724.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt739.jpg",
+      "gt": 7,
+      "pred": 1,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt743.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt748.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt749.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt751.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt752.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt755.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt756.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt757.jpg",
+      "gt": 7,
+      "pred": 3,
+      "matched": 3,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt764.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt766.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt767.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt768.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt769.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt774.jpg",
+      "gt": 7,
+      "pred": 0,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt780.jpg",
+      "gt": 6,
+      "pred": 7,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt794.jpg",
+      "gt": 7,
+      "pred": 5,
+      "matched": 0,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "iwt795.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 2
+    },
+    {
+      "name": "iwt818.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt819.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt826.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt834.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt84.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt863.jpg",
+      "gt": 7,
+      "pred": 7,
+      "matched": 7,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt867.jpg",
+      "gt": 7,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    },
+    {
+      "name": "iwt880.jpg",
+      "gt": 7,
+      "pred": 6,
+      "matched": 6,
+      "gt_lines": 1,
+      "pred_lines": 1
+    }
+  ]
+}

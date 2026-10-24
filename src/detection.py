@@ -65,10 +65,15 @@ def _iou(a: tuple[int, int, int, int], b: tuple[int, int, int, int]) -> float:
     return intersection / max(1, area_a + area_b - intersection)
 
 
-def find_candidates(image: np.ndarray, max_candidates: int = 10) -> list[Candidate]:
+def find_candidates(
+    image: np.ndarray, max_candidates: int = 10, *,
+    min_area_fraction: float = 0.005, max_area_fraction: float = 0.30,
+) -> list[Candidate]:
     """Return ranked candidates; scores are heuristics, not probabilities."""
     if image is None or image.size == 0:
         raise ValueError("image is empty")
+    if not 0 < min_area_fraction < max_area_fraction <= 1:
+        raise ValueError("invalid candidate area range")
     original_h, original_w = image.shape[:2]
     if image.ndim != 3 or image.shape[2] != 3:
         raise ValueError("expected BGR image")
@@ -87,7 +92,7 @@ def find_candidates(image: np.ndarray, max_candidates: int = 10) -> list[Candida
                 continue
             area_fraction = bw * bh / (w * h)
             ratio = bw / bh
-            if not (0.005 <= area_fraction <= 0.30 and (0.65 <= ratio <= 6.5 or (0.8 <= ratio <= 1.5))):
+            if not (min_area_fraction <= area_fraction <= max_area_fraction and (0.65 <= ratio <= 6.5 or (0.8 <= ratio <= 1.5))):
                 continue
             rect_area = cv2.contourArea(contour) / (bw * bh)
             if rect_area < 0.30:

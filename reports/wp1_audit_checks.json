@@ -1,0 +1,30 @@
+{
+  "standalone_box_matches_reference": 169,
+  "application_box_and_raw_text_matches_before_optimization": 169,
+  "shared_data_model_environment_fingerprints_match": true,
+  "current_source_matches_application_report": true,
+  "application_mean_ms_before": 2669.075800000019,
+  "application_mean_ms_after": 1658.930486982244,
+  "application_current_f1": 0.8288288288288288,
+  "historical_application_f1": 0.8408408408408409,
+  "historical_output_differences": [
+    "Tgmt_0578_png.rf.0beb5c618c224c87471c03fc86fdd5fb.jpg",
+    "Tgmt_0744_png.rf.5fa9408ba9fd69d2f8e871302471f8e8.jpg",
+    "Tgmt_0847_png.rf.2c1907fe45e230bd1579f20b5ec067bc.jpg",
+    "Tgmt_0892_png.rf.f211da0741ed54157b4c74cbb1c3af91.jpg"
+  ],
+  "historical_difference_checks": {
+    "files": 4,
+    "threads": [
+      1,
+      16
+    ],
+    "merges": [
+      "original scalar",
+      "optimized"
+    ],
+    "outputs_identical_in_all_variants": true
+  },
+  "ocr_artifact_sha256": "9e8445d7fc5a2a824e7dcb3a7eadf4dbf6466308afdcfac1ca84d251af5ff4af",
+  "scope": "output equivalence and report provenance checks; no full-scene OCR ground truth; separate timing runs have normal machine variance"
+}

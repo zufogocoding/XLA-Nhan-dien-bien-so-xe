@@ -1,0 +1,8 @@
+{
+  "clean": 0.9653103808033385,
+  "rotation_15_degrees": 0.7039645279081899,
+  "gaussian_blur_3x3": 0.9118414188836724,
+  "dark_contrast_0_5": 0.9653103808033385,
+  "central_8x8_occlusion": 0.7266562336984872,
+  "mean_single_character_feature_and_classifier_ms_100_samples": 4.646823000002769
+}

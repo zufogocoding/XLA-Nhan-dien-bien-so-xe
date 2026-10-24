@@ -5,8 +5,12 @@ function degrades to "no opinion" so the heuristic detector keeps working.
 """
 from pathlib import Path
 
-import joblib
 import numpy as np
+
+try:
+    import joblib
+except ImportError:
+    joblib = None
 
 from .hog import hog_features, crop_features
 
@@ -19,7 +23,7 @@ import os as _os
 
 def _load():
     global _MODEL, _LOADED
-    if _os.environ.get('WP1_DISABLE_SVM'):
+    if _os.environ.get('WP1_DISABLE_SVM') or joblib is None:
         return None
     if _LOADED:
         return _MODEL

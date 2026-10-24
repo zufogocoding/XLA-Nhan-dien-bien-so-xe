@@ -1,0 +1,2181 @@
+{
+  "images": 169,
+  "gt_boxes": 172,
+  "tp": 140,
+  "fp": 21,
+  "fn": 32,
+  "precision": 0.8695652173913043,
+  "recall": 0.813953488372093,
+  "f1": 0.8408408408408409,
+  "mean_ms": 1096.1766887578276,
+  "p95_ms": 2961.927599998307,
+  "sources": {
+    "white": 48,
+    "aligned_components": 59,
+    "characters": 19,
+    "edges": 34,
+    "null": 8,
+    "yellow": 1
+  },
+  "model": "svm_hog_lbp.pkl",
+  "scope": "actual image candidate selection: OpenCV geometry and unchanged HOG/SVM; full-scene box accuracy at IoU .5, NOT full-scene OCR accuracy; latency excludes HTTP/upload and SQLite; other background work may affect timing",
+  "cases": [
+    {
+      "file": "Tgmt_0675_png.rf.ac29b2affc7c0923e81c32180c5d2f7c.jpg",
+      "bbox": [
+        109,
+        232,
+        484,
+        363
+      ],
+      "best_iou": 0.9239253352838424,
+      "source": "white",
+      "raw_text": "30A97061",
+      "ms": 1737.4655000021448
+    },
+    {
+      "file": "Tgmt_0716_png.rf.6c8b39d0649480e734d438a1b16c0c1a.jpg",
+      "bbox": [
+        174,
+        293,
+        466,
+        395
+      ],
+      "best_iou": 0.9499041675640315,
+      "source": "aligned_components",
+      "raw_text": "89A088247",
+      "ms": 1781.6238000013982
+    },
+    {
+      "file": "Tgmt_0616_png.rf.3805c9908f62bae023cd12894b3bcd8f.jpg",
+      "bbox": [
+        123,
+        427,
+        498,
+        629
+      ],
+      "best_iou": 0.44106589898962123,
+      "source": "aligned_components",
+      "raw_text": "58236",
+      "ms": 322.0175999958883
+    },
+    {
+      "file": "Tgmt_0608_png.rf.f502b8f9c904b8572d9540e63e20e2d7.jpg",
+      "bbox": [
+        212,
+        237,
+        393,
+        325
+      ],
+      "best_iou": 0.4577926556197516,
+      "source": "aligned_components",
+      "raw_text": "55031",
+      "ms": 214.16129999852274
+    },
+    {
+      "file": "Tgmt_0579_png.rf.3bf10f99b21af3897378cd9060606af9.jpg",
+      "bbox": [
+        153,
+        420,
+        551,
+        526
+      ],
+      "best_iou": 0.9242969179869507,
+      "source": "white",
+      "raw_text": "30X42437",
+      "ms": 1705.5047000030754
+    },
+    {
+      "file": "Tgmt_0728_png.rf.ac802f4b563fcf310e796a6c389758c9.jpg",
+      "bbox": [
+        232,
+        382,
+        395,
+        543
+      ],
+      "best_iou": 0.9200511931989088,
+      "source": "white",
+      "raw_text": "99A10432",
+      "ms": 934.4339000017499
+    },
+    {
+      "file": "Tgmt_0705_png.rf.ef0c24af9a84254f919626b355217387.jpg",
+      "bbox": [
+        172,
+        310,
+        530,
+        410
+      ],
+      "best_iou": 0.7893684655322836,
+      "source": "characters",
+      "raw_text": "30A05197",
+      "ms": 1104.1723000016646
+    },
+    {
+      "file": "Tgmt_0580_png.rf.705bbe7b6276fc706f5f0493d0dd8b35.jpg",
+      "bbox": [
+        222,
+        356,
+        324,
+        494
+      ],
+      "best_iou": 0.8978078111865077,
+      "source": "white",
+      "raw_text": "30M4253",
+      "ms": 414.7732999990694
+    },
+    {
+      "file": "Tgmt_0750_png.rf.1b0371bb860b9585387d76f5ab60832e.jpg",
+      "bbox": [
+        181,
+        370,
+        481,
+        461
+      ],
+      "best_iou": 0.8093654038540252,
+      "source": "white",
+      "raw_text": "30F21950",
+      "ms": 1588.7242000026163
+    },
+    {
+      "file": "Tgmt_0647_png.rf.914e94160fc78e5115afa34f65e15fd9.jpg",
+      "bbox": [
+        238,
+        311,
+        464,
+        442
+      ],
+      "best_iou": 0.9077641200420262,
+      "source": "white",
+      "raw_text": "30776797",
+      "ms": 611.487499998475
+    },
+    {
+      "file": "Tgmt_0628_png.rf.55ae379bd68516e3c1c98c0540af8f7c.jpg",
+      "bbox": [
+        0,
+        243,
+        468,
+        540
+      ],
+      "best_iou": 0.5146365687435845,
+      "source": "aligned_components",
+      "raw_text": "66073",
+      "ms": 282.0480000009411
+    },
+    {
+      "file": "Tgmt_0597_png.rf.90026861a41bb8d693df831565b5eb24.jpg",
+      "bbox": [
+        152,
+        167,
+        454,
+        277
+      ],
+      "best_iou": 0.9233049989404882,
+      "source": "aligned_components",
+      "raw_text": "30G47036",
+      "ms": 1883.537299996533
+    },
+    {
+      "file": "Tgmt_0789_png.rf.1531dbba2f9ab53f3c8e359880eb5711.jpg",
+      "bbox": [
+        406,
+        191,
+        477,
+        248
+      ],
+      "best_iou": 0.0,
+      "source": "edges",
+      "raw_text": "7",
+      "ms": 1052.9164999970817
+    },
+    {
+      "file": "Tgmt_0629_png.rf.46f2164f35e2baff21425452c36c3fce.jpg",
+      "bbox": [
+        143,
+        240,
+        396,
+        476
+      ],
+      "best_iou": 0.8758525690218394,
+      "source": "edges",
+      "raw_text": "29C6073",
+      "ms": 617.4421000032453
+    },
+    {
+      "file": "Tgmt_0666_png.rf.3344539639bc6c8e4c76eb34cfd3e40b.jpg",
+      "bbox": null,
+      "best_iou": 0,
+      "source": null,
+      "raw_text": null,
+      "ms": 52.96459999954095
+    },
+    {
+      "file": "Tgmt_0734_png.rf.3afa6e4b9285693d925820e0fbe5214a.jpg",
+      "bbox": [
+        275,
+        0,
+        498,
+        68
+      ],
+      "best_iou": 0.0,
+      "source": "aligned_components",
+      "raw_text": "953",
+      "ms": 948.3819000015501
+    },
+    {
+      "file": "Tgmt_0589_png.rf.761b920a1a737153f1726feb5bc4734a.jpg",
+      "bbox": [
+        246,
+        228,
+        343,
+        355
+      ],
+      "best_iou": 0.9200918012224952,
+      "source": "white",
+      "raw_text": "0L",
+      "ms": 645.1391000009608
+    },
+    {
+      "file": "Tgmt_0761_png.rf.14d0fac205393c8e2aa90893f8db808c.jpg",
+      "bbox": [
+        184,
+        316,
+        469,
+        541
+      ],
+      "best_iou": 0.6217226484038715,
+      "source": "white",
+      "raw_text": "29A37229",
+      "ms": 456.1249000034877
+    },
+    {
+      "file": "Tgmt_0741_png.rf.32e1ec29d644a90c7c28e42d438349e6.jpg",
+      "bbox": [
+        167,
+        263,
+        453,
+        413
+      ],
+      "best_iou": 0.8245645524941726,
+      "source": "aligned_components",
+      "raw_text": "15N16938",
+      "ms": 874.8166000004858
+    },
+    {
+      "file": "Tgmt_0622_png.rf.2dd8a9ff95b4b0c42ef14ddaf33edd15.jpg",
+      "bbox": [
+        77,
+        158,
+        481,
+        354
+      ],
+      "best_iou": 0.8197825273161243,
+      "source": "aligned_components",
+      "raw_text": "31862043",
+      "ms": 1701.656400000502
+    },
+    {
+      "file": "Tgmt_0605_png.rf.f84091cfff4768c8ad846af3eee9629c.jpg",
+      "bbox": [
+        221,
+        340,
+        449,
+        587
+      ],
+      "best_iou": 0.8749908036121979,
+      "source": "white",
+      "raw_text": "0",
+      "ms": 271.7849999971804
+    },
+    {
+      "file": "Tgmt_0627_png.rf.4d209a8cb7c5317a49939d9834c45e5d.jpg",
+      "bbox": [
+        254,
+        227,
+        367,
+        284
+      ],
+      "best_iou": 0.3885408104559614,
+      "source": "characters",
+      "raw_text": "65227",
+      "ms": 236.62010000407463
+    },
+    {
+      "file": "Tgmt_0746_png.rf.f23c0114587046d38615e13e8d453c7a.jpg",
+      "bbox": [
+        141,
+        412,
+        361,
+        510
+      ],
+      "best_iou": 0.9153911205936918,
+      "source": "aligned_components",
+      "raw_text": "89A20061",
+      "ms": 1168.0486999975983
+    },
+    {
+      "file": "Tgmt_0578_png.rf.0beb5c618c224c87471c03fc86fdd5fb.jpg",
+      "bbox": [
+        508,
+        451,
+        640,
+        496
+      ],
+      "best_iou": 0.0,
+      "source": "aligned_components",
+      "raw_text": "7AAHN881",
+      "ms": 1344.2346999945585
+    },
+    {
+      "file": "Tgmt_0600_png.rf.34c3f58a63c83ded306a12c1d4c5338d.jpg",
+      "bbox": [
+        296,
+        132,
+        486,
+        354
+      ],
+      "best_iou": 0.9201162892451317,
+      "source": "edges",
+      "raw_text": "30A8483",
+      "ms": 210.50780000223313
+    },
+    {
+      "file": "Tgmt_0590_png.rf.36f928c866307f5f5e1dff029f81cc14.jpg",
+      "bbox": [
+        287,
+        237,
+        468,
+        343
+      ],
+      "best_iou": 0.8075456471300313,
+      "source": "aligned_components",
+      "raw_text": "3074253",
+      "ms": 619.1693000000669
+    },
+    {
+      "file": "Tgmt_0662_png.rf.907c1f6274e18eedc4129c6b2df2833b.jpg",
+      "bbox": [
+        38,
+        167,
+        640,
+        443
+      ],
+      "best_iou": 0.5581042576676778,
+      "source": "aligned_components",
+      "raw_text": "30F90540",
+      "ms": 2038.3911000026274
+    },
+    {
+      "file": "Tgmt_0656_png.rf.52105e18f93aeda4c2f37dd7e2257a45.jpg",
+      "bbox": [
+        169,
+        438,
+        457,
+        606
+      ],
+      "best_iou": 0.5653471845073361,
+      "source": "aligned_components",
+      "raw_text": "50L85886",
+      "ms": 347.31789999932516
+    },
+    {
+      "file": "Tgmt_0585_png.rf.4840fe7eac099753f988756b741507fb.jpg",
+      "bbox": [
+        278,
+        286,
+        463,
+        403
+      ],
+      "best_iou": 0.8743099550384618,
+      "source": "white",
+      "raw_text": "3074207",
+      "ms": 912.8057999987504
+    },
+    {
+      "file": "Tgmt_0770_png.rf.760e292dcf9ed4c4eb16c7be7470bdac.jpg",
+      "bbox": [
+        191,
+        347,
+        491,
+        536
+      ],
+      "best_iou": 0.9141904280595862,
+      "source": "white",
+      "raw_text": "54",
+      "ms": 1660.2035999967484
+    },
+    {
+      "file": "Tgmt_0892_png.rf.f211da0741ed54157b4c74cbb1c3af91.jpg",
+      "bbox": [
+        192,
+        382,
+        475,
+        459
+      ],
+      "best_iou": 0.8695235379714478,
+      "source": "aligned_components",
+      "raw_text": "30A8074",
+      "ms": 2409.2708000025596
+    },
+    {
+      "file": "Tgmt_0765_png.rf.56680250df00beb94883a95afda840ff.jpg",
+      "bbox": [
+        212,
+        284,
+        444,
+        555
+      ],
+      "best_iou": 0.9499887827365568,
+      "source": "edges",
+      "raw_text": "30F8803",
+      "ms": 1022.0799999951851
+    },
+    {
+      "file": "Tgmt_0566_png.rf.f651584218c0258c699b6d700ce0eb63.jpg",
+      "bbox": [
+        224,
+        90,
+        416,
+        222
+      ],
+      "best_iou": 0.4393435690204047,
+      "source": "characters",
+      "raw_text": "372607",
+      "ms": 1027.2225000007893
+    },
+    {
+      "file": "Tgmt_0607_png.rf.54cee3d196191346d7c42c4ac66e9cd2.jpg",
+      "bbox": [
+        206,
+        223,
+        449,
+        483
+      ],
+      "best_iou": 0.9532173488445713,
+      "source": "white",
+      "raw_text": "30A54827",
+      "ms": 952.1707000021706
+    },
+    {
+      "file": "Tgmt_0651_png.rf.6339e326007b1533fd1129c3f19dac1b.jpg",
+      "bbox": [
+        117,
+        379,
+        404,
+        485
+      ],
+      "best_iou": 0.9501208505029253,
+      "source": "aligned_components",
+      "raw_text": "30A79209",
+      "ms": 762.962000000698
+    },
+    {
+      "file": "Tgmt_0604_png.rf.1f2370111509ed796a41726a4ea98f37.jpg",
+      "bbox": [
+        206,
+        222,
+        528,
+        383
+      ],
+      "best_iou": 0.6340913065234627,
+      "source": "white",
+      "raw_text": "7514777",
+      "ms": 799.0983999989112
+    },
+    {
+      "file": "Tgmt_0610_png.rf.478dcc54d6d4b8c92b034e94f4f2ebcc.jpg",
+      "bbox": [
+        238,
+        98,
+        456,
+        344
+      ],
+      "best_iou": 0.9277361108422467,
+      "source": "white",
+      "raw_text": "30F57331",
+      "ms": 1491.0690000033355
+    },
+    {
+      "file": "Tgmt_0639_png.rf.70bd5f4861919396b0615dcc713f226f.jpg",
+      "bbox": [
+        237,
+        74,
+        280,
+        134
+      ],
+      "best_iou": 0.0,
+      "source": "characters",
+      "raw_text": "4L",
+      "ms": 173.38040000322508
+    },
+    {
+      "file": "Tgmt_0634_png.rf.9df78fc7dd1770ae0b7c479343fe8e9f.jpg",
+      "bbox": [
+        111,
+        261,
+        398,
+        524
+      ],
+      "best_iou": 0.9275332324164788,
+      "source": "white",
+      "raw_text": "29C67798",
+      "ms": 541.6942999945604
+    },
+    {
+      "file": "Tgmt_0845_png.rf.86b7906b54b1f6c1ccd11b919a99b005.jpg",
+      "bbox": [
+        215,
+        190,
+        345,
+        375
+      ],
+      "best_iou": 0.6914314136586134,
+      "source": "characters",
+      "raw_text": "77774777",
+      "ms": 1019.4885000018985
+    },
+    {
+      "file": "Tgmt_0756_png.rf.eff88642facd491f382cb2bf83b25281.jpg",
+      "bbox": [
+        266,
+        387,
+        408,
+        539
+      ],
+      "best_iou": 0.9224423197385875,
+      "source": "white",
+      "raw_text": "25697",
+      "ms": 353.0233000055887
+    },
+    {
+      "file": "Tgmt_0729_png.rf.07d5edd0c59bdd770294ea2cfa32781e.jpg",
+      "bbox": [
+        179,
+        338,
+        235,
+        422
+      ],
+      "best_iou": 0.870086303161234,
+      "source": "white",
+      "raw_text": "99A0432",
+      "ms": 1847.9321000049822
+    },
+    {
+      "file": "Tgmt_0655_png.rf.fdd26b130bf1d1cb7811673fe4acfea9.jpg",
+      "bbox": [
+        211,
+        363,
+        462,
+        584
+      ],
+      "best_iou": 0.9257006209156343,
+      "source": "edges",
+      "raw_text": "30E85886",
+      "ms": 582.0605999979307
+    },
+    {
+      "file": "Tgmt_0668_png.rf.e958075f1cabbcb4bef92e2152054c9f.jpg",
+      "bbox": [
+        296,
+        175,
+        542,
+        305
+      ],
+      "best_iou": 0.0,
+      "source": "aligned_components",
+      "raw_text": "2",
+      "ms": 824.3731000038679
+    },
+    {
+      "file": "Tgmt_0583_png.rf.d26e622ae46968fa6edd3c11cd7879d7.jpg",
+      "bbox": [
+        224,
+        428,
+        455,
+        531
+      ],
+      "best_iou": 0.8362760909496942,
+      "source": "aligned_components",
+      "raw_text": "30M4253",
+      "ms": 1356.45569999906
+    },
+    {
+      "file": "Tgmt_0682_png.rf.7ed18bf46381fe67f85b069795cb3b2d.jpg",
+      "bbox": [
+        263,
+        358,
+        386,
+        524
+      ],
+      "best_iou": 0.7944849838377901,
+      "source": "characters",
+      "raw_text": "30M4253",
+      "ms": 856.4295000032871
+    },
+    {
+      "file": "Tgmt_0763_png.rf.06ac4e64bca4c629a8e3e716bc3a58ee.jpg",
+      "bbox": [
+        185,
+        576,
+        438,
+        640
+      ],
+      "best_iou": 0.8971320830902284,
+      "source": "aligned_components",
+      "raw_text": "20A60432",
+      "ms": 258.02269999985583
+    },
+    {
+      "file": "Tgmt_0649_png.rf.7200ee4d65a8bd7e90f75bc85463f540.jpg",
+      "bbox": [
+        57,
+        352,
+        523,
+        528
+      ],
+      "best_iou": 0.941825501043073,
+      "source": "aligned_components",
+      "raw_text": "30F76935",
+      "ms": 625.6566000010935
+    },
+    {
+      "file": "Tgmt_0767_png.rf.7a39a2b605b837defb5e65e6f8038cec.jpg",
+      "bbox": [
+        172,
+        473,
+        357,
+        564
+      ],
+      "best_iou": 0.9140292495677386,
+      "source": "white",
+      "raw_text": "1",
+      "ms": 1520.292300003348
+    },
+    {
+      "file": "Tgmt_0556_png.rf.88568269425947b8ba638a4b3bc6298c.jpg",
+      "bbox": [
+        112,
+        133,
+        428,
+        512
+      ],
+      "best_iou": 0.9311679976463116,
+      "source": "edges",
+      "raw_text": "30E344221",
+      "ms": 266.05689999996684
+    },
+    {
+      "file": "Tgmt_0678_png.rf.b9994f2d22fcfac94b5b3333183f0637.jpg",
+      "bbox": [
+        224,
+        65,
+        436,
+        157
+      ],
+      "best_iou": 0.8792416827317474,
+      "source": "aligned_components",
+      "raw_text": "0",
+      "ms": 2559.9264000047697
+    },
+    {
+      "file": "Tgmt_0680_png.rf.a3691de9371ec234c87e9e9c4f3c14c2.jpg",
+      "bbox": null,
+      "best_iou": 0,
+      "source": null,
+      "raw_text": null,
+      "ms": 158.73300000384916
+    },
+    {
+      "file": "Tgmt_0764_png.rf.30bdda9fa5921c309dc4f831ddf8eca2.jpg",
+      "bbox": [
+        217,
+        301,
+        433,
+        523
+      ],
+      "best_iou": 0.9594284570011216,
+      "source": "edges",
+      "raw_text": "30A79209",
+      "ms": 579.9856000012369
+    },
+    {
+      "file": "Tgmt_0558_png.rf.e13610194e1a2779f07acdd0924a6674.jpg",
+      "bbox": [
+        89,
+        166,
+        555,
+        334
+      ],
+      "best_iou": 0.8903913209983861,
+      "source": "aligned_components",
+      "raw_text": "30F35939",
+      "ms": 310.0971000021673
+    },
+    {
+      "file": "Tgmt_0636_png.rf.dd37ed39219ad247763d066bb75e9cbd.jpg",
+      "bbox": [
+        193,
+        499,
+        443,
+        622
+      ],
+      "best_iou": 0.7113923571821951,
+      "source": "aligned_components",
+      "raw_text": "29C",
+      "ms": 336.23840000655036
+    },
+    {
+      "file": "Tgmt_0646_png.rf.01fd559f826eb65d1ca02870b1b6d286.jpg",
+      "bbox": [
+        200,
+        319,
+        418,
+        398
+      ],
+      "best_iou": 0.878981314873318,
+      "source": "edges",
+      "raw_text": "30E76226",
+      "ms": 1486.4855000050738
+    },
+    {
+      "file": "Tgmt_0582_png.rf.5599f78ac4cc78474d45a48ca7955d14.jpg",
+      "bbox": [
+        287,
+        479,
+        405,
+        640
+      ],
+      "best_iou": 0.854966656199856,
+      "source": "white",
+      "raw_text": "30M4253",
+      "ms": 773.3316000012564
+    },
+    {
+      "file": "Tgmt_0631_png.rf.94715748eca878c2da7ca95c6c36c103.jpg",
+      "bbox": [
+        224,
+        358,
+        407,
+        436
+      ],
+      "best_iou": 0.8948738731259638,
+      "source": "aligned_components",
+      "raw_text": "30E66266",
+      "ms": 1278.6304999972344
+    },
+    {
+      "file": "Tgmt_0659_png.rf.525c456c29fe6cffc8f5b3c38d5e670b.jpg",
+      "bbox": [
+        0,
+        191,
+        640,
+        389
+      ],
+      "best_iou": 0.4479952705965909,
+      "source": "edges",
+      "raw_text": "19N87180",
+      "ms": 1693.4244999938528
+    },
+    {
+      "file": "Tgmt_0591_png.rf.b802ffd2e0c5813fd43315271bc3a6ad.jpg",
+      "bbox": [
+        208,
+        200,
+        423,
+        261
+      ],
+      "best_iou": 0.8378679454140356,
+      "source": "edges",
+      "raw_text": "30G43342",
+      "ms": 585.4056000025594
+    },
+    {
+      "file": "Tgmt_0694_png.rf.3d9445a732bf7cf39a6aae1f6d31d437.jpg",
+      "bbox": [
+        194,
+        330,
+        481,
+        595
+      ],
+      "best_iou": 0.9245558419549087,
+      "source": "yellow",
+      "raw_text": "25500010",
+      "ms": 698.6001000041142
+    },
+    {
+      "file": "Tgmt_0732_png.rf.1169ae7649e2832c288e72d75aab90e0.jpg",
+      "bbox": [
+        298,
+        362,
+        408,
+        493
+      ],
+      "best_iou": 0.9316063470056978,
+      "source": "white",
+      "raw_text": "89A0868",
+      "ms": 663.2570000001579
+    },
+    {
+      "file": "Tgmt_0602_png.rf.00958940829cec00b9025a992250d2d1.jpg",
+      "bbox": [
+        202,
+        310,
+        375,
+        467
+      ],
+      "best_iou": 0.8957853290210482,
+      "source": "white",
+      "raw_text": "30E50207",
+      "ms": 362.4659999986761
+    },
+    {
+      "file": "Tgmt_0573_png.rf.89f7f6b78e15452cf75ff12f3edb5365.jpg",
+      "bbox": [
+        214,
+        316,
+        528,
+        423
+      ],
+      "best_iou": 0.7950138825862411,
+      "source": "aligned_components",
+      "raw_text": "30639509",
+      "ms": 1151.5111999979126
+    },
+    {
+      "file": "Tgmt_0563_png.rf.6058b4e95fa85bd669317acdf2de22a7.jpg",
+      "bbox": [
+        235,
+        288,
+        367,
+        448
+      ],
+      "best_iou": 0.9542172842771977,
+      "source": "edges",
+      "raw_text": "36A0404",
+      "ms": 340.73799999896437
+    },
+    {
+      "file": "Tgmt_0661_png.rf.9494431bd4103d4bc44571bdd781fa09.jpg",
+      "bbox": [
+        0,
+        416,
+        503,
+        576
+      ],
+      "best_iou": 0.47928751062383335,
+      "source": "aligned_components",
+      "raw_text": "30F90230",
+      "ms": 1533.2506999984616
+    },
+    {
+      "file": "Tgmt_0574_png.rf.275924dae7d5ad0ec9088da8ebc2852f.jpg",
+      "bbox": [
+        188,
+        85,
+        425,
+        357
+      ],
+      "best_iou": 0.90191073881523,
+      "source": "white",
+      "raw_text": "30A40293",
+      "ms": 762.6995999962674
+    },
+    {
+      "file": "Tgmt_0653_png.rf.0a3ef0db2edc0cc93a0fadad76670f03.jpg",
+      "bbox": [
+        0,
+        315,
+        538,
+        547
+      ],
+      "best_iou": 0.9275056059912209,
+      "source": "aligned_components",
+      "raw_text": "30F80651",
+      "ms": 806.6179000015836
+    },
+    {
+      "file": "Tgmt_0559_png.rf.23ba0498a7f683345cb7f2a38e0413bd.jpg",
+      "bbox": [
+        188,
+        289,
+        500,
+        434
+      ],
+      "best_iou": 0.8618862281049389,
+      "source": "white",
+      "raw_text": "20A36078",
+      "ms": 924.851600000693
+    },
+    {
+      "file": "Tgmt_0771_png.rf.e1eeb152e4bfccdeb7f3506f28994d81.jpg",
+      "bbox": [
+        250,
+        396,
+        512,
+        555
+      ],
+      "best_iou": 0.8572212211339957,
+      "source": "aligned_components",
+      "raw_text": "30433037",
+      "ms": 839.2779999994673
+    },
+    {
+      "file": "Tgmt_0714_png.rf.ba15fe0479f15674ef868d1033695963.jpg",
+      "bbox": [
+        94,
+        477,
+        549,
+        603
+      ],
+      "best_iou": 0.8234720176715399,
+      "source": "edges",
+      "raw_text": "26A08211",
+      "ms": 896.9846999971196
+    },
+    {
+      "file": "Tgmt_0795_png.rf.aa6c557eb54c97ffcd045d4d6d76183c.jpg",
+      "bbox": [
+        263,
+        242,
+        379,
+        371
+      ],
+      "best_iou": 0.8603688255196241,
+      "source": "edges",
+      "raw_text": "30G46487",
+      "ms": 383.5188999946695
+    },
+    {
+      "file": "Tgmt_0670_png.rf.d9a95dbe58ca25cca48a94e433cf63f0.jpg",
+      "bbox": [
+        204,
+        369,
+        371,
+        580
+      ],
+      "best_iou": 0.8940865476534525,
+      "source": "characters",
+      "raw_text": "09566",
+      "ms": 975.9454000013648
+    },
+    {
+      "file": "Tgmt_0614_png.rf.b9bd288fdcb58327be91628843647b47.jpg",
+      "bbox": [
+        183,
+        231,
+        433,
+        377
+      ],
+      "best_iou": 0.9259149445215578,
+      "source": "edges",
+      "raw_text": "30G58236",
+      "ms": 1072.7708999984316
+    },
+    {
+      "file": "Tgmt_0671_png.rf.9c4a9bfd6258f81fc0bae258eaae28be.jpg",
+      "bbox": [
+        139,
+        362,
+        430,
+        496
+      ],
+      "best_iou": 0.8782136083789269,
+      "source": "white",
+      "raw_text": "30A96308",
+      "ms": 1045.7199000011315
+    },
+    {
+      "file": "Tgmt_0701_png.rf.5f39ac967d9a6415461e6f27ba603d31.jpg",
+      "bbox": null,
+      "best_iou": 0,
+      "source": null,
+      "raw_text": null,
+      "ms": 111.8036000043503
+    },
+    {
+      "file": "Tgmt_0561_png.rf.79bfae552c76511920ea4be742c57423.jpg",
+      "bbox": [
+        162,
+        385,
+        447,
+        472
+      ],
+      "best_iou": 0.9460007028292932,
+      "source": "white",
+      "raw_text": "30F36253",
+      "ms": 984.9927000032039
+    },
+    {
+      "file": "Tgmt_0794_png.rf.b78b7bb1c94276c4198bb34c19551da7.jpg",
+      "bbox": [
+        122,
+        167,
+        404,
+        287
+      ],
+      "best_iou": 0.9241762580116565,
+      "source": "aligned_components",
+      "raw_text": "29N66294",
+      "ms": 2928.2678999952623
+    },
+    {
+      "file": "Tgmt_0587_png.rf.877c46f93c85d3e31739c1d1b87ebf14.jpg",
+      "bbox": [
+        54,
+        202,
+        537,
+        475
+      ],
+      "best_iou": 0.8542382608530105,
+      "source": "aligned_components",
+      "raw_text": "30M4253",
+      "ms": 3340.1318000032916
+    },
+    {
+      "file": "Tgmt_0691_png.rf.9f196ebc5e71786e2fc04f31fa0accc2.jpg",
+      "bbox": [
+        223,
+        530,
+        396,
+        600
+      ],
+      "best_iou": 0.949166410154313,
+      "source": "white",
+      "raw_text": "30F25697",
+      "ms": 1069.4637999986298
+    },
+    {
+      "file": "Tgmt_0660_png.rf.feac247c0a58250caafce7fbc7cfbb71.jpg",
+      "bbox": [
+        199,
+        233,
+        411,
+        309
+      ],
+      "best_iou": 0.8556048432845085,
+      "source": "characters",
+      "raw_text": "89A20061",
+      "ms": 1040.1633000001311
+    },
+    {
+      "file": "Tgmt_0735_png.rf.a8a55689d247092771b007647653abcb.jpg",
+      "bbox": [
+        161,
+        264,
+        321,
+        443
+      ],
+      "best_iou": 0.8921083923220273,
+      "source": "edges",
+      "raw_text": "0",
+      "ms": 284.0918000001693
+    },
+    {
+      "file": "Tgmt_0721_png.rf.f192132748ed2cd42ce287b495e758e4.jpg",
+      "bbox": [
+        330,
+        471,
+        466,
+        639
+      ],
+      "best_iou": 0.9001682665626926,
+      "source": "characters",
+      "raw_text": "14A09290",
+      "ms": 519.4001999989268
+    },
+    {
+      "file": "Tgmt_0567_png.rf.7df0da3df73851fafb00a11aa9003862.jpg",
+      "bbox": [
+        134,
+        211,
+        415,
+        318
+      ],
+      "best_iou": 0.9347672078060058,
+      "source": "aligned_components",
+      "raw_text": "29A37277",
+      "ms": 493.92339999758406
+    },
+    {
+      "file": "Tgmt_0744_png.rf.5fa9408ba9fd69d2f8e871302471f8e8.jpg",
+      "bbox": [
+        553,
+        448,
+        637,
+        473
+      ],
+      "best_iou": 0.0,
+      "source": "aligned_components",
+      "raw_text": "5",
+      "ms": 3546.2975000045844
+    },
+    {
+      "file": "Tgmt_0810_png.rf.bbd91fa0ee519acbf5f0e8b1743a5ae7.jpg",
+      "bbox": [
+        328,
+        330,
+        382,
+        387
+      ],
+      "best_iou": 0.8541099676281594,
+      "source": "characters",
+      "raw_text": "30PD17",
+      "ms": 373.2832000023336
+    },
+    {
+      "file": "Tgmt_0606_png.rf.6dbf42625e3baa34ea854bbe80e3eaa5.jpg",
+      "bbox": [
+        137,
+        384,
+        557,
+        500
+      ],
+      "best_iou": 0.9043341664228889,
+      "source": "edges",
+      "raw_text": "930F54659",
+      "ms": 767.8517999956966
+    },
+    {
+      "file": "Tgmt_0640_png.rf.6799687d2315e37d13b3185aaf89131f.jpg",
+      "bbox": [
+        217,
+        325,
+        415,
+        564
+      ],
+      "best_iou": 0.9304996452620746,
+      "source": "edges",
+      "raw_text": "30A71980",
+      "ms": 267.7468999972916
+    },
+    {
+      "file": "Tgmt_0755_png.rf.faf4ecca89c2bb18c7de816337d76f61.jpg",
+      "bbox": [
+        242,
+        471,
+        481,
+        563
+      ],
+      "best_iou": 0.6412435702108941,
+      "source": "aligned_components",
+      "raw_text": "F25697",
+      "ms": 375.3069999947911
+    },
+    {
+      "file": "Tgmt_0637_png.rf.31f7ddf3dcaba80af7527b58741b0cf2.jpg",
+      "bbox": null,
+      "best_iou": 0,
+      "source": null,
+      "raw_text": null,
+      "ms": 138.1039999978384
+    },
+    {
+      "file": "Tgmt_0686_png.rf.878b49c9f54bb6315b3143f9e46a6e75.jpg",
+      "bbox": [
+        153,
+        361,
+        262,
+        470
+      ],
+      "best_iou": 0.8930126594929823,
+      "source": "characters",
+      "raw_text": "30M4253",
+      "ms": 951.4712000018335
+    },
+    {
+      "file": "Tgmt_0674_png.rf.f8d442b7a641763108b0931af9cb14e1.jpg",
+      "bbox": [
+        187,
+        424,
+        458,
+        640
+      ],
+      "best_iou": 0.5996395712109761,
+      "source": "white",
+      "raw_text": "9J96805",
+      "ms": 262.22409999900265
+    },
+    {
+      "file": "Tgmt_0673_png.rf.e165425d7296af9e7797cb6f314b007a.jpg",
+      "bbox": [
+        214,
+        145,
+        400,
+        381
+      ],
+      "best_iou": 0.9186096005944359,
+      "source": "characters",
+      "raw_text": "5A06596",
+      "ms": 308.5901999947964
+    },
+    {
+      "file": "Tgmt_0854_png.rf.7c74fbbec5f4a9f2dc2ee59aeb09a05f.jpg",
+      "bbox": [
+        174,
+        213,
+        229,
+        286
+      ],
+      "best_iou": 0.8235052058393332,
+      "source": "white",
+      "raw_text": "AA66169",
+      "ms": 912.8012000001036
+    },
+    {
+      "file": "Tgmt_0690_png.rf.50dba95c4d6a0c6c9d71f9a1dc0d65c7.jpg",
+      "bbox": [
+        232,
+        473,
+        338,
+        580
+      ],
+      "best_iou": 0.8876216604798575,
+      "source": "characters",
+      "raw_text": "30A97571",
+      "ms": 231.2524000008125
+    },
+    {
+      "file": "Tgmt_0601_png.rf.aaf2f1bda69f16a8212f146533e6ede4.jpg",
+      "bbox": [
+        150,
+        253,
+        439,
+        350
+      ],
+      "best_iou": 0.8762413407659592,
+      "source": "edges",
+      "raw_text": "36N490542",
+      "ms": 550.8890999990399
+    },
+    {
+      "file": "Tgmt_0743_png.rf.0fe5cea33ca81daaf23373b978be3fce.jpg",
+      "bbox": [
+        117,
+        317,
+        425,
+        463
+      ],
+      "best_iou": 0.9363634760273972,
+      "source": "aligned_components",
+      "raw_text": "99819339",
+      "ms": 964.4845000002533
+    },
+    {
+      "file": "Tgmt_0581_png.rf.166f73b3d898f412536e637a90ba1bfe.jpg",
+      "bbox": [
+        182,
+        388,
+        285,
+        525
+      ],
+      "best_iou": 0.9376945484550229,
+      "source": "white",
+      "raw_text": "30M4253",
+      "ms": 824.6387000035611
+    },
+    {
+      "file": "Tgmt_0592_png.rf.99b58064710149799feb1f275f0fcb60.jpg",
+      "bbox": [
+        196,
+        192,
+        565,
+        288
+      ],
+      "best_iou": 0.7684019982188468,
+      "source": "aligned_components",
+      "raw_text": "30E43843",
+      "ms": 643.4305000002496
+    },
+    {
+      "file": "Tgmt_0619_png.rf.60b2e60fd9e5192fd74254dd8f6a71b0.jpg",
+      "bbox": [
+        135,
+        0,
+        398,
+        52
+      ],
+      "best_iou": 0.0,
+      "source": "aligned_components",
+      "raw_text": "1",
+      "ms": 622.1598000047379
+    },
+    {
+      "file": "Tgmt_0598_png.rf.5a9fe7726661afe80ae4bda61ebb8368.jpg",
+      "bbox": [
+        150,
+        503,
+        396,
+        584
+      ],
+      "best_iou": 0.8641659198566125,
+      "source": "white",
+      "raw_text": "30A47837",
+      "ms": 857.178300000669
+    },
+    {
+      "file": "Tgmt_0565_png.rf.4e11828f29980a35e04dd1a2558522c6.jpg",
+      "bbox": [
+        214,
+        12,
+        351,
+        155
+      ],
+      "best_iou": 0.8909049988926923,
+      "source": "edges",
+      "raw_text": "36A04104",
+      "ms": 1380.8846999963862
+    },
+    {
+      "file": "Tgmt_0652_png.rf.f6e364b771e3fc5358e1af46f92fa662.jpg",
+      "bbox": [
+        66,
+        315,
+        522,
+        481
+      ],
+      "best_iou": 0.700454185575689,
+      "source": "aligned_components",
+      "raw_text": "30M749921",
+      "ms": 815.9376000039629
+    },
+    {
+      "file": "Tgmt_0707_png.rf.12e40df8b5d68932ca3402846a20359e.jpg",
+      "bbox": [
+        167,
+        464,
+        374,
+        551
+      ],
+      "best_iou": 0.9127580180178599,
+      "source": "aligned_components",
+      "raw_text": "30F06973",
+      "ms": 1229.7763000024133
+    },
+    {
+      "file": "Tgmt_0613_png.rf.c274fd6166de451f524ddf28c76cdffa.jpg",
+      "bbox": [
+        244,
+        152,
+        593,
+        379
+      ],
+      "best_iou": 0.9619239305621551,
+      "source": "edges",
+      "raw_text": "30G58236",
+      "ms": 1270.2788000024157
+    },
+    {
+      "file": "Tgmt_0727_png.rf.6f47e147d7bc4aeb82b929dfd3b571ad.jpg",
+      "bbox": [
+        152,
+        426,
+        459,
+        571
+      ],
+      "best_iou": 0.8941699906337612,
+      "source": "edges",
+      "raw_text": "30Z1040",
+      "ms": 757.7317999966908
+    },
+    {
+      "file": "Tgmt_0560_png.rf.7cc1bbc24f630d8b279962c3915563b2.jpg",
+      "bbox": [
+        159,
+        192,
+        400,
+        414
+      ],
+      "best_iou": 0.9600667412576637,
+      "source": "edges",
+      "raw_text": "30F36127",
+      "ms": 3265.1315000039176
+    },
+    {
+      "file": "Tgmt_0586_png.rf.fb652bccb44ad88f53626aab7247b19f.jpg",
+      "bbox": [
+        158,
+        354,
+        432,
+        488
+      ],
+      "best_iou": 0.8992904273655722,
+      "source": "aligned_components",
+      "raw_text": "30M4253",
+      "ms": 1338.3281999995233
+    },
+    {
+      "file": "Tgmt_0658_png.rf.4ce03e35f71d12d66d609d46c4d33fa4.jpg",
+      "bbox": [
+        49,
+        105,
+        640,
+        383
+      ],
+      "best_iou": 0.8923659533773997,
+      "source": "aligned_components",
+      "raw_text": "30F86577",
+      "ms": 1149.6881999992183
+    },
+    {
+      "file": "Tgmt_0722_png.rf.744cc2ba426cbbfaf1895a9a1f6421ea.jpg",
+      "bbox": [
+        0,
+        544,
+        511,
+        640
+      ],
+      "best_iou": 0.5161615219929726,
+      "source": "aligned_components",
+      "raw_text": "14",
+      "ms": 560.3682000000845
+    },
+    {
+      "file": "Tgmt_0758_png.rf.58d5bfadea79b9d52dc2ed1e41296424.jpg",
+      "bbox": [
+        94,
+        498,
+        397,
+        579
+      ],
+      "best_iou": 0.5253121550465748,
+      "source": "aligned_components",
+      "raw_text": "30F25697",
+      "ms": 1016.4460000014515
+    },
+    {
+      "file": "Tgmt_0626_png.rf.601e1e7d679b49f0f07fc06ad189ef89.jpg",
+      "bbox": [
+        99,
+        307,
+        467,
+        470
+      ],
+      "best_iou": 0.9147159242464659,
+      "source": "edges",
+      "raw_text": "30E68379",
+      "ms": 604.8606000040309
+    },
+    {
+      "file": "Tgmt_0615_png.rf.2d4ca95b1ec4160d43ad13b75f886824.jpg",
+      "bbox": [
+        233,
+        193,
+        433,
+        259
+      ],
+      "best_iou": 0.38738250535970514,
+      "source": "aligned_components",
+      "raw_text": "58236",
+      "ms": 1143.5839000041597
+    },
+    {
+      "file": "Tgmt_0710_png.rf.f2aad001b9f974180c44cad2a97827ff.jpg",
+      "bbox": [
+        180,
+        507,
+        421,
+        578
+      ],
+      "best_iou": 0.774644325872246,
+      "source": "characters",
+      "raw_text": "89A07379",
+      "ms": 631.5182999969693
+    },
+    {
+      "file": "Tgmt_0569_png.rf.5ab02d41ce91f1a1bb69b01e022e04bf.jpg",
+      "bbox": [
+        218,
+        368,
+        468,
+        447
+      ],
+      "best_iou": 0.7197144551287812,
+      "source": "edges",
+      "raw_text": "37A39988",
+      "ms": 838.4041000026627
+    },
+    {
+      "file": "Tgmt_0749_png.rf.7c61c2bec31e5485c05c50a8f9afb7cb.jpg",
+      "bbox": [
+        250,
+        341,
+        390,
+        484
+      ],
+      "best_iou": 0.8971702148048281,
+      "source": "characters",
+      "raw_text": "020890",
+      "ms": 2024.0744999973685
+    },
+    {
+      "file": "Tgmt_0754_png.rf.439db65e229b6d1d96cb7a26bd0b768f.jpg",
+      "bbox": [
+        241,
+        343,
+        370,
+        540
+      ],
+      "best_iou": 0.8661565076376749,
+      "source": "white",
+      "raw_text": "1F25677",
+      "ms": 975.9138000008534
+    },
+    {
+      "file": "Tgmt_0739_png.rf.757b238f6603cf374af2ebc66847de80.jpg",
+      "bbox": [
+        218,
+        308,
+        329,
+        412
+      ],
+      "best_iou": 0.8481176462535621,
+      "source": "edges",
+      "raw_text": "29H15606",
+      "ms": 1230.6982000009157
+    },
+    {
+      "file": "Tgmt_0568_png.rf.f02d32c0e3e3da4f3bbb1ed26253c3bf.jpg",
+      "bbox": [
+        137,
+        167,
+        449,
+        484
+      ],
+      "best_iou": 0.9097751750428026,
+      "source": "white",
+      "raw_text": "37C37544",
+      "ms": 849.0124999952968
+    },
+    {
+      "file": "Tgmt_0657_png.rf.cf06ef53126c36b6d5db16f6217fc506.jpg",
+      "bbox": [
+        55,
+        443,
+        402,
+        601
+      ],
+      "best_iou": 0.7187950057819278,
+      "source": "aligned_components",
+      "raw_text": "30686404",
+      "ms": 716.4787000001525
+    },
+    {
+      "file": "Tgmt_0667_png.rf.37ddf9cc7b9ea91fa30202128d02d15b.jpg",
+      "bbox": [
+        87,
+        362,
+        567,
+        554
+      ],
+      "best_iou": 0.8286001013774681,
+      "source": "aligned_components",
+      "raw_text": "30E93875",
+      "ms": 1508.6114999940037
+    },
+    {
+      "file": "Tgmt_0676_png.rf.3c426baeb44425df7bcfe3b3152c67d8.jpg",
+      "bbox": [
+        63,
+        396,
+        510,
+        519
+      ],
+      "best_iou": 0.8728933465944113,
+      "source": "white",
+      "raw_text": "51C97363",
+      "ms": 608.560500004387
+    },
+    {
+      "file": "Tgmt_0725_png.rf.434fcc5cc9f199fbcc0e8aa13759163e.jpg",
+      "bbox": [
+        175,
+        366,
+        489,
+        440
+      ],
+      "best_iou": 0.9377859797321879,
+      "source": "white",
+      "raw_text": "29A09586",
+      "ms": 1635.3926000010688
+    },
+    {
+      "file": "Tgmt_0847_png.rf.2c1907fe45e230bd1579f20b5ec067bc.jpg",
+      "bbox": [
+        242,
+        333,
+        345,
+        478
+      ],
+      "best_iou": 0.8135474608367039,
+      "source": "characters",
+      "raw_text": "360",
+      "ms": 1632.7688999954262
+    },
+    {
+      "file": "Tgmt_0748_png.rf.f98d1c797c1388290d51981a6503efdb.jpg",
+      "bbox": [
+        129,
+        421,
+        447,
+        524
+      ],
+      "best_iou": 0.8941005627155558,
+      "source": "white",
+      "raw_text": "30F20784",
+      "ms": 906.6536000027554
+    },
+    {
+      "file": "Tgmt_0745_png.rf.809afb6ff899f1722566dc917eae3258.jpg",
+      "bbox": null,
+      "best_iou": 0,
+      "source": null,
+      "raw_text": null,
+      "ms": 52.080999994359445
+    },
+    {
+      "file": "Tgmt_0564_png.rf.c6d63f3994c1b947575fdffcd9f3040c.jpg",
+      "bbox": [
+        236,
+        279,
+        364,
+        433
+      ],
+      "best_iou": 0.9612747251052045,
+      "source": "edges",
+      "raw_text": "36A0404",
+      "ms": 725.8715000061784
+    },
+    {
+      "file": "Tgmt_0650_png.rf.a12c67ecce46f80f18e5e0a2630957a0.jpg",
+      "bbox": [
+        271,
+        346,
+        428,
+        445
+      ],
+      "best_iou": 0.567686154542001,
+      "source": "aligned_components",
+      "raw_text": "4",
+      "ms": 163.55390000535408
+    },
+    {
+      "file": "Tgmt_0645_png.rf.10cf810f265a7ecd64825de5bf70571d.jpg",
+      "bbox": [
+        144,
+        421,
+        455,
+        547
+      ],
+      "best_iou": 0.8607443660368769,
+      "source": "aligned_components",
+      "raw_text": "30E75531",
+      "ms": 262.0790000000852
+    },
+    {
+      "file": "Tgmt_0699_png.rf.a1cabad0882bee43f9cb5ecc0949f6d0.jpg",
+      "bbox": [
+        211,
+        425,
+        542,
+        524
+      ],
+      "best_iou": 0.9134200757807636,
+      "source": "white",
+      "raw_text": "88LD00757",
+      "ms": 1292.7221999998437
+    },
+    {
+      "file": "Tgmt_0733_png.rf.50b2caeccd4e7dc156922b65e8dec6d0.jpg",
+      "bbox": [
+        124,
+        476,
+        338,
+        618
+      ],
+      "best_iou": 0.7828857780702914,
+      "source": "aligned_components",
+      "raw_text": "89581S6",
+      "ms": 609.5869000055245
+    },
+    {
+      "file": "Tgmt_0571_png.rf.0db7dacde06e40f7dff195f21f83a208.jpg",
+      "bbox": [
+        156,
+        182,
+        450,
+        308
+      ],
+      "best_iou": 0.8961020669524441,
+      "source": "aligned_components",
+      "raw_text": "30E38721",
+      "ms": 785.341899994819
+    },
+    {
+      "file": "Tgmt_0677_png.rf.5579d37c83c75d4171a738bb2113f5dc.jpg",
+      "bbox": [
+        167,
+        384,
+        491,
+        510
+      ],
+      "best_iou": 0.8776269114981383,
+      "source": "aligned_components",
+      "raw_text": "30A98846",
+      "ms": 2019.9451000007684
+    },
+    {
+      "file": "Tgmt_0760_png.rf.a0f75779a56b265e6c89bf8f15227a03.jpg",
+      "bbox": [
+        218,
+        418,
+        486,
+        507
+      ],
+      "best_iou": 0.9317679075490198,
+      "source": "aligned_components",
+      "raw_text": "29A09586",
+      "ms": 3116.5881999986595
+    },
+    {
+      "file": "Tgmt_0621_png.rf.4fff8d902fe52a133672b70421dd65e8.jpg",
+      "bbox": null,
+      "best_iou": 0,
+      "source": null,
+      "raw_text": null,
+      "ms": 279.62019999540644
+    },
+    {
+      "file": "Tgmt_0664_png.rf.73f181e17a8b1cbe7bf518ef029e07a2.jpg",
+      "bbox": [
+        124,
+        360,
+        532,
+        545
+      ],
+      "best_iou": 0.9577567524812353,
+      "source": "white",
+      "raw_text": "30E90955",
+      "ms": 1949.7182999984943
+    },
+    {
+      "file": "Tgmt_0747_png.rf.63c04fd4312b802678b057b57285732d.jpg",
+      "bbox": [
+        0,
+        0,
+        42,
+        54
+      ],
+      "best_iou": 0.0,
+      "source": "characters",
+      "raw_text": "5",
+      "ms": 465.2734000046621
+    },
+    {
+      "file": "Tgmt_0599_png.rf.09091d8af666429cb002bce9465a5b14.jpg",
+      "bbox": [
+        136,
+        359,
+        515,
+        569
+      ],
+      "best_iou": 0.8995678104343358,
+      "source": "white",
+      "raw_text": "30E40227",
+      "ms": 2509.4315000023926
+    },
+    {
+      "file": "Tgmt_0759_png.rf.6127677efbcbd3342750ddbf44175695.jpg",
+      "bbox": [
+        93,
+        275,
+        580,
+        487
+      ],
+      "best_iou": 0.7757422313161054,
+      "source": "aligned_components",
+      "raw_text": "30G27838",
+      "ms": 2050.835800000641
+    },
+    {
+      "file": "Tgmt_0804_png.rf.6c03a3957d72282c3ec1cc442e967d40.jpg",
+      "bbox": [
+        281,
+        287,
+        333,
+        342
+      ],
+      "best_iou": 0.7803432124918095,
+      "source": "edges",
+      "raw_text": "242I751",
+      "ms": 1228.5011999993003
+    },
+    {
+      "file": "Tgmt_0706_png.rf.72a187f1a89b6b90acadb7e5b12e6c59.jpg",
+      "bbox": [
+        281,
+        297,
+        420,
+        354
+      ],
+      "best_iou": 0.898389981843997,
+      "source": "white",
+      "raw_text": "30E05207",
+      "ms": 4800.3728999974555
+    },
+    {
+      "file": "Tgmt_0630_png.rf.3736a2f074b8eabc9f4e5311d8573c79.jpg",
+      "bbox": [
+        136,
+        351,
+        431,
+        478
+      ],
+      "best_iou": 0.8259069995269216,
+      "source": "white",
+      "raw_text": "30E66122",
+      "ms": 2791.4267999949516
+    },
+    {
+      "file": "Tgmt_0570_png.rf.1b0133f993737716ee5a90279bdd55ee.jpg",
+      "bbox": [
+        183,
+        235,
+        461,
+        333
+      ],
+      "best_iou": 0.8937024458776623,
+      "source": "aligned_components",
+      "raw_text": "30E38721",
+      "ms": 4445.266800001264
+    },
+    {
+      "file": "Tgmt_0632_png.rf.dda6d3c8773d23ba6dbfa982111f1a02.jpg",
+      "bbox": [
+        97,
+        314,
+        470,
+        476
+      ],
+      "best_iou": 0.8601075272564789,
+      "source": "aligned_components",
+      "raw_text": "29C6625",
+      "ms": 5908.53409999545
+    },
+    {
+      "file": "Tgmt_0738_png.rf.539a24f4937cecf610fd7d0ddfeb14f2.jpg",
+      "bbox": [
+        94,
+        239,
+        324,
+        411
+      ],
+      "best_iou": 0.821694204445703,
+      "source": "aligned_components",
+      "raw_text": "1909952",
+      "ms": 2534.0299000017694
+    },
+    {
+      "file": "Tgmt_0762_png.rf.4316711e7d8c8e2d55c7010e1d380cd8.jpg",
+      "bbox": [
+        173,
+        275,
+        465,
+        402
+      ],
+      "best_iou": 0.9131530083258727,
+      "source": "white",
+      "raw_text": "598",
+      "ms": 2984.3674000003375
+    },
+    {
+      "file": "Tgmt_0827_png.rf.b074c239dda92c1bb07c14d11595ebdd.jpg",
+      "bbox": [
+        520,
+        79,
+        640,
+        185
+      ],
+      "best_iou": 0.0,
+      "source": "white",
+      "raw_text": "S894",
+      "ms": 1389.5160000029136
+    },
+    {
+      "file": "Tgmt_0575_png.rf.a3771c0822eaee771acab10b4cf54293.jpg",
+      "bbox": [
+        147,
+        230,
+        433,
+        470
+      ],
+      "best_iou": 0.938189509136274,
+      "source": "edges",
+      "raw_text": "29H40433",
+      "ms": 1655.924500002584
+    },
+    {
+      "file": "Tgmt_0669_png.rf.3ad70db0027f9402ba2e64e61623722d.jpg",
+      "bbox": [
+        219,
+        261,
+        526,
+        592
+      ],
+      "best_iou": 0.9306193697534564,
+      "source": "white",
+      "raw_text": "95205",
+      "ms": 1512.8958000059356
+    },
+    {
+      "file": "Tgmt_0681_png.rf.5ac8b10333d560fde56f060a2bacc724.jpg",
+      "bbox": null,
+      "best_iou": 0,
+      "source": null,
+      "raw_text": null,
+      "ms": 116.36520000320161
+    },
+    {
+      "file": "Tgmt_0731_png.rf.6ab6db7a3f6af0a0f7e39cc0524693a1.jpg",
+      "bbox": [
+        214,
+        208,
+        433,
+        457
+      ],
+      "best_iou": 0.9645018429535607,
+      "source": "edges",
+      "raw_text": "89A1034",
+      "ms": 659.9932999961311
+    },
+    {
+      "file": "Tgmt_0643_png.rf.a04e2e6ff1a430d7617af47b43e19b37.jpg",
+      "bbox": [
+        119,
+        415,
+        254,
+        506
+      ],
+      "best_iou": 0.312885380199042,
+      "source": "characters",
+      "raw_text": "830A",
+      "ms": 817.9100999986986
+    },
+    {
+      "file": "Tgmt_0689_png.rf.f438e486d63e1e6c3e7ed4d9651a71fe.jpg",
+      "bbox": [
+        107,
+        466,
+        510,
+        598
+      ],
+      "best_iou": 0.92332970471464,
+      "source": "white",
+      "raw_text": "30G40304",
+      "ms": 3766.9297000029474
+    },
+    {
+      "file": "Tgmt_0635_png.rf.88f4b917c42754677d7a8525f9b29b47.jpg",
+      "bbox": [
+        120,
+        278,
+        591,
+        491
+      ],
+      "best_iou": 0.8283073695762687,
+      "source": "aligned_components",
+      "raw_text": "30F70179",
+      "ms": 525.5715000021155
+    },
+    {
+      "file": "Tgmt_0700_png.rf.2dd35fdbb6ef007242233dda0358c639.jpg",
+      "bbox": [
+        225,
+        240,
+        399,
+        426
+      ],
+      "best_iou": 0.9136689246557693,
+      "source": "edges",
+      "raw_text": "3024",
+      "ms": 1039.3966999981785
+    },
+    {
+      "file": "Tgmt_0695_png.rf.7a80286ecab14dde21365abc52ce3d56.jpg",
+      "bbox": null,
+      "best_iou": 0,
+      "source": null,
+      "raw_text": null,
+      "ms": 71.58720000006724
+    },
+    {
+      "file": "Tgmt_0696_png.rf.5dd99d784f1f1698a133806f87db1b3f.jpg",
+      "bbox": [
+        138,
+        449,
+        497,
+        585
+      ],
+      "best_iou": 0.9310965631058028,
+      "source": "white",
+      "raw_text": "89LD00275",
+      "ms": 917.4679000061587
+    },
+    {
+      "file": "Tgmt_0638_png.rf.752e6c53f772e34b422e6567bf623489.jpg",
+      "bbox": [
+        158,
+        343,
+        407,
+        453
+      ],
+      "best_iou": 0.6253070320451858,
+      "source": "edges",
+      "raw_text": "30A717",
+      "ms": 871.9400000045425
+    },
+    {
+      "file": "Tgmt_0618_png.rf.8337ae330c0828bcb067039c062915e4.jpg",
+      "bbox": [
+        142,
+        256,
+        505,
+        401
+      ],
+      "best_iou": 0.8964122043201469,
+      "source": "white",
+      "raw_text": "30F60898",
+      "ms": 1088.7339999972028
+    },
+    {
+      "file": "Tgmt_0588_png.rf.dfd3ff73f956deecb5d278cd1b049158.jpg",
+      "bbox": [
+        133,
+        466,
+        516,
+        640
+      ],
+      "best_iou": 0.917519655369617,
+      "source": "aligned_components",
+      "raw_text": "3M4253",
+      "ms": 2204.7987000041758
+    },
+    {
+      "file": "Tgmt_0595_png.rf.2ad8ea4e813acb14fba7535340a4f1a7.jpg",
+      "bbox": [
+        179,
+        344,
+        418,
+        450
+      ],
+      "best_iou": 0.9084590751164443,
+      "source": "white",
+      "raw_text": "30G46885",
+      "ms": 1774.6820999964257
+    },
+    {
+      "file": "Tgmt_0623_png.rf.b9abf8738c52c3bc383530069c146f0a.jpg",
+      "bbox": [
+        89,
+        484,
+        133,
+        542
+      ],
+      "best_iou": 0.008119336182493695,
+      "source": "edges",
+      "raw_text": "8",
+      "ms": 259.4061999989208
+    },
+    {
+      "file": "Tgmt_0715_png.rf.4febaae333501c41262063223dde2526.jpg",
+      "bbox": [
+        252,
+        432,
+        417,
+        603
+      ],
+      "best_iou": 0.9239020183517946,
+      "source": "white",
+      "raw_text": "99A08487",
+      "ms": 463.39950000401586
+    },
+    {
+      "file": "Tgmt_0624_png.rf.7c76f6cfe67edfe5998f040e96ae5a0a.jpg",
+      "bbox": [
+        132,
+        168,
+        526,
+        355
+      ],
+      "best_iou": 0.8929646330471971,
+      "source": "edges",
+      "raw_text": "30E63699",
+      "ms": 970.6315000003087
+    },
+    {
+      "file": "Tgmt_0719_png.rf.21f5a0c795ed7629a3d7474c66fe7d62.jpg",
+      "bbox": [
+        139,
+        352,
+        408,
+        435
+      ],
+      "best_iou": 0.817920651178742,
+      "source": "characters",
+      "raw_text": "30G09132",
+      "ms": 840.0040999986231
+    },
+    {
+      "file": "Tgmt_0736_png.rf.46a481151161859333c622211a235506.jpg",
+      "bbox": [
+        154,
+        369,
+        236,
+        400
+      ],
+      "best_iou": 0.0,
+      "source": "aligned_components",
+      "raw_text": "J",
+      "ms": 1565.2363000044716
+    },
+    {
+      "file": "Tgmt_0766_png.rf.ee99173570c4132defd182b31ea76ba2.jpg",
+      "bbox": [
+        122,
+        370,
+        469,
+        505
+      ],
+      "best_iou": 0.8603626806678103,
+      "source": "edges",
+      "raw_text": "30G27838",
+      "ms": 979.3822999999975
+    },
+    {
+      "file": "Tgmt_0768_png.rf.174786843c1e3db49736923a783dc0a1.jpg",
+      "bbox": [
+        0,
+        477,
+        125,
+        536
+      ],
+      "best_iou": 0.0,
+      "source": "aligned_components",
+      "raw_text": "5686",
+      "ms": 465.4300000038347
+    },
+    {
+      "file": "Tgmt_0572_png.rf.f668e2edd6abe56dc3bf9f5887d881cb.jpg",
+      "bbox": [
+        144,
+        425,
+        396,
+        556
+      ],
+      "best_iou": 0.48229911098567657,
+      "source": "aligned_components",
+      "raw_text": "3936",
+      "ms": 212.77490000647958
+    }
+  ]
+}

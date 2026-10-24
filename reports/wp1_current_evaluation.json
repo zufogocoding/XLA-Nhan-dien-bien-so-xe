@@ -1,0 +1,169 @@
+{
+  "tp": 124,
+  "fp": 17,
+  "fn": 48,
+  "images": 169,
+  "read_errors": 0,
+  "precision": 0.8794326241134752,
+  "recall": 0.7209302325581395,
+  "f1": 0.792332268370607,
+  "mean_ms": 145.82839230748914,
+  "median_ms": 132.11349999983213,
+  "iou_threshold": 0.5,
+  "max_candidates": 1,
+  "category": null,
+  "sample_failures": [
+    {
+      "file": "Tgmt_0616_png.rf.3805c9908f62bae023cd12894b3bcd8f.jpg",
+      "ground_truth": [
+        [
+          78,
+          267,
+          535.073,
+          620.821
+        ]
+      ],
+      "predicted": []
+    },
+    {
+      "file": "Tgmt_0608_png.rf.f502b8f9c904b8572d9540e63e20e2d7.jpg",
+      "ground_truth": [
+        [
+          194,
+          170,
+          413.512,
+          322.846
+        ]
+      ],
+      "predicted": []
+    },
+    {
+      "file": "Tgmt_0628_png.rf.55ae379bd68516e3c1c98c0540af8f7c.jpg",
+      "ground_truth": [
+        [
+          0,
+          55,
+          436.098,
+          503.78
+        ]
+      ],
+      "predicted": []
+    },
+    {
+      "file": "Tgmt_0789_png.rf.1531dbba2f9ab53f3c8e359880eb5711.jpg",
+      "ground_truth": [
+        [
+          202,
+          319,
+          312.73199999999997,
+          499.813
+        ]
+      ],
+      "predicted": [
+        [
+          406,
+          191,
+          477,
+          248
+        ]
+      ]
+    },
+    {
+      "file": "Tgmt_0666_png.rf.3344539639bc6c8e4c76eb34cfd3e40b.jpg",
+      "ground_truth": [
+        [
+          160,
+          302,
+          533.171,
+          635.008
+        ]
+      ],
+      "predicted": []
+    },
+    {
+      "file": "Tgmt_0734_png.rf.3afa6e4b9285693d925820e0fbe5214a.jpg",
+      "ground_truth": [
+        [
+          224,
+          391,
+          398.14599999999996,
+          582.22
+        ]
+      ],
+      "predicted": []
+    },
+    {
+      "file": "Tgmt_0627_png.rf.4d209a8cb7c5317a49939d9834c45e5d.jpg",
+      "ground_truth": [
+        [
+          248,
+          158,
+          369.951,
+          293.935
+        ]
+      ],
+      "predicted": [
+        [
+          254,
+          227,
+          367,
+          284
+        ]
+      ]
+    },
+    {
+      "file": "Tgmt_0746_png.rf.f23c0114587046d38615e13e8d453c7a.jpg",
+      "ground_truth": [
+        [
+          146,
+          415,
+          358.195,
+          508.008
+        ]
+      ],
+      "predicted": [
+        [
+          229,
+          425,
+          361,
+          500
+        ]
+      ]
+    },
+    {
+      "file": "Tgmt_0578_png.rf.0beb5c618c224c87471c03fc86fdd5fb.jpg",
+      "ground_truth": [
+        [
+          3,
+          72,
+          500.561,
+          444.033
+        ]
+      ],
+      "predicted": [
+        [
+          450,
+          459,
+          539,
+          517
+        ]
+      ]
+    },
+    {
+      "file": "Tgmt_0656_png.rf.52105e18f93aeda4c2f37dd7e2257a45.jpg",
+      "ground_truth": [
+        [
+          152,
+          349,
+          444.683,
+          596.154
+        ]
+      ],
+      "predicted": []
+    }
+  ],
+  "run_date": "2026-10-24",
+  "model": "models/wp1_svm.pkl",
+  "scikit_learn_version": "1.8.0",
+  "timing_scope": "find_candidates; first-image lazy model loading included; image decoding excluded"
+}

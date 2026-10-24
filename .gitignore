@@ -1,4 +1,51 @@
+# Local environments, caches and editor state
 .venv/
+venv/
 __pycache__/
+*.py[cod]
 .pytest_cache/
-outputs/
+.mypy_cache/
+.ruff_cache/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+
+# Uploads, databases, logs and intermediate work
+/outputs/
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.db
+*.log
+*.tmp
+
+# Downloaded/prepared datasets; do not untrack the dataset already in history
+/Vietnam License Plate.v2i.coco/
+/dataset_raw/
+/datasets/
+/data/external/
+/data/characters/
+/data/labels.csv
+/data/plates.json
+
+# Keep the models needed by the app and the public WP3 Python default.
+# Other trained experiment artifacts remain local and can be regenerated.
+/models/*.pkl
+/models/*.joblib
+!/models/wp1_svm.pkl
+!/models/svm_hog.pkl
+!/models/svm_hog_lbp.pkl
+
+# Machine-specific smoke responses, user-upload diagnostics and generated video
+/reports/local_*
+/reports/image_processing_user_cases.json
+/reports/image_processing_final_smoke.json
+/reports/image_processing_before_after.jpg
+/reports/image_processing_web.png
+/demo/video_demo.mp4

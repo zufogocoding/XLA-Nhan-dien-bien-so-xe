@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153d38">
+  <title>Biển số · Nhận diện phương tiện</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="Trang chủ"><span class="brand-mark">BS</span><span>biển số<span class="brand-sub">PHÒNG THỬ NGHIỆM</span></span></a>
+    <nav aria-label="Điều hướng chính">
+      <a href="#recognize" class="active">01 <span>Nhận diện</span></a>
+      <a href="#history">02 <span>Lịch sử</span></a>
+      <a href="#statistics">03 <span>Thống kê</span></a>
+    </nav>
+    <div class="sidebar-bottom"><span class="live-dot"></span> Phiên làm việc local<p>Ảnh và kết quả lưu trên máy này.</p></div>
+  </aside>
+  <main>
+    <header class="topbar"><span>XỬ LÝ ẢNH / BIỂN SỐ VIỆT NAM</span><span id="model-status" class="status-pill">Đang kết nối…</span></header>
+    <section id="recognize" aria-labelledby="main-heading">
+      <div class="heading-row"><div><p class="eyebrow">TỪ HÌNH ẢNH ĐẾN DỮ LIỆU</p><h1 id="main-heading">Đọc biển số.<br><span>Nhìn rõ từng bước.</span></h1></div><p class="intro">Tải ảnh, chọn một đoạn video<br>hoặc ghi nhận từ webcam.</p></div>
+      <div class="workspace">
+        <article class="panel upload-panel">
+          <div class="panel-heading"><span class="step">01</span><h2>Nguồn đầu vào</h2><span class="small-label">ẢNH / VIDEO</span></div>
+          <form id="upload-form">
+            <label class="drop-zone" id="drop-zone" for="file-input"><span class="upload-icon" aria-hidden="true">↑</span><strong id="file-label">Kéo thả tệp vào đây</strong><span>hoặc bấm để chọn từ máy tính</span><small>JPG, PNG, WebP · MP4, AVI, MOV</small><input id="file-input" type="file" accept="image/*,video/*" required></label>
+            <div class="form-row"><label for="vehicle-type">Loại phương tiện</label><select id="vehicle-type"><option value="unknown">Chưa xác định</option><option value="car">Ô tô</option><option value="motorcycle">Xe máy</option></select></div>
+            <button id="upload-button" class="primary" type="submit">Bắt đầu nhận diện <span aria-hidden="true">↗</span></button>
+          </form>
+          <div class="camera-controls"><button id="camera-open" class="secondary" type="button">Mở webcam</button><button id="camera-capture" class="secondary" type="button" disabled>Chụp & nhận diện</button><button id="camera-stop" class="text-button" type="button" hidden>Dừng</button></div>
+          <video id="camera" autoplay playsinline muted hidden aria-label="Hình ảnh webcam"></video>
+          <p id="message" class="message" role="status" aria-live="polite">Sẵn sàng nhận tệp đầu tiên.</p>
+        </article>
+        <article class="panel result-panel">
+          <div class="panel-heading"><span class="step">02</span><h2>Kết quả nhận diện</h2><span id="result-state" class="small-label">CHỜ ĐẦU VÀO</span></div>
+          <div id="empty-result" class="empty-result"><div class="plate-placeholder" aria-hidden="true">-- · -----</div><h3>Mỗi biển số, một hành trình.</h3><p>Ảnh gốc, vùng biển và các ký tự<br>sẽ xuất hiện tại đây.</p></div>
+          <div id="result-content" hidden>
+            <div class="result-title"><strong id="plate-text"></strong><span id="valid-state" class="status-pill"></span></div>
+            <p id="result-detail" class="muted"></p>
+            <div class="result-images"><figure><img id="source-image" alt="Ảnh đầu vào" hidden><figcaption>Ảnh đầu vào</figcaption></figure><figure><img id="crop-image" alt="Vùng biển số đã chỉnh" hidden><figcaption>Vùng biển đã cắt</figcaption></figure></div>
+            <div class="character-heading"><span>CÁC KÝ TỰ ĐÃ TÁCH</span><span id="char-count"></span></div><div id="characters" class="characters"></div>
+            <div class="result-metadata"><span id="raw-text"></span><span id="elapsed"></span></div>
+            <details id="processing-details" class="processing-details" hidden><summary>Xem các bước xử lý ảnh</summary><p id="processing-note" class="muted"></p><div id="processing-images" class="processing-grid"></div></details>
+          </div>
+        </article>
+      </div>
+      <div class="method-strip"><span>QUY TRÌNH</span><p>Phát hiện vùng biển <i>→</i> Tách ký tự <i>→</i> Nhận dạng <i>→</i> Kiểm tra định dạng</p></div>
+    </section>
+    <section id="statistics" class="stats-section" aria-labelledby="stats-heading"><div class="section-heading"><h2 id="stats-heading">Tổng quan phiên làm việc</h2><span class="muted">Từ lịch sử lưu trên máy</span></div><div class="stats-grid"><article><span>KẾT QUẢ ĐÃ LƯU</span><strong id="stat-total">0</strong></article><article><span>ĐÚNG MẪU & MÃ ĐĂNG KÝ</span><strong id="stat-valid">0</strong></article><article><span>CẦN KIỂM TRA</span><strong id="stat-review">0</strong></article></div><p class="footnote">Kiểm tra định dạng và mã đăng ký không xác nhận tính pháp lý của biển số. Các chỉ số trên là số lượt xử lý, không phải độ chính xác mô hình.</p></section>
+    <section id="history" aria-labelledby="history-heading"><div class="section-heading"><h2 id="history-heading">Lịch sử nhận diện <span id="history-count" class="count-badge">0</span></h2><div class="history-actions"><label class="sr-only" for="search">Tìm biển số</label><input id="search" placeholder="Tìm biển số…" maxlength="30"><button id="refresh" class="secondary" type="button">Làm mới</button></div></div><div class="table-wrap"><table><thead><tr><th>Biển số</th><th>Địa phương</th><th>Thời gian</th><th>Trạng thái</th><th><span class="sr-only">Thao tác</span></th></tr></thead><tbody id="history-body"><tr><td colspan="5" class="empty-history">Chưa có kết quả được lưu.</td></tr></tbody></table></div><div class="pagination"><button id="previous" class="text-button" type="button" disabled>← Trước</button><span id="page-info"></span><button id="next" class="text-button" type="button" disabled>Sau →</button></div></section>
+    <footer>BIỂN SỐ LAB <span>OpenCV · HOG / LBP · Bộ phân loại ký tự</span></footer>
+  </main>
+  <dialog id="edit-dialog"><form id="edit-form"><h2>Kiểm tra kết quả</h2><p>Nhập lại biển số đã đọc từ ảnh gốc.</p><label for="edit-text">Biển số</label><input id="edit-text" maxlength="30" required><div class="dialog-actions"><button id="edit-cancel" class="secondary" type="button">Hủy</button><button class="primary" type="submit">Lưu chỉnh sửa</button></div></form></dialog>
+</body>
+</html>

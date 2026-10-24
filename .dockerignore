@@ -1,0 +1,26 @@
+.git
+.venv
+__pycache__
+**/__pycache__
+.pytest_cache
+.env
+.env.*
+.idea
+.vscode
+*.log
+*.sqlite*
+*.db
+outputs
+Vietnam License Plate.v2i.coco
+data/external
+data/characters
+data/labels.csv
+data/plates.json
+dataset_raw
+datasets
+reports
+tests
+demo
+models/knn.pkl
+models/rf.pkl
+models/svm_lbp.pkl
