@@ -21,6 +21,24 @@ Tạo lại sau khi upload video qua API và cập nhật báo cáo smoke test:
 Ảnh giao diện bản local đã kiểm tra: `../reports/local_web_demo.png`.
 Kết quả kiểm tra video xuất ra: `../reports/local_video_demo_validation.json`.
 
+## Demo nhiều biển trong một ảnh
+
+```bash
+python scripts/demo_multi_plate.py "duong-dan-anh.jpg"
+```
+
+Lệnh ghi `annotated.jpg`, crop/template từng biển và `result.json` dưới
+`outputs/multi_plate/<tên-ảnh>/`. Ảnh mẫu đã tạo:
+
+- `multi_plate_real_result.jpg`: ảnh thật 2 biển, đọc đúng `59B-491.36` và
+  `60B6-087.83`.
+- `multi_plate_collage_input.jpg` / `multi_plate_collage_result.jpg`: collage
+  4 ảnh, tìm 8/8 box nhưng chỉ 4/8 chuỗi đúng định dạng.
+
+Đây là kiểm tra chức năng trên ảnh train, không phải benchmark accuracy.
+Số đo localization và chẩn đoán nằm trong
+[reports/multi_plate_diagnosis.md](../reports/multi_plate_diagnosis.md).
+
 Kịch bản quay web theo WP4, khi người dùng sẵn sàng thử camera thật:
 
 1. Giới thiệu bốn giai đoạn; nói rõ đây là baseline và số đo nguyên biển.

@@ -22,6 +22,30 @@ def detect_plate(image_path: str | Path) -> dict | None:
     return detect_plate_image(image)
 
 
+def detect_plates(image_path: str | Path, *, max_plates: int = 10) -> list[dict]:
+    """Return ranked WP1 candidates for images that contain several plates.
+
+    This is still standalone WP1: no segmentation or OCR is used. The
+    application-level multi-plate reader lives in ``src.multi_plate``.
+    """
+    path = Path(image_path)
+    image = cv2.imdecode(np.fromfile(path, dtype=np.uint8), cv2.IMREAD_COLOR)
+    if image is None:
+        raise ValueError(f"cannot read image: {path}")
+    return detect_plates_image(image, max_plates=max_plates)
+
+
+def _candidate_result(image: np.ndarray, chosen) -> dict:
+    x1, y1, x2, y2 = chosen.bbox
+    crop = image[y1:y2, x1:x2].copy()
+    normalized, angle = _normalize(crop, chosen.corners - np.array([x1, y1], np.float32))
+    return {
+        'plate_crop': crop, 'plate_normalized': normalized,
+        'bbox': list(chosen.bbox), 'angle': angle,
+        'confidence': min(1., chosen.score),
+    }
+
+
 def detect_plate_image(image: np.ndarray, *, classifier=None) -> dict | None:
     """Run standalone WP1, independently of segmentation and OCR.
 
@@ -35,15 +59,15 @@ def detect_plate_image(image: np.ndarray, *, classifier=None) -> dict | None:
     candidates = find_candidates(image, max_candidates=3)
     if not candidates:
         return None
-    chosen = candidates[0]
-    x1, y1, x2, y2 = chosen.bbox
-    crop = image[y1:y2, x1:x2].copy()
-    normalized, angle = _normalize(crop, chosen.corners - np.array([x1, y1], np.float32))
-    return {
-        'plate_crop': crop, 'plate_normalized': normalized,
-        'bbox': list(chosen.bbox), 'angle': angle,
-        'confidence': min(1., chosen.score),
-    }
+    return _candidate_result(image, candidates[0])
+
+
+def detect_plates_image(image: np.ndarray, *, max_plates: int = 10) -> list[dict]:
+    """Run standalone WP1 and return up to ``max_plates`` ranked proposals."""
+    if not 1 <= max_plates <= 30:
+        raise ValueError("max_plates must be between 1 and 30")
+    candidates = find_candidates(image, max_candidates=max_plates)
+    return [_candidate_result(image, candidate) for candidate in candidates[:max_plates]]
 
 
 def _normalize(crop: np.ndarray, local_corners: np.ndarray) -> tuple[np.ndarray, float]:

@@ -3,7 +3,9 @@
 Pipeline OpenCV truyền thống: **WP1 phát hiện biển → WP2 tách ký tự → WP3
 HOG/LBP + classifier → WP4 sửa chuỗi, kiểm tra mẫu và lưu SQLite**. Có giao
 diện HTML + JavaScript, FastAPI, upload ảnh/video, lịch sử, thống kê, sửa kết
-quả và chụp từ webcam. Đây là baseline, chưa đạt toàn bộ mục tiêu accuracy.
+quả và chụp từ webcam. Có thêm chế độ đọc **nhiều biển trong một ảnh** ở lớp
+ứng dụng, không thay hợp đồng WP1 một biển. Đây là baseline, chưa đạt toàn bộ
+mục tiêu accuracy.
 
 **Đã sửa lỗi cắt nhầm logo và mất dòng ký tự ngày 24/10/2026.** Trên 478
 crop test: đúng nguyên chuỗi 48,74% → 69,46%, recall box ký tự 76,79% →
@@ -112,6 +114,39 @@ WP2–WP4 đã có mã baseline và báo cáo; các mục chưa đạt được 
 bảng tiến độ. Thử nới ngưỡng diện tích WP1 trên valid làm F1 giảm, nên giữ
 mặc định: [báo cáo thử nghiệm](reports/wp1_validation_tuning.md).
 
+## Ảnh có nhiều biển
+
+`src/multi_plate.py` là lớp ứng dụng: lấy proposal WP1 (thêm tile cho ảnh lớn),
+chạy WP2–WP4 cho từng vùng, lọc theo confidence/định dạng và khử trùng lặp.
+WP1 độc lập vẫn giữ `detect_plate()` trả tối đa một biển. Có thêm
+`detect_plates_image()` để lấy danh sách proposal WP1 thuần, không OCR.
+
+```bash
+python scripts/demo_multi_plate.py "duong-dan-anh.jpg"
+python scripts/evaluate_multi_plate.py --min-plate-area 0.01 \
+  --output reports/wp_multi_plate_evaluation_prominent.json
+```
+
+Demo ghi ảnh đánh dấu, crop từng biển và `result.json` dưới
+`outputs/multi_plate/`. Trên web, bật **Ảnh có nhiều biển số** trước khi upload;
+API tương ứng là `POST /api/upload/image/multi` với form `max_plates`.
+
+Đo box trên valid, IoU ≥ 0,5, không có nhãn chuỗi:
+
+| Tập | Ảnh | Box GT | TP / FP / FN | Precision | Recall | F1 |
+|---|---:|---:|---:|---:|---:|---:|
+| Mọi box | 118 | 286 | 94 / 9 / 192 | 0,913 | 0,329 | 0,483 |
+| Box ≥1% diện tích ảnh | 23 | 47 | 28 / 2 / 19 | 0,933 | 0,596 | 0,727 |
+
+Toàn bộ valid có nhiều biển nền rất nhỏ nên recall thấp; tập prominent mới phản
+ánh biển chính. Top-1 trên tập prominent chỉ đạt F1 0,523, nên thứ hạng biển
+phụ vẫn là hạn chế. Test chỉ có 3 ảnh / 6 box nhiều biển, không dùng để chỉnh
+threshold. Demo thật 2 biển đọc đúng cả hai; collage 4 ảnh tìm đủ 8/8 box nhưng
+chỉ 4/8 chuỗi đúng định dạng. Đây là kiểm tra chức năng, không phải benchmark.
+
+Chẩn đoán đầy đủ vì sao WP1/OCR còn thấp, gồm top-10 oracle và giới hạn
+diện tích 30%: [reports/multi_plate_diagnosis.md](reports/multi_plate_diagnosis.md).
+
 ## Cài đặt
 
 ```powershell
@@ -145,6 +180,17 @@ result = detect_plate(image_path)  # None nếu không có ứng viên
 
 `detect_plate` trả về dict gồm `plate_crop`, `plate_normalized` (mảng BGR), `bbox=[x1,y1,x2,y2]` theo tọa độ ảnh gốc, `angle` theo độ và `confidence` là điểm heuristic từ 0 đến 1.
 
+Đọc nhiều biển trong một ảnh:
+
+```bash
+python scripts/demo_multi_plate.py "duong-dan-anh.jpg" --max-plates 10
+```
+
+Kết quả gồm `count`, `elapsed_ms`, `annotated_image` và danh sách `plates` với
+`bbox`, `plate_text`, `is_valid`, `recognition_confidence`, `status`. Dùng
+`--text-regions auto|on|off` để điều khiển fallback vùng ký tự; mặc định chỉ
+fallback khi contour không tìm thấy biển.
+
 ## Đánh giá
 
 Đo trên nhãn COCO:
@@ -152,6 +198,14 @@ result = detect_plate(image_path)  # None nếu không có ứng viên
 ```powershell
 .\.venv\Scripts\python.exe evaluate_wp1.py 'Vietnam License Plate.v2i.coco\test'
 .\.venv\Scripts\python.exe -m pytest -q
+```
+
+Chẩn đoán lỗi WP1 và đo nhiều biển:
+
+```bash
+python scripts/diagnose_wp1_failures.py
+python scripts/evaluate_multi_plate.py --min-plate-area 0.01 \
+  --output reports/wp_multi_plate_evaluation_prominent.json
 ```
 
 Xem [khảo sát dataset](eda_report.md).
@@ -164,6 +218,8 @@ và [model đi kèm](models/README.md).
 
 - [Ảnh before/after](demo/wp1_before_after.png): ảnh gốc, box dự đoán, vùng biển đã cắt, chỉnh phối cảnh, chuyển xám, CLAHE và lọc bilateral.
 - [Ảnh minh họa HOG](demo/hog_character.png): giải thích gradient, histogram theo ô 8×8 cho WP3.
+- [Demo 2 biển thật](demo/multi_plate_real_result.jpg) và
+  [collage 4 ảnh](demo/multi_plate_collage_result.jpg): box đánh số và chuỗi đọc được.
 - Ảnh giao diện local: `reports/local_web_demo.png` (tạo local, không đưa lên Git).
 - Video kết quả thật có chú thích: `demo/video_demo.mp4` (tạo local, không đưa lên Git). Cài `requirements-demo.txt`,
   rồi chạy `.\.venv\Scripts\python.exe -m demo.make_video_demo` sau khi xử lý

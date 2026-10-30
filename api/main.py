@@ -70,6 +70,25 @@ def create_app(runtime: Path | None = None, model_dir: Path | None = None) -> Fa
             path.unlink(missing_ok=True)
             raise HTTPException(400, str(exc)) from exc
 
+    @app.post("/api/upload/image/multi")
+    async def upload_image_multi(
+        file: UploadFile = File(...),
+        vehicle_type: str = Form("unknown"),
+        max_plates: int = Form(10, ge=1, le=20),
+    ):
+        hint(vehicle_type)
+        path = await save_upload(file, "image")
+        try:
+            return await run_in_threadpool(
+                service.process_image_multi,
+                path,
+                vehicle_type=vehicle_type,
+                max_plates=max_plates,
+            )
+        except ValueError as exc:
+            path.unlink(missing_ok=True)
+            raise HTTPException(400, str(exc)) from exc
+
     @app.post("/api/upload/video")
     async def upload_video(file: UploadFile = File(...), vehicle_type: str = Form("unknown"), stride: int = Form(5, ge=1, le=60)):
         hint(vehicle_type)

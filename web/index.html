@@ -28,6 +28,7 @@
           <form id="upload-form">
             <label class="drop-zone" id="drop-zone" for="file-input"><span class="upload-icon" aria-hidden="true">↑</span><strong id="file-label">Kéo thả tệp vào đây</strong><span>hoặc bấm để chọn từ máy tính</span><small>JPG, PNG, WebP · MP4, AVI, MOV</small><input id="file-input" type="file" accept="image/*,video/*" required></label>
             <div class="form-row"><label for="vehicle-type">Loại phương tiện</label><select id="vehicle-type"><option value="unknown">Chưa xác định</option><option value="car">Ô tô</option><option value="motorcycle">Xe máy</option></select></div>
+            <div class="form-row check-row"><label for="multi-plate">Ảnh có nhiều biển số</label><input id="multi-plate" type="checkbox"></div>
             <button id="upload-button" class="primary" type="submit">Bắt đầu nhận diện <span aria-hidden="true">↗</span></button>
           </form>
           <div class="camera-controls"><button id="camera-open" class="secondary" type="button">Mở webcam</button><button id="camera-capture" class="secondary" type="button" disabled>Chụp & nhận diện</button><button id="camera-stop" class="text-button" type="button" hidden>Dừng</button></div>
@@ -44,6 +45,12 @@
             <div class="character-heading"><span>CÁC KÝ TỰ ĐÃ TÁCH</span><span id="char-count"></span></div><div id="characters" class="characters"></div>
             <div class="result-metadata"><span id="raw-text"></span><span id="elapsed"></span></div>
             <details id="processing-details" class="processing-details" hidden><summary>Xem các bước xử lý ảnh</summary><p id="processing-note" class="muted"></p><div id="processing-images" class="processing-grid"></div></details>
+          </div>
+          <div id="multi-result" hidden>
+            <div class="result-title"><strong>NHIỀU BIỂN SỐ</strong><span id="multi-count" class="status-pill"></span></div>
+            <p class="muted">Ảnh đã đánh dấu mọi vùng biển tìm được. Bấm một dòng để xem chi tiết.</p>
+            <figure class="multi-annotated"><img id="multi-annotated" alt="Ảnh đã đánh dấu các biển số" hidden><figcaption>Ảnh đánh dấu</figcaption></figure>
+            <div id="multi-list" class="multi-list"></div>
           </div>
         </article>
       </div>

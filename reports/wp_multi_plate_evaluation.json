@@ -1,0 +1,4123 @@
+{
+  "split": "/home/trongzufo/pj/XLA/XLA-Nhan-dien-bien-so-xe/Vietnam License Plate.v2i.coco/valid",
+  "images": 118,
+  "min_boxes": 2,
+  "min_plate_area": 0.0,
+  "iou_threshold": 0.5,
+  "scope": "multi-plate box localization; no OCR text labels; predictions may include unannotated background plates",
+  "elapsed_seconds": 63.532286659999954,
+  "mean_seconds_per_image": 0.5384092089830504,
+  "multi": {
+    "tp": 94,
+    "fp": 9,
+    "fn": 192,
+    "precision": 0.912621359223301,
+    "recall": 0.32867132867132864,
+    "f1": 0.4832904884318766,
+    "images_all_boxes_recalled": 15
+  },
+  "top1": {
+    "tp": 73,
+    "fp": 7,
+    "fn": 213,
+    "precision": 0.9125,
+    "recall": 0.25524475524475526,
+    "f1": 0.3989071038251366
+  },
+  "cases": [
+    {
+      "file": "Dieu_0137_png.rf.bda200e2eeedb9255a2c0b301a0422c9.jpg",
+      "ground_truth": [
+        [
+          76,
+          309,
+          120.86,
+          364.826
+        ],
+        [
+          538,
+          373,
+          563.421,
+          398.919
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Dieu_0265_png.rf.b8c9569fcdb41130de9a380dc3547fd3.jpg",
+      "ground_truth": [
+        [
+          51,
+          275,
+          126.265,
+          300.254
+        ],
+        [
+          491,
+          413,
+          558.788,
+          468.826
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            489,
+            408,
+            562,
+            468
+          ],
+          "plate_text": "76B1-172.04",
+          "raw_text": "768117204",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0042_png.rf.78c0a1dff2adb32ae03096f242c469be.jpg",
+      "ground_truth": [
+        [
+          119,
+          221,
+          211.567,
+          316.632
+        ],
+        [
+          478,
+          411,
+          588.345,
+          515.623
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            476,
+            395,
+            591,
+            519
+          ],
+          "plate_text": "59X1-953.30",
+          "raw_text": "59X195330",
+          "is_valid": true,
+          "status": "recognized"
+        },
+        {
+          "bbox": [
+            119,
+            225,
+            212,
+            315
+          ],
+          "plate_text": "54X-103.69",
+          "raw_text": "54X10369",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "file": "Dieu_0103_png.rf.7577c709ca4c632578e9c88acffbf471.jpg",
+      "ground_truth": [
+        [
+          147,
+          340,
+          191.138,
+          375.964
+        ],
+        [
+          290,
+          368,
+          336.59000000000003,
+          406.416
+        ],
+        [
+          558,
+          245,
+          582.521,
+          264.617
+        ],
+        [
+          504,
+          184,
+          527.908,
+          201.165
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            114,
+            336,
+            197,
+            384
+          ],
+          "plate_text": "51X-529.53",
+          "raw_text": "51X52953",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 0,
+      "fp": 1,
+      "fn": 4
+    },
+    {
+      "file": "Dieu_0196_png.rf.429c79622742a41e8c968ba94694cf2c.jpg",
+      "ground_truth": [
+        [
+          161,
+          472,
+          223.804,
+          519.186
+        ],
+        [
+          540,
+          323,
+          611.277,
+          373.509
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0037_png.rf.fd7f2d56acd7c972234f0a7e9facf883.jpg",
+      "ground_truth": [
+        [
+          54,
+          413,
+          134.857,
+          453.609
+        ],
+        [
+          441,
+          296,
+          532.686,
+          331.195
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            148,
+            0,
+            312,
+            27
+          ],
+          "plate_text": "14G-0000",
+          "raw_text": "1460000",
+          "is_valid": true,
+          "status": "needs_review"
+        },
+        {
+          "bbox": [
+            437,
+            298,
+            541,
+            331
+          ],
+          "plate_text": null,
+          "raw_text": "77369942",
+          "is_valid": false,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 1,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0494_png.rf.5af8a0386a3f284c2d1eeae091daea70.jpg",
+      "ground_truth": [
+        [
+          132,
+          200,
+          236.174,
+          303.01099999999997
+        ],
+        [
+          402,
+          297,
+          494.71,
+          396.024
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            401,
+            298,
+            493,
+            396
+          ],
+          "plate_text": "61I2-167.51",
+          "raw_text": "611216751",
+          "is_valid": true,
+          "status": "recognized"
+        },
+        {
+          "bbox": [
+            134,
+            202,
+            237,
+            291
+          ],
+          "plate_text": "62E-130.23",
+          "raw_text": "62E13023",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "file": "Hung_0062_png.rf.8df576cb9a6076c00d334d93a3784659.jpg",
+      "ground_truth": [
+        [
+          153,
+          332,
+          254.587,
+          388.315
+        ],
+        [
+          270,
+          394,
+          391.021,
+          447.665
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            264,
+            388,
+            396,
+            449
+          ],
+          "plate_text": "77K1-381.54",
+          "raw_text": "77K138154",
+          "is_valid": true,
+          "status": "recognized"
+        },
+        {
+          "bbox": [
+            148,
+            331,
+            257,
+            389
+          ],
+          "plate_text": null,
+          "raw_text": "3X631933",
+          "is_valid": false,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "file": "Dieu_0366_png.rf.536f96a35d5c398bb908c3e0464c7daf.jpg",
+      "ground_truth": [
+        [
+          260,
+          289,
+          395.40700000000004,
+          346.812
+        ],
+        [
+          428,
+          346,
+          533.076,
+          401.369
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            253,
+            280,
+            398,
+            363
+          ],
+          "plate_text": "62I-6125",
+          "raw_text": "6216125",
+          "is_valid": true,
+          "status": "needs_review"
+        },
+        {
+          "bbox": [
+            426,
+            345,
+            535,
+            403
+          ],
+          "plate_text": "37Z-0099",
+          "raw_text": "3720099",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "file": "Dieu_0083_png.rf.10cdc17bd81b5185a67c84d03749fd35.jpg",
+      "ground_truth": [
+        [
+          69,
+          499,
+          126.819,
+          522.925
+        ],
+        [
+          464,
+          497,
+          486.928,
+          514.944
+        ],
+        [
+          580,
+          480,
+          597.944,
+          497.279
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            64,
+            494,
+            148,
+            528
+          ],
+          "plate_text": "51S-8216",
+          "raw_text": "5158216",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 0,
+      "fp": 1,
+      "fn": 3
+    },
+    {
+      "file": "Dieu_0278_png.rf.b0303fca53e68dbfd2144ae46fe472e7.jpg",
+      "ground_truth": [
+        [
+          53,
+          410,
+          157.957,
+          470.952
+        ],
+        [
+          536,
+          278,
+          591.371,
+          305.826
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            49,
+            408,
+            163,
+            472
+          ],
+          "plate_text": "59X4-111.42",
+          "raw_text": "59X411142",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0343_png.rf.3fd042166fa3a97849d852b393c3294f.jpg",
+      "ground_truth": [
+        [
+          32,
+          485,
+          121.397,
+          559.497
+        ],
+        [
+          475,
+          467,
+          540.524,
+          530.6610000000001
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            31,
+            484,
+            122,
+            561
+          ],
+          "plate_text": "55X-200.65",
+          "raw_text": "55X20065",
+          "is_valid": true,
+          "status": "recognized"
+        },
+        {
+          "bbox": [
+            445,
+            470,
+            547,
+            527
+          ],
+          "plate_text": "49E2-019.24",
+          "raw_text": "49E201924",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "file": "Dieu_0288_png.rf.5c2c05c4c29854109db0a8ddd5ad00b4.jpg",
+      "ground_truth": [
+        [
+          114,
+          316,
+          159.857,
+          348.565
+        ],
+        [
+          545,
+          267,
+          585.374,
+          293.584
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0231_png.rf.cc5a5cf6a1c3d9a7e7f4ba7a0a336160.jpg",
+      "ground_truth": [
+        [
+          56,
+          254,
+          120.798,
+          302.515
+        ],
+        [
+          175,
+          458,
+          257.243,
+          526.453
+        ],
+        [
+          524,
+          254,
+          565.371,
+          292.546
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            181,
+            462,
+            255,
+            521
+          ],
+          "plate_text": "59E-1858",
+          "raw_text": "59E1B58",
+          "is_valid": true,
+          "status": "needs_review"
+        },
+        {
+          "bbox": [
+            57,
+            262,
+            121,
+            301
+          ],
+          "plate_text": null,
+          "raw_text": "9U979348",
+          "is_valid": false,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0273_png.rf.48a3570a01e5b7adee688b2f109c8258.jpg",
+      "ground_truth": [
+        [
+          114,
+          436,
+          166.835,
+          472.552
+        ],
+        [
+          488,
+          363,
+          519.402,
+          386.261
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0200_png.rf.11cddded64e43bf9463e7dc93e3d78aa.jpg",
+      "ground_truth": [
+        [
+          47,
+          242,
+          112.844,
+          300.601
+        ],
+        [
+          368,
+          394,
+          479.495,
+          476.305
+        ],
+        [
+          444,
+          31,
+          487.896,
+          63.922
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            45,
+            245,
+            114,
+            301
+          ],
+          "plate_text": "55B7-168.84",
+          "raw_text": "558716884",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0370_png.rf.3c08a3d477d1a4b06f5b4d802841481a.jpg",
+      "ground_truth": [
+        [
+          123,
+          377,
+          228.316,
+          429.658
+        ],
+        [
+          402,
+          64,
+          460.509,
+          89.654
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            131,
+            379,
+            220,
+            425
+          ],
+          "plate_text": "59E1-961.88",
+          "raw_text": "59E196188",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0380_png.rf.9f0ad49e2fbe27d1f31cd661e3b35b71.jpg",
+      "ground_truth": [
+        [
+          454,
+          292,
+          523.311,
+          329.131
+        ],
+        [
+          129,
+          408,
+          246.018,
+          464.034
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            438,
+            291,
+            525,
+            328
+          ],
+          "plate_text": "49E1-224.08",
+          "raw_text": "49E122408",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0414_png.rf.a30636e035e3b983c99da7a80766c2d8.jpg",
+      "ground_truth": [
+        [
+          144,
+          466,
+          177.016,
+          497.153
+        ],
+        [
+          359,
+          329,
+          375.762,
+          344.577
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0432_png.rf.f0feeb3eaf7df357cc6ede01daeeb711.jpg",
+      "ground_truth": [
+        [
+          86,
+          431,
+          151.524,
+          496.016
+        ],
+        [
+          500,
+          172,
+          523.873,
+          195.026
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0302_png.rf.87991b5bcaf8e60dccae43b09ec05d8a.jpg",
+      "ground_truth": [
+        [
+          258,
+          242,
+          358.81600000000003,
+          285.882
+        ],
+        [
+          92,
+          157,
+          148.709,
+          188.73
+        ],
+        [
+          518,
+          153,
+          578.309,
+          183.38
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            255,
+            240,
+            357,
+            287
+          ],
+          "plate_text": "59T-280.67",
+          "raw_text": "59728067",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0278_png.rf.d03b91afe2cffb6df8067408d288ce74.jpg",
+      "ground_truth": [
+        [
+          57,
+          419,
+          152.404,
+          469.352
+        ],
+        [
+          374,
+          169,
+          495.905,
+          195.501
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            359,
+            165,
+            499,
+            198
+          ],
+          "plate_text": null,
+          "raw_text": "1F92401",
+          "is_valid": false,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0005_png.rf.8bd585edb1af2f333debd3513d04bcc0.jpg",
+      "ground_truth": [
+        [
+          124,
+          475,
+          166.299,
+          506.06
+        ],
+        [
+          552,
+          478,
+          567.939,
+          493.53
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0191_png.rf.c599a8dff29163a87f478d12dc2dc237.jpg",
+      "ground_truth": [
+        [
+          3,
+          326,
+          107.472,
+          412.914
+        ],
+        [
+          463,
+          458,
+          622.781,
+          559.399
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0080_png.rf.c59e946310ee26512856c42cad1ee521.jpg",
+      "ground_truth": [
+        [
+          42,
+          201,
+          114.867,
+          234.57999999999998
+        ],
+        [
+          509,
+          250,
+          597.669,
+          284.239
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            38,
+            202,
+            120,
+            237
+          ],
+          "plate_text": "60C-528.11",
+          "raw_text": "60C52811",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0130_png.rf.21555367510b9350a0d538428fdcf86f.jpg",
+      "ground_truth": [
+        [
+          136,
+          426,
+          183.85,
+          472.521
+        ],
+        [
+          342,
+          335,
+          376.39300000000003,
+          370.223
+        ],
+        [
+          550,
+          257,
+          579.408,
+          281.59
+        ],
+        [
+          484,
+          210,
+          512.91,
+          235.254
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 4
+    },
+    {
+      "file": "Dieu_0087_png.rf.441e37425ba7aa166d31315826d5d636.jpg",
+      "ground_truth": [
+        [
+          17,
+          423,
+          71.163,
+          446.613
+        ],
+        [
+          350,
+          334,
+          385.748,
+          352.728
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            0,
+            414,
+            73,
+            447
+          ],
+          "plate_text": "68O1-455.44",
+          "raw_text": "680145544",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0125_png.rf.55e52193b0ba4b41f2e5e23aaac0696c.jpg",
+      "ground_truth": [
+        [
+          76,
+          451,
+          116.374,
+          498.85
+        ],
+        [
+          263,
+          495,
+          308.358,
+          547.503
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Dieu_0112_png.rf.9e6fa1a3d86d361e6ec8ad4afd9e430a.jpg",
+      "ground_truth": [
+        [
+          122,
+          467,
+          183.916,
+          526.668
+        ],
+        [
+          588,
+          141,
+          608.843,
+          161.434
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            122,
+            466,
+            183,
+            527
+          ],
+          "plate_text": "47I1-956.52",
+          "raw_text": "471195652",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0166_png.rf.1c95ecac6d4e5aadf9e1105535e309a2.jpg",
+      "ground_truth": [
+        [
+          275,
+          420,
+          323.585,
+          446.501
+        ],
+        [
+          349,
+          414,
+          421.43600000000004,
+          449.776
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Dieu_0389_png.rf.2fa302de02a2b59c78a4cae88a4078bf.jpg",
+      "ground_truth": [
+        [
+          417,
+          343,
+          503.853,
+          380.455
+        ],
+        [
+          122,
+          248,
+          155.656,
+          267.54200000000003
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            415,
+            346,
+            504,
+            379
+          ],
+          "plate_text": "59F2-246.43",
+          "raw_text": "59F224643",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0077_png.rf.3c89b0a6123ac26075b99c1da5a85895.jpg",
+      "ground_truth": [
+        [
+          25,
+          339,
+          98.769,
+          412.769
+        ],
+        [
+          371,
+          278,
+          411.374,
+          315.217
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            26,
+            338,
+            98,
+            411
+          ],
+          "plate_text": "86B4-578.18",
+          "raw_text": "868457818",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0113_png.rf.b8beb617aed31a15d2d226eecfd47020.jpg",
+      "ground_truth": [
+        [
+          78,
+          336,
+          134.398,
+          360.521
+        ],
+        [
+          244,
+          377,
+          280.169,
+          416.234
+        ],
+        [
+          456,
+          443,
+          505.655,
+          494.494
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            456,
+            442,
+            507,
+            494
+          ],
+          "plate_text": "67L1-394.76",
+          "raw_text": "67L139476",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Dieu_0383_png.rf.f5d4486a866006ffb2c40270b91f19fa.jpg",
+      "ground_truth": [
+        [
+          119,
+          326,
+          158.084,
+          347.17
+        ],
+        [
+          303,
+          458,
+          396.367,
+          507.669
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            302,
+            458,
+            395,
+            507
+          ],
+          "plate_text": "38L1-231.57",
+          "raw_text": "38L123157",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0306_png.rf.8ae5e5c32c78aa0fcaf9f9cb32b15290.jpg",
+      "ground_truth": [
+        [
+          151,
+          285,
+          263.254,
+          324.28
+        ],
+        [
+          544,
+          365,
+          593.27,
+          416.471
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            137,
+            283,
+            271,
+            329
+          ],
+          "plate_text": "47A-436.47",
+          "raw_text": "47A43647",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0293_png.rf.b4fe4b39250de724d58ef09c8301efd7.jpg",
+      "ground_truth": [
+        [
+          13,
+          338,
+          92.212,
+          379.181
+        ],
+        [
+          258,
+          237,
+          298.506,
+          259.278
+        ],
+        [
+          558,
+          258,
+          608.408,
+          283.654
+        ],
+        [
+          421,
+          191,
+          466.007,
+          211.253
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            451,
+            52,
+            514,
+            89
+          ],
+          "plate_text": "51O-132.71",
+          "raw_text": "51013271",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 0,
+      "fp": 1,
+      "fn": 4
+    },
+    {
+      "file": "Hung_0354_png.rf.2338973e5aff342f4058947d41df08cc.jpg",
+      "ground_truth": [
+        [
+          327,
+          444,
+          394.556,
+          507.661
+        ],
+        [
+          188,
+          155,
+          237.778,
+          205.11599999999999
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            187,
+            152,
+            240,
+            207
+          ],
+          "plate_text": "51G-925.06",
+          "raw_text": "51G92506",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0219_png.rf.b35618cd0ceb41cbc0b039a8b4a20a1f.jpg",
+      "ground_truth": [
+        [
+          46,
+          252,
+          98.336,
+          271.273
+        ],
+        [
+          367,
+          210,
+          409.368,
+          244.559
+        ],
+        [
+          475,
+          402,
+          539.981,
+          452.677
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 3
+    },
+    {
+      "file": "Dieu_0097_png.rf.4a62409b3922a6449c618fe60784f311.jpg",
+      "ground_truth": [
+        [
+          94,
+          300,
+          130.16899999999998,
+          327.791
+        ],
+        [
+          527,
+          367,
+          558.264,
+          398.877
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0250_png.rf.60a10669cf483412f1dc22cb7af73227.jpg",
+      "ground_truth": [
+        [
+          0,
+          270,
+          73.982,
+          307.101
+        ],
+        [
+          256,
+          399,
+          369.954,
+          449.352
+        ],
+        [
+          511,
+          283,
+          581.669,
+          312.814
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            253,
+            400,
+            373,
+            454
+          ],
+          "plate_text": "46TI-293.79",
+          "raw_text": "4G7I29379",
+          "is_valid": false,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Dieu_0120_png.rf.52d4addaa9a8b4daf3d122702cff66f7.jpg",
+      "ground_truth": [
+        [
+          87,
+          321,
+          132.935,
+          345.513
+        ],
+        [
+          301,
+          416,
+          373.43600000000004,
+          455.089
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            295,
+            418,
+            371,
+            454
+          ],
+          "plate_text": "67S-486.25",
+          "raw_text": "67548625",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0114_png.rf.af5e7822ee9baf00a08a2b3e8172f98d.jpg",
+      "ground_truth": [
+        [
+          76,
+          432,
+          129.946,
+          457.338
+        ],
+        [
+          309,
+          354,
+          349.46,
+          372.799
+        ],
+        [
+          578,
+          389,
+          603.747,
+          414.338
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 3
+    },
+    {
+      "file": "Dieu_0240_png.rf.491ae3853ce40c0ff2d828e65673811e.jpg",
+      "ground_truth": [
+        [
+          79,
+          283,
+          178.19,
+          364.08
+        ],
+        [
+          394,
+          230,
+          496.679,
+          333.01099999999997
+        ],
+        [
+          562,
+          139,
+          625.801,
+          196.155
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            390,
+            227,
+            501,
+            331
+          ],
+          "plate_text": "59X1-154.36",
+          "raw_text": "59X115436",
+          "is_valid": true,
+          "status": "recognized"
+        },
+        {
+          "bbox": [
+            561,
+            132,
+            630,
+            211
+          ],
+          "plate_text": "51I-781.34",
+          "raw_text": "51178I34",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0018_png.rf.533b63e7a2268b0fadf1dab1f98bbae2.jpg",
+      "ground_truth": [
+        [
+          314,
+          403,
+          356.912,
+          444.686
+        ],
+        [
+          437,
+          474,
+          481.751,
+          518.138
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0287_png.rf.a63801fa8f3e7a77ada7e50080352f38.jpg",
+      "ground_truth": [
+        [
+          105,
+          376,
+          201.287,
+          422.377
+        ],
+        [
+          493,
+          283,
+          545.119,
+          305.526
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Dieu_0099_png.rf.b5ac89c7d07022d05b196693e41a32e0.jpg",
+      "ground_truth": [
+        [
+          135,
+          294,
+          180.364,
+          329.147
+        ],
+        [
+          337,
+          385,
+          379.912,
+          418.512
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            125,
+            289,
+            196,
+            327
+          ],
+          "plate_text": "81Z-3618",
+          "raw_text": "8123618",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0157_png.rf.d88cebca34699458a686b51ae28a2137.jpg",
+      "ground_truth": [
+        [
+          16,
+          137,
+          106.278,
+          272.582
+        ],
+        [
+          361,
+          172,
+          476.079,
+          307.582
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Dieu_0170_png.rf.8c969a617a83f62617a9805c2e7db3a8.jpg",
+      "ground_truth": [
+        [
+          369,
+          449,
+          439.779,
+          516.788
+        ],
+        [
+          546,
+          301,
+          582.386,
+          333.565
+        ],
+        [
+          96,
+          280,
+          123.414,
+          304.59
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            366,
+            446,
+            441,
+            516
+          ],
+          "plate_text": "60Z4-000.23",
+          "raw_text": "60Z400023",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Dieu_0185_png.rf.ff94299bb931cf578a56a7aba303bca4.jpg",
+      "ground_truth": [
+        [
+          237,
+          372,
+          355.371,
+          421.689
+        ],
+        [
+          70,
+          89,
+          96.501,
+          103.576
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            245,
+            369,
+            357,
+            421
+          ],
+          "plate_text": "69F1-356.98",
+          "raw_text": "69F135698",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0266_png.rf.b7a8bdc15db3d5b4dc54dc4a871bbf53.jpg",
+      "ground_truth": [
+        [
+          48,
+          292,
+          122.105,
+          307.725
+        ],
+        [
+          531,
+          423,
+          606.062,
+          460.86
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            503,
+            421,
+            610,
+            463
+          ],
+          "plate_text": "47B2-369.55",
+          "raw_text": "478236955",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0021_png.rf.232c45a245d3f2b677a0d7bb0252c39d.jpg",
+      "ground_truth": [
+        [
+          11,
+          423,
+          111.96,
+          472.383
+        ],
+        [
+          454,
+          299,
+          509.054,
+          323.086
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            14,
+            425,
+            118,
+            476
+          ],
+          "plate_text": "78T-157.48",
+          "raw_text": "78715748",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0091_png.rf.7e88b9f41a237779c5009697d6c9e47e.jpg",
+      "ground_truth": [
+        [
+          32,
+          451,
+          117.158,
+          493.798
+        ],
+        [
+          391,
+          389,
+          475.28,
+          422.58
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            389,
+            390,
+            478,
+            423
+          ],
+          "plate_text": "51A-632.61",
+          "raw_text": "51A63261",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0082_png.rf.e1dd9c31adfaf7ad9a4b6ac9631c189f.jpg",
+      "ground_truth": [
+        [
+          122,
+          287,
+          222.247,
+          329.798
+        ],
+        [
+          349,
+          351,
+          436.901,
+          418.15999999999997
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            117,
+            285,
+            227,
+            331
+          ],
+          "plate_text": "51O-414.98",
+          "raw_text": "51041498",
+          "is_valid": true,
+          "status": "recognized"
+        },
+        {
+          "bbox": [
+            344,
+            349,
+            441,
+            421
+          ],
+          "plate_text": "65G1-512.70",
+          "raw_text": "6S6151270",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "file": "Hung_0095_png.rf.b0ca174c310ab2d5698aedcda80a7d4e.jpg",
+      "ground_truth": [
+        [
+          383,
+          240,
+          465.469,
+          293.33299999999997
+        ],
+        [
+          572,
+          394,
+          638.835,
+          447.33299999999997
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            572,
+            397,
+            640,
+            460
+          ],
+          "plate_text": "59I1-221.13",
+          "raw_text": "591122113",
+          "is_valid": true,
+          "status": "needs_review"
+        },
+        {
+          "bbox": [
+            384,
+            242,
+            464,
+            291
+          ],
+          "plate_text": "51S-008.01",
+          "raw_text": "51500801",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "file": "Hung_0334_png.rf.a8fc7b38d099910a45257b0719ec38a7.jpg",
+      "ground_truth": [
+        [
+          47,
+          497,
+          136.397,
+          565.402
+        ],
+        [
+          474,
+          280,
+          521.238,
+          317.926
+        ],
+        [
+          581,
+          201,
+          610.46,
+          226.058
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            45,
+            497,
+            137,
+            566
+          ],
+          "plate_text": "61Z-237.73",
+          "raw_text": "61223773",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Dieu_0486_png.rf.b9aadc550b72a4d3fea813a9ee315851.jpg",
+      "ground_truth": [
+        [
+          60,
+          228,
+          204.05,
+          359.589
+        ],
+        [
+          401,
+          299,
+          510.657,
+          400.682
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            60,
+            228,
+            202,
+            356
+          ],
+          "plate_text": "59D1-755.30",
+          "raw_text": "59D175530",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0079_png.rf.51c569c08104a4e14303594483719ab3.jpg",
+      "ground_truth": [
+        [
+          47,
+          363,
+          109.305,
+          386.261
+        ],
+        [
+          335,
+          456,
+          374.377,
+          493.217
+        ],
+        [
+          530,
+          404,
+          556.417,
+          426.596
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            36,
+            363,
+            105,
+            384
+          ],
+          "plate_text": "72A-1766",
+          "raw_text": "72A1766",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0374_png.rf.a2e201e13f094787cf2136c9742d8af3.jpg",
+      "ground_truth": [
+        [
+          68,
+          277,
+          164.315,
+          319.532
+        ],
+        [
+          382,
+          131,
+          427.007,
+          151.253
+        ],
+        [
+          523,
+          163,
+          581.509,
+          187.304
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            68,
+            275,
+            168,
+            321
+          ],
+          "plate_text": "67B2-529.77",
+          "raw_text": "678252977",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0377_png.rf.5c15629a6526b8231275f96a7f06c46b.jpg",
+      "ground_truth": [
+        [
+          155,
+          298,
+          210.873,
+          318.995
+        ],
+        [
+          375,
+          330,
+          409.032,
+          362.508
+        ],
+        [
+          493,
+          278,
+          517.381,
+          299.672
+        ],
+        [
+          573,
+          298,
+          601.952,
+          321.704
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 4
+    },
+    {
+      "file": "Hung_0182_png.rf.948a9b01cd33060c7757451690b94573.jpg",
+      "ground_truth": [
+        [
+          57,
+          188,
+          85.274,
+          246.862
+        ],
+        [
+          77,
+          235,
+          133.548,
+          318.33299999999997
+        ],
+        [
+          348,
+          373,
+          450.679,
+          499.984
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 3
+    },
+    {
+      "file": "Dieu_0040_png.rf.a1fe0df73572a312d697b8ead4b69264.jpg",
+      "ground_truth": [
+        [
+          193,
+          296,
+          271.467,
+          380.18899999999996
+        ],
+        [
+          375,
+          235,
+          437.529,
+          289.764
+        ],
+        [
+          484,
+          340,
+          572.889,
+          402.937
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            482,
+            338,
+            574,
+            404
+          ],
+          "plate_text": "77F1-808.08",
+          "raw_text": "77F180808",
+          "is_valid": true,
+          "status": "recognized"
+        },
+        {
+          "bbox": [
+            374,
+            237,
+            436,
+            291
+          ],
+          "plate_text": "71C4-347.95",
+          "raw_text": "71C434795",
+          "is_valid": true,
+          "status": "recognized"
+        },
+        {
+          "bbox": [
+            190,
+            295,
+            274,
+            382
+          ],
+          "plate_text": "55X-256.57",
+          "raw_text": "55X25657",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 3,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "file": "Hung_0435_png.rf.ccf7ebe717f9586dcc2172ca57d61504.jpg",
+      "ground_truth": [
+        [
+          383,
+          354,
+          462.212,
+          392.481
+        ],
+        [
+          221,
+          144,
+          269.608,
+          172.35399999999998
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            381,
+            354,
+            464,
+            392
+          ],
+          "plate_text": "79Z-969.95",
+          "raw_text": "79296995",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0487_png.rf.ef4cf8499a6c8af1a8cde57cb8477fa2.jpg",
+      "ground_truth": [
+        [
+          89,
+          151,
+          268.938,
+          348.38300000000004
+        ],
+        [
+          485,
+          273,
+          608.115,
+          409.241
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            484,
+            265,
+            614,
+            405
+          ],
+          "plate_text": "59C-400.56",
+          "raw_text": "59CA0056",
+          "is_valid": true,
+          "status": "recognized"
+        },
+        {
+          "bbox": [
+            83,
+            109,
+            291,
+            354
+          ],
+          "plate_text": "59L2-933.92",
+          "raw_text": "59L293392",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "file": "Hung_0123_png.rf.8994c3aff7df87f6ec0b733ae90ba7e1.jpg",
+      "ground_truth": [
+        [
+          182,
+          342,
+          247.679,
+          394.016
+        ],
+        [
+          319,
+          393,
+          383.69100000000003,
+          453.576
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            305,
+            390,
+            386,
+            456
+          ],
+          "plate_text": "76B1-467.08",
+          "raw_text": "76B146708",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0407_png.rf.f148bfd33877c83b6048febc2bd1251b.jpg",
+      "ground_truth": [
+        [
+          93,
+          391,
+          200.481,
+          452.883
+        ],
+        [
+          514,
+          129,
+          550.913,
+          151.799
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0099_png.rf.2d206a9f780c96efd7c3a4de21507ebc.jpg",
+      "ground_truth": [
+        [
+          32,
+          420,
+          117.53,
+          456.669
+        ],
+        [
+          294,
+          323,
+          362.584,
+          352.239
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            373,
+            10,
+            517,
+            43
+          ],
+          "plate_text": "52V-1297",
+          "raw_text": "52V1297",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 0,
+      "fp": 1,
+      "fn": 2
+    },
+    {
+      "file": "Dieu_0111_png.rf.c645832b3c589a57dc8fceaec540e0a9.jpg",
+      "ground_truth": [
+        [
+          146,
+          388,
+          188.912,
+          408.434
+        ],
+        [
+          414,
+          363,
+          434.23,
+          380.165
+        ],
+        [
+          540,
+          357,
+          560.843,
+          377.434
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 3
+    },
+    {
+      "file": "Hung_0235_png.rf.965a9f5b259f653704312c3f852af314.jpg",
+      "ground_truth": [
+        [
+          163,
+          273,
+          204.371,
+          305.565
+        ],
+        [
+          201,
+          432,
+          263.804,
+          489.155
+        ],
+        [
+          392,
+          286,
+          441.844,
+          321.223
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            388,
+            269,
+            443,
+            320
+          ],
+          "plate_text": "10T-9948",
+          "raw_text": "1079948",
+          "is_valid": false,
+          "status": "needs_review"
+        },
+        {
+          "bbox": [
+            380,
+            284,
+            446,
+            328
+          ],
+          "plate_text": "10I-9948",
+          "raw_text": "1019948",
+          "is_valid": false,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 1,
+      "fn": 2
+    },
+    {
+      "file": "Dieu_0056_png.rf.d20f55bfb71cf8e50cb8dadbdd34e2ee.jpg",
+      "ground_truth": [
+        [
+          62,
+          376,
+          110.429,
+          422.59000000000003
+        ],
+        [
+          122,
+          402,
+          188.207,
+          464.12
+        ],
+        [
+          405,
+          290,
+          441.169,
+          325.147
+        ],
+        [
+          570,
+          264,
+          601.264,
+          292.608
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            123,
+            399,
+            189,
+            464
+          ],
+          "plate_text": null,
+          "raw_text": "5H35411",
+          "is_valid": false,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 3
+    },
+    {
+      "file": "Hung_0114_png.rf.518953facdbb8f347fbb9fa8c4770dd5.jpg",
+      "ground_truth": [
+        [
+          61,
+          327,
+          153.18099999999998,
+          370.457
+        ],
+        [
+          368,
+          280,
+          447.675,
+          296.624
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0247_png.rf.6d461421d8474de53d71336bbca51bfd.jpg",
+      "ground_truth": [
+        [
+          260,
+          534,
+          388.08799999999997,
+          602.24
+        ],
+        [
+          217,
+          359,
+          304.453,
+          399.414
+        ],
+        [
+          42,
+          239,
+          146.237,
+          259.538
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            34,
+            242,
+            162,
+            266
+          ],
+          "plate_text": "51C-817.88",
+          "raw_text": "51C81788",
+          "is_valid": true,
+          "status": "recognized"
+        },
+        {
+          "bbox": [
+            214,
+            355,
+            297,
+            405
+          ],
+          "plate_text": null,
+          "raw_text": "F59H2328",
+          "is_valid": false,
+          "status": "needs_review"
+        },
+        {
+          "bbox": [
+            267,
+            535,
+            393,
+            604
+          ],
+          "plate_text": null,
+          "raw_text": "272C150260",
+          "is_valid": false,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 3,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "file": "Dieu_0234_png.rf.1e34aab21e98e38c893334e80cd2dd65.jpg",
+      "ground_truth": [
+        [
+          218,
+          415,
+          295.736,
+          449.451
+        ],
+        [
+          577,
+          312,
+          606.151,
+          327.238
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            219,
+            416,
+            297,
+            447
+          ],
+          "plate_text": "50G0-065.23",
+          "raw_text": "506006523",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0390_png.rf.687c0cef66fc7675b30d8568b1383e93.jpg",
+      "ground_truth": [
+        [
+          69,
+          475,
+          149.113,
+          516.857
+        ],
+        [
+          503,
+          381,
+          561.509,
+          407.329
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            68,
+            474,
+            153,
+            518
+          ],
+          "plate_text": "49E8-364.22",
+          "raw_text": "49E836422",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0167_png.rf.7fe64b5c8abd0de82f09f8f40294faa9.jpg",
+      "ground_truth": [
+        [
+          0,
+          267,
+          111.495,
+          343.379
+        ],
+        [
+          485,
+          387,
+          638.091,
+          476.547
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            0,
+            267,
+            120,
+            345
+          ],
+          "plate_text": "77O1-281.25",
+          "raw_text": "770128125",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0159_png.rf.17a9560bcf3ce3b2c667552f8d9553b2.jpg",
+      "ground_truth": [
+        [
+          4,
+          410,
+          146.222,
+          506.79
+        ],
+        [
+          443,
+          413,
+          637.019,
+          531.519
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            414,
+            406,
+            640,
+            537
+          ],
+          "plate_text": "37O1-868.62",
+          "raw_text": "370186862",
+          "is_valid": true,
+          "status": "recognized"
+        },
+        {
+          "bbox": [
+            10,
+            406,
+            147,
+            513
+          ],
+          "plate_text": "90B8-120.70",
+          "raw_text": "908812070",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "file": "Hung_0178_png.rf.cf43c4ad05c23af172cb43b2889b069c.jpg",
+      "ground_truth": [
+        [
+          600,
+          436,
+          639.683,
+          535.8679999999999
+        ],
+        [
+          347,
+          260,
+          431.325,
+          336.72
+        ],
+        [
+          185,
+          221,
+          244.524,
+          289.122
+        ],
+        [
+          52,
+          118,
+          89.202,
+          181.492
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 4
+    },
+    {
+      "file": "Dieu_0208_png.rf.ac3dec969f99fb5021c8cc6673bbc0ab.jpg",
+      "ground_truth": [
+        [
+          308,
+          267,
+          369.308,
+          309.534
+        ],
+        [
+          143,
+          395,
+          184.371,
+          431.552
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            305,
+            270,
+            371,
+            314
+          ],
+          "plate_text": "51G-301.26",
+          "raw_text": "51G30126",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0082_png.rf.e996e963554f8a68a0cb28666cce138a.jpg",
+      "ground_truth": [
+        [
+          66,
+          435,
+          119.333,
+          486.173
+        ],
+        [
+          419,
+          343,
+          456.383,
+          376.229
+        ],
+        [
+          537,
+          294,
+          561.424,
+          315.931
+        ],
+        [
+          315,
+          228,
+          356.869,
+          263.223
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            66,
+            436,
+            119,
+            486
+          ],
+          "plate_text": "59X-403.75",
+          "raw_text": "59X40375",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 3
+    },
+    {
+      "file": "Dieu_0406_png.rf.97f75ecde8e68a21181a37f7c84ea93d.jpg",
+      "ground_truth": [
+        [
+          87,
+          329,
+          170.372,
+          359.243
+        ],
+        [
+          429,
+          421,
+          484.172,
+          469.225
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            428,
+            423,
+            484,
+            468
+          ],
+          "plate_text": "61E1-450.04",
+          "raw_text": "61E145004",
+          "is_valid": true,
+          "status": "recognized"
+        },
+        {
+          "bbox": [
+            84,
+            329,
+            176,
+            356
+          ],
+          "plate_text": "51A1-298.69",
+          "raw_text": "51A129869",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "file": "Dieu_0124_png.rf.0109b95fb926cee126931c903a9ee4de.jpg",
+      "ground_truth": [
+        [
+          101,
+          386,
+          144.364,
+          437.173
+        ],
+        [
+          275,
+          428,
+          328.832,
+          491.136
+        ],
+        [
+          527,
+          212,
+          558.402,
+          246.559
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 3
+    },
+    {
+      "file": "Hung_0173_png.rf.14d80ec288d1a5cb603c23dd4c205c1e.jpg",
+      "ground_truth": [
+        [
+          2,
+          173,
+          70.148,
+          273.082
+        ],
+        [
+          186,
+          165,
+          276.37,
+          274.3
+        ],
+        [
+          486,
+          345,
+          623.284,
+          526.0699999999999
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            180,
+            158,
+            283,
+            283
+          ],
+          "plate_text": null,
+          "raw_text": "6311263N",
+          "is_valid": false,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Dieu_0492_png.rf.eff8a6574a39ef8cc07c6e3ea85a1cbe.jpg",
+      "ground_truth": [
+        [
+          82,
+          187,
+          228.542,
+          339.19100000000003
+        ],
+        [
+          392,
+          305,
+          533.558,
+          461.179
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            385,
+            298,
+            540,
+            464
+          ],
+          "plate_text": "59B1-440.32",
+          "raw_text": "59B144032",
+          "is_valid": true,
+          "status": "recognized"
+        },
+        {
+          "bbox": [
+            79,
+            186,
+            232,
+            337
+          ],
+          "plate_text": "72P-496.18",
+          "raw_text": "72P49618",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "file": "Hung_0192_png.rf.4cf50a374e3ffed07dde21e459671eff.jpg",
+      "ground_truth": [
+        [
+          71,
+          413,
+          178.106,
+          482.13599999999997
+        ],
+        [
+          369,
+          467,
+          485.76300000000003,
+          542.72
+        ],
+        [
+          578,
+          151,
+          617.506,
+          177.337
+        ],
+        [
+          436,
+          140,
+          480.774,
+          168.971
+        ],
+        [
+          162,
+          145,
+          205.018,
+          170.02100000000002
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            62,
+            448,
+            220,
+            491
+          ],
+          "plate_text": "99B8-936.87",
+          "raw_text": "998893687",
+          "is_valid": true,
+          "status": "needs_review"
+        },
+        {
+          "bbox": [
+            69,
+            414,
+            185,
+            476
+          ],
+          "plate_text": null,
+          "raw_text": "609598364",
+          "is_valid": false,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 1,
+      "fn": 4
+    },
+    {
+      "file": "Hung_0020_png.rf.32505886dcf9db159fee8d98f51acdd7.jpg",
+      "ground_truth": [
+        [
+          104,
+          271,
+          189.926,
+          332.89300000000003
+        ],
+        [
+          396,
+          413,
+          486.37,
+          484.77
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            104,
+            271,
+            192,
+            336
+          ],
+          "plate_text": "61C-241.14",
+          "raw_text": "61C24114",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0075_png.rf.a7acf32eae3cc5a74c1a8b763aa4843b.jpg",
+      "ground_truth": [
+        [
+          20,
+          451,
+          54.891,
+          477.584
+        ],
+        [
+          211,
+          478,
+          248.383,
+          509.9
+        ],
+        [
+          418,
+          466,
+          441.925,
+          487.931
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 3
+    },
+    {
+      "file": "Hung_0096_png.rf.2e1a9d7a97990522bcbc11dee363b7ec.jpg",
+      "ground_truth": [
+        [
+          258,
+          450,
+          353.693,
+          498.06600000000003
+        ],
+        [
+          116,
+          261,
+          195.89,
+          294.58
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            114,
+            261,
+            199,
+            297
+          ],
+          "plate_text": "11A-113.43",
+          "raw_text": "11A11343",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0375_png.rf.961bdbe95eeb4bcd9ff73ba4f04d50f7.jpg",
+      "ground_truth": [
+        [
+          406,
+          359,
+          464.413,
+          410.471
+        ],
+        [
+          572,
+          237,
+          614.159,
+          274.926
+        ],
+        [
+          256,
+          332,
+          304.254,
+          378.053
+        ],
+        [
+          24,
+          397,
+          88.508,
+          455.921
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            404,
+            364,
+            462,
+            411
+          ],
+          "plate_text": "93P2-672.39",
+          "raw_text": "93P267239",
+          "is_valid": true,
+          "status": "recognized"
+        },
+        {
+          "bbox": [
+            233,
+            327,
+            317,
+            398
+          ],
+          "plate_text": null,
+          "raw_text": "5311143989",
+          "is_valid": false,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 1,
+      "fn": 3
+    },
+    {
+      "file": "Dieu_0092_png.rf.d839bc4f94a7e11e59ae88a2ba59fae5.jpg",
+      "ground_truth": [
+        [
+          64,
+          433,
+          171.481,
+          494.069
+        ],
+        [
+          444,
+          212,
+          497.198,
+          238.87
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            66,
+            433,
+            172,
+            495
+          ],
+          "plate_text": null,
+          "raw_text": "1X985671",
+          "is_valid": false,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0493_png.rf.45e13371d7d2f649c1f14fbd7b26e1a4.jpg",
+      "ground_truth": [
+        [
+          100,
+          130,
+          237.072,
+          255.607
+        ],
+        [
+          425,
+          290,
+          549.611,
+          408.962
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            99,
+            128,
+            236,
+            243
+          ],
+          "plate_text": null,
+          "raw_text": "83C17719K",
+          "is_valid": false,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0122_png.rf.03993e70fd71f5309eecb29573ba6994.jpg",
+      "ground_truth": [
+        [
+          3,
+          362,
+          110.984,
+          407.432
+        ],
+        [
+          485,
+          316,
+          546.617,
+          344.316
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0067_png.rf.653387046954d05b2ccf3ddc8e10dc7f.jpg",
+      "ground_truth": [
+        [
+          577,
+          280,
+          596.744,
+          295.314
+        ],
+        [
+          481,
+          237,
+          488.356,
+          246.636
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0330_png.rf.04b37011880b9a3fb1f114b0bc1251fa.jpg",
+      "ground_truth": [
+        [
+          169,
+          293,
+          215.595,
+          334.645
+        ],
+        [
+          277,
+          83,
+          315.402,
+          113.039
+        ],
+        [
+          614,
+          62,
+          625.265,
+          72.241
+        ],
+        [
+          579,
+          27,
+          586.298,
+          32.717
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 4
+    },
+    {
+      "file": "Hung_0315_png.rf.62918b55f03cdea0bcecd8a48d9fde08.jpg",
+      "ground_truth": [
+        [
+          58,
+          396,
+          160.61599999999999,
+          433.806
+        ],
+        [
+          462,
+          97,
+          550.2139999999999,
+          133.45600000000002
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            25,
+            392,
+            169,
+            437
+          ],
+          "plate_text": "76C-191.55",
+          "raw_text": "76C19155",
+          "is_valid": true,
+          "status": "recognized"
+        },
+        {
+          "bbox": [
+            459,
+            99,
+            552,
+            133
+          ],
+          "plate_text": null,
+          "raw_text": "51906430",
+          "is_valid": false,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "file": "Dieu_0289_png.rf.693c5c8289100904f23886b35717720a.jpg",
+      "ground_truth": [
+        [
+          67,
+          325,
+          109.866,
+          354.242
+        ],
+        [
+          486,
+          432,
+          542.324,
+          477.192
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            475,
+            430,
+            550,
+            485
+          ],
+          "plate_text": null,
+          "raw_text": "59X411L142",
+          "is_valid": false,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0156_png.rf.b9b50dc193fa801c7d436aca6d22e566.jpg",
+      "ground_truth": [
+        [
+          95,
+          130,
+          173.869,
+          214.656
+        ],
+        [
+          334,
+          140,
+          423.286,
+          225.317
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0402_png.rf.04e4e2166c6c31a6d456c361bdff7b4b.jpg",
+      "ground_truth": [
+        [
+          32,
+          476,
+          73.143,
+          513.926
+        ],
+        [
+          293,
+          283,
+          316.365,
+          301.963
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0236_png.rf.ce291f42a4bc599b1b3d165274b1f379.jpg",
+      "ground_truth": [
+        [
+          41,
+          166,
+          154.954,
+          215.689
+        ],
+        [
+          141,
+          367,
+          298.23900000000003,
+          438.553
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            52,
+            168,
+            145,
+            215
+          ],
+          "plate_text": "62A-342.48",
+          "raw_text": "62A34248",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0344_png.rf.e62172590844409a750cc83a217095e4.jpg",
+      "ground_truth": [
+        [
+          368,
+          176,
+          439.111,
+          238.937
+        ],
+        [
+          565,
+          246,
+          582.778,
+          269.704
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0134_png.rf.114c832234923666266a2538e089402c.jpg",
+      "ground_truth": [
+        [
+          79,
+          446,
+          145.667,
+          505.259
+        ],
+        [
+          468,
+          366,
+          511.562,
+          398.57
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            422,
+            365,
+            561,
+            399
+          ],
+          "plate_text": "51D1-771.05",
+          "raw_text": "51D177105",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 0,
+      "fp": 1,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0372_png.rf.c427032b7ec33c7b6538682d6c3796ae.jpg",
+      "ground_truth": [
+        [
+          32,
+          311,
+          133.716,
+          359.608
+        ],
+        [
+          509,
+          169,
+          565.7090000000001,
+          198.03
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0437_png.rf.b9ea97602a4bd08ee3833ee39d6248ba.jpg",
+      "ground_truth": [
+        [
+          261,
+          308,
+          327.54,
+          371.661
+        ],
+        [
+          50,
+          383,
+          103.84100000000001,
+          401.963
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            249,
+            311,
+            354,
+            377
+          ],
+          "plate_text": null,
+          "raw_text": "5A38907",
+          "is_valid": false,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0014_png.rf.223b46fb687a2ecfd6ab8b0a89ef1ae5.jpg",
+      "ground_truth": [
+        [
+          0,
+          334,
+          79.89,
+          372.848
+        ],
+        [
+          365,
+          379,
+          459.815,
+          419.823
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            0,
+            301,
+            81,
+            374
+          ],
+          "plate_text": "59S3-485.06",
+          "raw_text": "59S348506",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0338_png.rf.740507b73ac23525b822501e9efcfa78.jpg",
+      "ground_truth": [
+        [
+          132,
+          462,
+          224.714,
+          519.384
+        ],
+        [
+          484,
+          263,
+          523.606,
+          285.278
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0422_png.rf.1186558f322905ce4b5bf4572fb6c161.jpg",
+      "ground_truth": [
+        [
+          18,
+          414,
+          117.015,
+          468.008
+        ],
+        [
+          495,
+          231,
+          543.608,
+          257.329
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            19,
+            415,
+            119,
+            470
+          ],
+          "plate_text": "54A-232.78",
+          "raw_text": "54423278",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0388_png.rf.b929a812f268f7651f44f47511165be9.jpg",
+      "ground_truth": [
+        [
+          47,
+          379,
+          129.511,
+          416.455
+        ],
+        [
+          318,
+          410,
+          418.967,
+          456.412
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            310,
+            404,
+            412,
+            457
+          ],
+          "plate_text": "60C2-754.08",
+          "raw_text": "60C275408",
+          "is_valid": true,
+          "status": "recognized"
+        },
+        {
+          "bbox": [
+            43,
+            377,
+            131,
+            423
+          ],
+          "plate_text": "38L1-231.57",
+          "raw_text": "38L123157",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "file": "Hung_0195_png.rf.6614515432d7ec7f5a974ee9030f7fc2.jpg",
+      "ground_truth": [
+        [
+          32,
+          351,
+          156.664,
+          421.453
+        ],
+        [
+          342,
+          477,
+          485.1,
+          567.206
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0213_png.rf.c1b6f15f6e202be99e359d9b8509e7c1.jpg",
+      "ground_truth": [
+        [
+          132,
+          538,
+          270.68899999999996,
+          608.89
+        ],
+        [
+          477,
+          435,
+          550.3199999999999,
+          474.752
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            127,
+            534,
+            277,
+            612
+          ],
+          "plate_text": "76B1-418.73",
+          "raw_text": "768141873",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0381_png.rf.502e8a25720b9e03181998a60e0ace1d.jpg",
+      "ground_truth": [
+        [
+          237,
+          430,
+          333.624,
+          482.112
+        ],
+        [
+          490,
+          323,
+          538.855,
+          349.87
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            220,
+            418,
+            335,
+            481
+          ],
+          "plate_text": "38L1-231.57",
+          "raw_text": "38L123157",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0326_png.rf.313733bf3f171ceda5330d081bff74f9.jpg",
+      "ground_truth": [
+        [
+          64,
+          333,
+          125.968,
+          389.889
+        ],
+        [
+          131,
+          443,
+          210.74599999999998,
+          513.434
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            130,
+            440,
+            213,
+            514
+          ],
+          "plate_text": "99X-1481",
+          "raw_text": "99X1481",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0141_png.rf.03ac8337d627126eade16b513ac83a6f.jpg",
+      "ground_truth": [
+        [
+          331,
+          282,
+          359.91,
+          293.963
+        ],
+        [
+          409,
+          339,
+          435.41700000000003,
+          364.254
+        ],
+        [
+          38,
+          428,
+          77.37700000000001,
+          466.546
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 3
+    },
+    {
+      "file": "Dieu_0147_png.rf.1c027040a348059c7b9f8bc312f4b8e1.jpg",
+      "ground_truth": [
+        [
+          98,
+          416,
+          157.315,
+          465.844
+        ],
+        [
+          267,
+          218,
+          322.826,
+          261.198
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0269_png.rf.c5cb123009114071fdf3620fd35a2409.jpg",
+      "ground_truth": [
+        [
+          135,
+          403,
+          236.587,
+          454.677
+        ],
+        [
+          423,
+          237,
+          468.935,
+          257.538
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            134,
+            401,
+            240,
+            455
+          ],
+          "plate_text": "59U1-563.68",
+          "raw_text": "59U156368",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0154_png.rf.29a69e08be8633f89e834be863c16ffb.jpg",
+      "ground_truth": [
+        [
+          143,
+          282,
+          189.85399999999998,
+          325.198
+        ],
+        [
+          21,
+          490,
+          56.888,
+          529.211
+        ],
+        [
+          193,
+          429,
+          231.38,
+          468.875
+        ],
+        [
+          372,
+          444,
+          418.854,
+          491.186
+        ],
+        [
+          560,
+          314,
+          585.421,
+          337.925
+        ],
+        [
+          525,
+          222,
+          549.922,
+          242.602
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            370,
+            442,
+            421,
+            492
+          ],
+          "plate_text": "49G1-203.47",
+          "raw_text": "496120347",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 5
+    },
+    {
+      "file": "Hung_0064_png.rf.7a0cf5fab5ff8977454a4b36e64adeb2.jpg",
+      "ground_truth": [
+        [
+          25,
+          395,
+          86.269,
+          446.18
+        ],
+        [
+          464,
+          433,
+          533.02,
+          485.165
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            23,
+            400,
+            86,
+            452
+          ],
+          "plate_text": "59T7-498.57",
+          "raw_text": "597749857",
+          "is_valid": true,
+          "status": "needs_review"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Hung_0376_png.rf.a1520b55ac62d6076d07f49cfe0a5e3b.jpg",
+      "ground_truth": [
+        [
+          183,
+          269,
+          230.238,
+          316.407
+        ],
+        [
+          278,
+          392,
+          352.159,
+          454.307
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "file": "Hung_0241_png.rf.fd6eaac001d084368e1d75cabc5cedec.jpg",
+      "ground_truth": [
+        [
+          426,
+          381,
+          580.5889999999999,
+          451.228
+        ],
+        [
+          140,
+          189,
+          223.92000000000002,
+          231.402
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            415,
+            369,
+            583,
+            484
+          ],
+          "plate_text": "59X1-658.56",
+          "raw_text": "59X165856",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "file": "Dieu_0095_png.rf.8d3f9c6541805c33117d9c56f837f6c6.jpg",
+      "ground_truth": [
+        [
+          41,
+          397,
+          74.10300000000001,
+          424.791
+        ],
+        [
+          150,
+          432,
+          187.395,
+          468.782
+        ],
+        [
+          296,
+          533,
+          341.977,
+          581.225
+        ]
+      ],
+      "predictions": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 3
+    },
+    {
+      "file": "Dieu_0172_png.rf.f2337c28db5df8c0bab8c0e7f0a811cb.jpg",
+      "ground_truth": [
+        [
+          4,
+          301,
+          39.888,
+          332.236
+        ],
+        [
+          130,
+          343,
+          173.364,
+          380.882
+        ],
+        [
+          404,
+          430,
+          470.791,
+          495.794
+        ],
+        [
+          572,
+          287,
+          603.9,
+          312.919
+        ]
+      ],
+      "predictions": [
+        {
+          "bbox": [
+            403,
+            427,
+            474,
+            497
+          ],
+          "plate_text": "60Z-400.23",
+          "raw_text": "60240023",
+          "is_valid": true,
+          "status": "recognized"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 3
+    }
+  ]
+}

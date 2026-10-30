@@ -17,6 +17,13 @@ Kết quả gồm `plate_crop`, `plate_normalized`, `bbox`, `angle`, `confidence
 `detect_plate` và `detect_plate_image` mặc định chỉ chạy WP1, lấy ứng viên
 đầu của detector như nhánh WP1 gốc; không tải OCR hoặc chạy WP2.
 
+`detect_plates(image_path, max_plates=10)` và
+`detect_plates_image(bgr_array, max_plates=10)` trả **danh sách proposal WP1
+thuần**, cùng năm trường `bbox`, `plate_crop`, `plate_normalized`, `angle`,
+`confidence`. Hàm này không chạy WP2/WP3, không lọc theo nội dung, và không
+thay hợp đồng `detect_plate()` một biển. Ứng dụng đọc nhiều biển dùng
+`src.multi_plate.recognize_plates()` như mô tả bên dưới.
+
 Ứng dụng đầy đủ gọi rõ ràng
 `src.recognition_selection.select_plate_for_recognition(image, classifier)`.
 Hàm này thêm ứng viên từ chữ thẳng hàng, dùng WP2–WP4 kiểm tra nhiều vùng,
@@ -91,12 +98,42 @@ nếu chưa có gợi ý đủ phân biệt. Không suy loại xe từ category 
 Hỗ trợ thêm sê-ri xe máy hai chữ, ví dụ `29AC88688`; chuỗi đã đúng mẫu
 được giữ nguyên trước bước sửa nhầm. Parser không bao phủ mọi loại biển.
 
+## Nhiều biển trong một ảnh
+
+```python
+from src.multi_plate import recognize_plates, annotate_plates, summarize_plate
+plates = recognize_plates(image_bgr, classifier, max_plates=10)
+```
+
+`recognize_plates()` lấy proposal từ `find_candidates()` (thêm tile 1600 px,
+overlap 20% cho ảnh lớn), chạy WP2 segmentation và WP3 OCR cho từng vùng, áp
+WP4, rồi lọc theo confidence/định dạng và khử trùng lặp. Kết quả mỗi phần tử
+gồm `bbox`, `plate_crop`, `plate_normalized`, `angle`, `source`, `segmentation`,
+`ocr`, `postprocessing`, `plate_text`, `is_valid`, `recognition_confidence`,
+`quality_ok`, `status`, `selection_score`. `summarize_plate()` bỏ mảng ảnh để
+serialize. `annotate_plates()` vẽ box đánh số và chuỗi lên bản sao ảnh.
+
+Tham số:
+
+- `max_plates` 1–30; `max_candidates` 1–60; `max_ocr` mặc định 10.
+- `use_tiles=True` bật proposal theo tile cho ảnh có cạnh > 1600 px.
+- `include_text_regions=None` chỉ fallback vùng ký tự thẳng hàng khi contour
+  không tìm thấy biển; `True` bật sớm (dễ tăng FP), `False` tắt.
+- `vehicle_type`: `unknown`, `car`, `motorcycle`.
+
+Đây là lớp ứng dụng, không phải benchmark WP1. Box dự đoán có thể là biển nền
+chưa có trong nhãn COCO; vì vậy không dùng trực tiếp làm ground truth. Đo trên
+valid: mọi box F1 0,483; box ≥1% diện tích ảnh F1 0,727. Test chỉ có 3 ảnh
+nhiều biển, không dùng để chỉnh threshold. Xem
+[chẩn đoán](../reports/multi_plate_diagnosis.md).
+
 ## HTTP
 
 | Method | Path | Nội dung |
 |---|---|---|
 | GET | `/api/health` | Trạng thái server, khả năng nạp model OCR |
 | POST | `/api/upload/image` | Multipart `file`, `vehicle_type` tùy chọn |
+| POST | `/api/upload/image/multi` | Multipart `file`, `vehicle_type`, `max_plates` 1–20 (mặc định 10) |
 | POST | `/api/upload/video` | Multipart `file`, `vehicle_type`, `stride` 1–60 (mặc định 5) |
 | GET | `/api/plates` | `q`, `limit` 1–200, `offset` |
 | GET | `/api/plates/{id}` | Chi tiết một bản ghi |
@@ -104,6 +141,12 @@ Hỗ trợ thêm sê-ri xe máy hai chữ, ví dụ `29AC88688`; chuỗi đã đ
 | PATCH | `/api/plates/{id}` | JSON như trên: chỉnh kết quả, giữ chuỗi OCR gốc |
 | DELETE | `/api/plates/{id}` | Xóa bản ghi database; giữ file ảnh nguồn |
 | GET | `/api/stats` | Số bản ghi theo trạng thái/tỉnh; không phải accuracy |
+
+`/api/upload/image/multi` trả `items` (mỗi detection là một bản ghi), `count`,
+`annotated_url`, `source_url`, `elapsed_ms`, `tiles`, `scope`. Mỗi bản ghi có
+`metadata.multi_plate_index` và `multi_plate_count`, đồng thời lưu crop/ký
+tự/ảnh xử lý như ảnh đơn. Nếu không có detection, endpoint vẫn tạo một bản ghi
+`no_plate` hoặc `ocr_unavailable` với `count=0` và trả ảnh đánh dấu rỗng.
 
 Ảnh trung gian ở `metadata.processing_images` gồm ảnh xám, nhị phân được
 chọn và box/thứ tự ký tự, có URL `/files/processing/...`. Có `threshold_method`,

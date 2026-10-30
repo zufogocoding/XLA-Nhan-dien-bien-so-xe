@@ -1,7 +1,9 @@
 # Tiến độ WP1–WP4
 
-Cập nhật: 24/10/2026. Bản local đã tích hợp bốn giai đoạn và có artifact
-baseline. Chưa hoàn thành toàn bộ tiêu chí nghiệm thu về độ chính xác.
+Cập nhật: 30/10/2026. Bản local đã tích hợp bốn giai đoạn và có artifact
+baseline. Chưa hoàn thành toàn bộ tiêu chí nghiệm thu về độ chính xác. Đã có
+chẩn đoán định lượng vì sao WP1/OCR còn thấp và chế độ đọc nhiều biển ở lớp
+ứng dụng: [chẩn đoán](multi_plate_diagnosis.md).
 
 Đã sửa nhận diện theo hướng xử lý ảnh ở đợt tiếp theo cùng ngày. Kết quả
 hiện hành: [báo cáo sửa lỗi](image_processing_fix.md). Đã sửa thêm lỗi thay
@@ -21,8 +23,10 @@ biệt rõ WP1 độc lập và bộ chọn vùng có hỗ trợ OCR của ứng
 | Hạng mục | Kết quả kiểm chứng | Trạng thái |
 |---|---|---|
 | WP1 độc lập Precision / Recall / F1 | 0,8794 / 0,7209 / 0,7923 trên 169 ảnh, 172 box; khớp nhánh WP1 | Precision đạt; Recall/F1 chưa đạt |
+| WP1 chẩn đoán lỗi | 44/48 FN không có proposal đúng trong top 10; 36/44 có IoU tốt nhất <0,10; 9 box >30% diện tích bị cap, nới cap cứu 4 | Nút thắt là sinh proposal, không phải xếp hạng |
 | WP1 thời gian | Trung bình 179,7 ms; P95 298,1 ms, gồm decode và warp/deskew | Trung bình dưới 200 ms; một số ảnh vượt |
 | Bộ chọn vùng của ứng dụng | 0,8571 / 0,8023 / 0,8288, dùng WP2–WP4 hỗ trợ | Đạt ba ngưỡng box trong phạm vi ứng dụng; không thay kết quả WP1 độc lập |
+| Ảnh nhiều biển | Valid prominent F1 0,727 (28/2/19); top-1 F1 0,523; valid mọi box F1 0,483 | Chức năng có; biển nền nhỏ và thứ hạng biển phụ còn yếu |
 | WP2 tách ký tự | Recall/precision 92,57%/97,15% khi HOG/SVM chọn ngưỡng; thuần hình học 91,78%/88,06% | Recall đạt 90%; cần kiểm soát box thừa |
 | WP2 số dòng | 94,979% trên 478 ảnh; nhãn suy từ hình học box | Vẫn dưới 95%; thiếu nhãn dòng độc lập |
 | WP2 chuẩn hóa | Mọi ký tự 32×32, giữ tỷ lệ và căn giữa | Đã triển khai, có kiểm thử |
@@ -50,6 +54,24 @@ joblib tùy chọn, sửa chuẩn hóa góc deskew với OpenCV hiện tại và
 mảng ảnh cho video. Đánh giá lại toàn test, kiểm thử hồi quy hình học. Nới
 ngưỡng diện tích trên valid làm F1 giảm nên giữ cấu hình cũ. Xem
 [WP1](wp1_evaluation.md), [tuning](wp1_validation_tuning.md), [latency](baseline_local_latency.json).
+
+### Chẩn đoán và ảnh nhiều biển
+
+Đã tách bốn phép đo để không ghép sai: box WP1 độc lập, box của bộ chọn vùng
+ứng dụng, chuỗi OCR trên crop, và toàn cảnh. Chẩn đoán mới xác định 44/48 FN
+không có proposal đúng trong top 10; trả top-10 chỉ thêm 4 TP nhưng thêm 109
+FP (F1 0,601). Cap diện tích 30% bỏ 9 box lớn, nới cap cứu 4. Với chuỗi, trần
+lý thuyết của 9 ký tự ở accuracy 96,53% là khoảng 72,8%, nên 69,46% không phải
+classifier hỏng; WER một-biển-một-token đúng bằng 1 − đúng chuỗi. Xem
+[chẩn đoán](multi_plate_diagnosis.md), [dữ liệu](wp1_failure_diagnosis.json).
+
+Thêm `src/multi_plate.py` (proposal WP1 + tile, WP2–WP4, lọc và khử trùng lặp),
+`detect_plates()`/`detect_plates_image()` cho danh sách proposal WP1 thuần,
+endpoint `POST /api/upload/image/multi`, checkbox trên web và CLI
+`scripts/demo_multi_plate.py`. Hợp đồng `detect_plate()` một biển giữ nguyên.
+Demo 2 biển thật đọc đúng cả hai; collage 4 ảnh tìm 8/8 box nhưng 4/8 chuỗi
+đúng định dạng. Đây là kiểm tra chức năng, không phải benchmark; valid
+prominent F1 0,727, top-1 0,523.
 
 ### WP2
 
@@ -92,7 +114,7 @@ video demo: `../demo/video_demo.mp4` (tạo local, không đưa lên Git), [kị
 
 ## Kiểm chứng và tái lập
 
-- 53 kiểm thử pytest đạt; một cảnh báo deprecation từ TestClient/httpx.
+- 58 kiểm thử pytest đạt.
 - node --check web/app.js và git diff --check đạt.
 - API thật nạp đúng SVM+HOG+LBP, WP2 phiên bản
   wp2-0.4-multithreshold-frame-aware; URL ảnh/crop/ký tự/ảnh trung gian truy cập được.
@@ -112,8 +134,10 @@ rồi mở http://127.0.0.1:8000/. Xem [README](../README.md).
 
 ## Phần còn cần dữ liệu/kiểm chứng
 
-1. Nâng tiếp chất lượng đọc chuỗi, tách dòng và tối ưu tốc độ; WP1 độc lập
-   còn thiếu Recall/F1. Bộ chọn vùng có OCR đạt ngưỡng box ở phạm vi ứng dụng.
+1. Sửa sinh proposal WP1 cho 44 box không có ứng viên trong top 10 (ưu tiên
+   ảnh nhỏ/mờ/dính thân xe và nhánh close-up >30%); sau đó nâng chuỗi/tách
+   dòng và tối ưu tốc độ. Bộ chọn vùng có OCR đạt ngưỡng box ở phạm vi ứng
+   dụng, nhưng chưa chứng minh WP1 độc lập đạt Recall/F1.
 2. Tập ảnh giao thông kèm chuỗi biển thật độc lập để đo WP1→WP4; thêm mẫu
    O/Q/W và ảnh điều kiện khó có nhãn; nhãn loại xe/dòng chính thức nếu cần
    kết luận riêng theo nhóm.

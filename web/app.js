@@ -20,7 +20,27 @@ for (const name of ["dragenter", "dragover"]) $("drop-zone").addEventListener(na
 for (const name of ["dragleave", "drop"]) $("drop-zone").addEventListener(name, event => { event.preventDefault(); $("drop-zone").classList.remove("drag"); });
 $("drop-zone").addEventListener("drop", event => { chooseFile(event.dataTransfer.files[0]); if (selectedFile) { const transfer = new DataTransfer(); transfer.items.add(selectedFile); $("file-input").files = transfer.files; } });
 function showImage(id, url) { const node = $(id); node.hidden = !url; if (url) node.src = url; else node.removeAttribute("src"); }
-function showResult(record) {
+function showMultiResult(result) {
+  $("empty-result").hidden = true; $("result-content").hidden = true; $("multi-result").hidden = false;
+  $("multi-count").textContent = result.count + " biển";
+  $("multi-count").classList.toggle("warning", result.count === 0);
+  showImage("multi-annotated", result.annotated_url);
+  $("multi-list").replaceChildren();
+  for (const record of result.items) {
+    const row = document.createElement("button");
+    row.type = "button"; row.className = "multi-item";
+    const image = document.createElement("img"); image.src = record.crop_url || ""; image.alt = "Vùng biển " + record.id;
+    const body = document.createElement("span"); body.className = "multi-item-body";
+    const title = document.createElement("strong"); title.textContent = record.plate_text || record.raw_text || "Chưa đọc được";
+    const detail = document.createElement("small"); detail.textContent = [statusNames[record.status] || record.status, record.province, record.confidence == null ? null : "Điểm OCR: " + Math.round(record.confidence * 100) + "%"].filter(Boolean).join(" · ");
+    body.append(title, detail); row.append(image, body);
+    row.addEventListener("click", () => { showResult(record, true); $("recognize").scrollIntoView(); });
+    $("multi-list").append(row);
+  }
+  if (!result.items.length) { const note = document.createElement("p"); note.className = "muted"; note.textContent = "Chưa đọc được biển nào trong ảnh này."; $("multi-list").append(note); }
+}
+function showResult(record, keepMulti = false) {
+  if (!keepMulti) $("multi-result").hidden = true;
   $("empty-result").hidden = true; $("result-content").hidden = false;
   $("plate-text").textContent = record.plate_text || record.raw_text || "Chưa đọc được";
   $("result-state").textContent = "#" + record.id;
@@ -46,11 +66,14 @@ async function upload(file) {
   if (busy) return;
   setBusy(true);
   const video = file.type.startsWith("video/") || /\.(mp4|avi|mov|mkv|webm)$/i.test(file.name);
-  message(video ? "Đang xử lý video. Các khung hình được lưu vào lịch sử khi hoàn thành." : "Đang tìm biển số và đọc ký tự…");
+  const multi = !video && $("multi-plate").checked;
+  message(video ? "Đang xử lý video. Các khung hình được lưu vào lịch sử khi hoàn thành." : (multi ? "Đang tìm tất cả biển số trong ảnh…" : "Đang tìm biển số và đọc ký tự…"));
   const body = new FormData(); body.append("file", file); body.append("vehicle_type", $("vehicle-type").value);
+  if (multi) body.append("max_plates", "10");
   try {
-    const result = await api("/api/upload/" + (video ? "video" : "image"), {method:"POST",body});
+    const result = await api("/api/upload/" + (video ? "video" : (multi ? "image/multi" : "image")), {method:"POST",body});
     if (video) { const best = [...result.items].reverse().find(item => item.crop_url) || result.items.at(-1); if (best) showResult(best); message("Đã xử lý " + result.frames_processed + " khung hình; tìm thấy vùng biển trong " + result.detections + " khung hình."); }
+    else if (multi) { showMultiResult(result); message("Đã tìm thấy " + result.count + " biển số trong " + Math.round(result.elapsed_ms) + " ms."); }
     else { showResult(result); message("Đã lưu kết quả #" + result.id + ". " + (statusNames[result.status] || "Hoàn tất.")); }
     offset = 0; await refresh();
   } catch (error) { message(error.message, true); }

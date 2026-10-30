@@ -12,6 +12,7 @@ from .character_classifier import CharacterClassifier, ModelNotReadyError
 from .database import Database
 from .detection import _iou
 from .models import PlateRecord
+from .multi_plate import annotate_plates, recognize_plates
 from .pipeline_wp1 import detect_plate_image
 from .recognition_selection import select_plate_for_recognition
 from .pipeline_wp2 import segment_plate, SEGMENTATION_VERSION
@@ -58,63 +59,71 @@ class RecognitionService:
             result[field.replace("_path", "_url")] = "/files/" + record[field] if record.get(field) else None
         return result
 
+    def _store_detection(self, record: PlateRecord, detection: dict, *, vehicle_type: str) -> None:
+        """Persist crop, segmentation, OCR and post-processing for one detection."""
+        token = uuid.uuid4().hex
+        crop = Path("crops") / f"{token}.png"
+        cv2.imencode(".png", detection["plate_normalized"])[1].tofile(self.public / crop)
+        record.crop_path = crop.as_posix()
+        record.metadata.update({key: detection[key] for key in ("bbox", "angle", "confidence")})
+        record.metadata["detection_score"] = record.metadata.pop("confidence")
+        segmentation = detection.get('segmentation') or segment_plate(detection["plate_normalized"])
+        record.line_type = segmentation["line_type"]
+        record.metadata["positions"] = segmentation["positions"]
+        record.metadata["num_chars"] = segmentation["num_chars"]
+        record.metadata["segmentation_version"] = segmentation["algorithm_version"]
+        record.metadata["line_method"] = segmentation["line_method"]
+        record.metadata['threshold_method'] = segmentation['threshold_method']
+        record.metadata['frame_cleanup'] = segmentation['frame_cleanup']
+        record.metadata['detection_source'] = detection.get('source')
+        record.metadata['candidate_diagnostics'] = detection.get('candidate_diagnostics', [])
+        gray = cv2.cvtColor(detection['plate_normalized'], cv2.COLOR_BGR2GRAY)
+        boxes = detection['plate_normalized'].copy()
+        for index, (x, y, width, height) in enumerate(segmentation['positions']):
+            cv2.rectangle(boxes, (x, y), (x + width - 1, y + height - 1), (20, 180, 60), 1)
+            cv2.putText(boxes, str(index + 1), (x, max(9, y)), cv2.FONT_HERSHEY_SIMPLEX, .35, (20, 120, 20), 1)
+        record.metadata['processing_images'] = []
+        for name, label, array in (
+            ('gray', 'Ảnh xám', gray),
+            ('binary', 'Ảnh nhị phân được chọn', segmentation['binary']),
+            ('boxes', 'Thứ tự và vùng ký tự', boxes),
+        ):
+            path = Path('processing') / f'{token}_{name}.png'
+            cv2.imencode('.png', array)[1].tofile(self.public / path)
+            record.metadata['processing_images'].append({'label': label, 'url': '/files/' + path.as_posix()})
+        record.metadata["character_urls"] = []
+        for index, character in enumerate(segmentation["characters"]):
+            path = Path("characters") / f"{token}_{index}.png"
+            cv2.imencode(".png", character)[1].tofile(self.public / path)
+            record.metadata["character_urls"].append("/files/" + path.as_posix())
+        if not segmentation["characters"]:
+            record.status = "segmentation_empty"
+            return
+        classifier = self.classifier()
+        ocr = detection.get('ocr') or recognize_characters(segmentation["characters"], classifier)
+        result = postprocess(ocr["raw_text"], ocr["confidences"], vehicle_type=vehicle_type)
+        record.plate_text = result["plate_text"]
+        record.raw_text = ocr["raw_text"]
+        record.confidence = result["confidence"]
+        record.is_valid = result["is_valid"]
+        record.province = result["province"]
+        record.vehicle_type = result["vehicle_type"]
+        record.model_version = classifier.load().get("model_version")
+        quality_ok = bool(ocr['confidences'] and min(ocr['confidences']) >= .35 and np.mean(ocr['confidences']) >= .8)
+        record.status = "recognized" if result["is_valid"] and quality_ok else "needs_review"
+        record.metadata['ocr_requires_review'] = not quality_ok
+        record.metadata.update({"ocr": ocr, "postprocessing": result})
+
     def process_frame(self, image: np.ndarray, source: str, *, vehicle_type: str = "unknown", extra: dict | None = None) -> dict:
         start = perf_counter()
         record = PlateRecord(image_path=source, metadata=dict(extra or {}))
         try:
-            classifier=self.classifier()
-            detection = select_plate_for_recognition(image,classifier) if classifier.model_path.is_file() else detect_plate_image(image)
+            classifier = self.classifier()
+            detection = select_plate_for_recognition(image, classifier) if classifier.model_path.is_file() else detect_plate_image(image)
             if detection is None:
                 record.status = "no_plate"
             else:
-                token = uuid.uuid4().hex
-                crop = Path("crops") / f"{token}.png"
-                cv2.imencode(".png", detection["plate_normalized"])[1].tofile(self.public / crop)
-                record.crop_path = crop.as_posix()
-                record.metadata.update({key: detection[key] for key in ("bbox", "angle", "confidence")})
-                record.metadata["detection_score"] = record.metadata.pop("confidence")
-                segmentation = detection.get('segmentation') or segment_plate(detection["plate_normalized"])
-                record.line_type = segmentation["line_type"]
-                record.metadata["positions"] = segmentation["positions"]
-                record.metadata["num_chars"] = segmentation["num_chars"]
-                record.metadata["segmentation_version"] = segmentation["algorithm_version"]
-                record.metadata["line_method"] = segmentation["line_method"]
-                record.metadata['threshold_method']=segmentation['threshold_method']
-                record.metadata['frame_cleanup']=segmentation['frame_cleanup']
-                record.metadata['detection_source']=detection.get('source')
-                record.metadata['candidate_diagnostics']=detection.get('candidate_diagnostics',[])
-                gray=cv2.cvtColor(detection['plate_normalized'],cv2.COLOR_BGR2GRAY)
-                boxes=detection['plate_normalized'].copy()
-                for index,(x,y,width,height) in enumerate(segmentation['positions']):
-                    cv2.rectangle(boxes,(x,y),(x+width-1,y+height-1),(20,180,60),1)
-                    cv2.putText(boxes,str(index+1),(x,max(9,y)),cv2.FONT_HERSHEY_SIMPLEX,.35,(20,120,20),1)
-                record.metadata['processing_images']=[]
-                for name,label,array in (('gray','Ảnh xám',gray),('binary','Ảnh nhị phân được chọn',segmentation['binary']),('boxes','Thứ tự và vùng ký tự',boxes)):
-                    path=Path('processing')/f'{token}_{name}.png'
-                    cv2.imencode('.png',array)[1].tofile(self.public/path)
-                    record.metadata['processing_images'].append({'label':label,'url':'/files/'+path.as_posix()})
-                record.metadata["character_urls"] = []
-                for index, character in enumerate(segmentation["characters"]):
-                    path = Path("characters") / f"{token}_{index}.png"
-                    cv2.imencode(".png", character)[1].tofile(self.public / path)
-                    record.metadata["character_urls"].append("/files/" + path.as_posix())
-                if not segmentation["characters"]:
-                    record.status = "segmentation_empty"
-                else:
-                    classifier = self.classifier()
-                    ocr = detection.get('ocr') or recognize_characters(segmentation["characters"], classifier)
-                    result = postprocess(ocr["raw_text"], ocr["confidences"], vehicle_type=vehicle_type)
-                    record.plate_text = result["plate_text"]
-                    record.raw_text = ocr["raw_text"]
-                    record.confidence = result["confidence"]
-                    record.is_valid = result["is_valid"]
-                    record.province = result["province"]
-                    record.vehicle_type = result["vehicle_type"]
-                    record.model_version = classifier.load().get("model_version")
-                    quality_ok = bool(ocr['confidences'] and min(ocr['confidences']) >= .35 and np.mean(ocr['confidences']) >= .8)
-                    record.status = "recognized" if result["is_valid"] and quality_ok else "needs_review"
-                    record.metadata['ocr_requires_review']=not quality_ok
-                    record.metadata.update({"ocr": ocr, "postprocessing": result})
+                self._store_detection(record, detection, vehicle_type=vehicle_type)
         except ModelNotReadyError as exc:
             record.status, record.error = "ocr_unavailable", str(exc)
         except (ValueError, cv2.error) as exc:
@@ -128,6 +137,68 @@ class RecognitionService:
             raise ValueError("uploaded file is not a readable image")
         source = path.relative_to(self.public).as_posix()
         return self.process_frame(image, source, vehicle_type=vehicle_type)
+
+    def process_image_multi(
+        self,
+        path: Path,
+        *,
+        vehicle_type: str = "unknown",
+        max_plates: int = 10,
+        use_tiles: bool = True,
+    ) -> dict:
+        """Read every plausible plate in one image and persist one record each."""
+        if not 1 <= max_plates <= 20:
+            raise ValueError("max_plates must be between 1 and 20")
+        image = cv2.imdecode(np.fromfile(path, np.uint8), cv2.IMREAD_COLOR)
+        if image is None:
+            raise ValueError("uploaded file is not a readable image")
+        source = path.relative_to(self.public).as_posix()
+        start = perf_counter()
+        detections = []
+        failure = None
+        try:
+            detections = recognize_plates(
+                image,
+                self.classifier(),
+                max_plates=max_plates,
+                use_tiles=use_tiles,
+                vehicle_type=vehicle_type,
+            )
+        except (ModelNotReadyError, ValueError, cv2.error) as exc:
+            failure = exc
+        records = []
+        for index, detection in enumerate(detections, 1):
+            record = PlateRecord(
+                image_path=source,
+                metadata={"multi_plate_index": index, "multi_plate_count": len(detections)},
+            )
+            try:
+                self._store_detection(record, detection, vehicle_type=vehicle_type)
+            except (ModelNotReadyError, ValueError, cv2.error) as exc:
+                record.status, record.error = "processing_error", str(exc)
+            record.metadata["elapsed_ms"] = (perf_counter() - start) * 1000
+            records.append(self.with_urls(self.database.create(record)))
+        if not records:
+            status = "ocr_unavailable" if isinstance(failure, ModelNotReadyError) else "no_plate"
+            record = PlateRecord(
+                image_path=source,
+                status=status,
+                error=str(failure) if failure else None,
+                metadata={"multi_plate_count": 0, "elapsed_ms": (perf_counter() - start) * 1000},
+            )
+            records.append(self.with_urls(self.database.create(record)))
+        annotated = annotate_plates(image, detections)
+        annotated_path = Path("processing") / f"{uuid.uuid4().hex}_multi.jpg"
+        cv2.imencode(".jpg", annotated, [cv2.IMWRITE_JPEG_QUALITY, 92])[1].tofile(self.public / annotated_path)
+        return {
+            "items": records,
+            "count": len(detections),
+            "annotated_url": "/files/" + annotated_path.as_posix(),
+            "source_url": "/files/" + source,
+            "elapsed_ms": (perf_counter() - start) * 1000,
+            "tiles": use_tiles,
+            "scope": "multi-plate detector/OCR candidates; boxes are not ground truth",
+        }
 
     def process_video(self, path: Path, *, stride: int = 5, vehicle_type: str = "unknown") -> dict:
         if not 1 <= stride <= 60:

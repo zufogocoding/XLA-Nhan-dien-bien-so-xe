@@ -61,3 +61,7 @@ Có thể tái lập bằng:
 ```
 
 Hướng cải thiện: kiểm tra nhãn `1`/`2`, tối ưu bằng `valid`, bổ sung đặc trưng phân biệt biển với logo (mật độ nét ký tự, khung chữ nhật, độ tương phản trong vùng), xử lý nhiều biển và đánh giá riêng xe máy. Chỉ kết luận đạt yêu cầu sau khi kiểm tra lại trên tập test độc lập.
+
+Chẩn đoán định lượng ngày 30/10/2026: 44/48 FN không có proposal đúng trong
+top 10 và 36/44 có IoU tốt nhất dưới 0,10, nên nút thắt là sinh proposal chứ
+không phải xếp hạng. Xem [multi_plate_diagnosis.md](multi_plate_diagnosis.md).
