@@ -1,6 +1,6 @@
 # Tiến độ WP1–WP4
 
-Cập nhật: 30/10/2026. Bản local đã tích hợp bốn giai đoạn và có artifact
+Cập nhật: 31/10/2026. Bản local đã tích hợp bốn giai đoạn và có artifact
 baseline. Chưa hoàn thành toàn bộ tiêu chí nghiệm thu về độ chính xác. Đã có
 chẩn đoán định lượng vì sao WP1/OCR còn thấp và chế độ đọc nhiều biển ở lớp
 ứng dụng: [chẩn đoán](multi_plate_diagnosis.md).
@@ -16,7 +16,7 @@ biệt rõ WP1 độc lập và bộ chọn vùng có hỗ trợ OCR của ứng
 - Bảng mã đăng ký hiện hành thay danh sách 63 tỉnh cũ trong brief.
 - OCR/video winter2897 đã duyệt; huấn luyện baseline dù O/Q/W ít mẫu,
   ghi rõ giới hạn. Không huấn luyện lại model WP1 đã có.
-- Dừng sửa Docker Desktop, tiếp tục local; không reset/đổi tên runtime Docker.
+- Dừng sửa Docker Desktop; chuyển sang Podman rootless cho môi trường local.
 
 ## Kết quả theo tiêu chí
 
@@ -39,7 +39,7 @@ biệt rõ WP1 độc lập và bộ chọn vùng có hỗ trợ OCR của ứng
 | Web/API local | Upload ảnh/video, kết quả, lịch sử, tìm kiếm, CRUD, thống kê | Đã chạy và kiểm tra |
 | Webcam | Có nút mở camera/cấp quyền, gửi từng ảnh chụp | Có mã; chưa kiểm tra camera vật lý |
 | Video demo | MP4 260 frame từ kết quả inference thật | Chưa có bài quay OBS đầy đủ web/webcam |
-| Docker | Có Dockerfile backend/frontend, nginx, compose; config hợp lệ | Chưa build; dừng theo yêu cầu người dùng |
+| Docker/Podman | Có Dockerfile backend/frontend, nginx, compose; đã build và chạy thử bằng Podman rootless 5.8 + podman-compose 1.6, healthcheck backend/frontend đạt | Đạt với Podman; Docker Desktop không dùng |
 
 Các tập đánh giá WP1 và WP2–WP3 khác nhau, không ghép các chỉ số thành
 accuracy toàn luồng. `recognized` chỉ nói đúng mẫu/mã được hỗ trợ; điểm OCR
@@ -142,9 +142,10 @@ rồi mở http://127.0.0.1:8000/. Xem [README](../README.md).
    O/Q/W và ảnh điều kiện khó có nhãn; nhãn loại xe/dòng chính thức nếu cần
    kết luận riêng theo nhóm.
 3. Người dùng thử camera vật lý và quay bài demo web/webcam đầy đủ.
-4. Docker build để lại theo yêu cầu dừng sửa Docker. PostgreSQL chỉ cần khi
-   người dùng đổi mục tiêu sang production.
+4. Môi trường container đã chuyển sang Podman rootless và build/chạy thành
+   công ngày 31/10/2026 (backend healthy, frontend nginx healthy, test 58/58
+   đạt trong container). PostgreSQL chỉ cần khi người dùng đổi mục tiêu sang
+   production.
 
-Docker Model Runner hiện vẫn tạm tắt theo lần cho phép trước. Cấu hình gốc:
-`%APPDATA%/Docker/settings-store.json.codex-backup-20261024-880cd934`.
-Không thay đổi thêm Docker sau yêu cầu dừng.
+Docker Desktop không còn là môi trường demo; cấu hình compose dùng chung với
+Podman. Không thay đổi thêm cấu hình Docker Desktop.

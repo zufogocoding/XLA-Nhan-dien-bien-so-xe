@@ -1,233 +1,323 @@
-# Nhận diện biển số xe Việt Nam — bản local
+# Nhận diện biển số xe Việt Nam — baseline local
 
-Pipeline OpenCV truyền thống: **WP1 phát hiện biển → WP2 tách ký tự → WP3
-HOG/LBP + classifier → WP4 sửa chuỗi, kiểm tra mẫu và lưu SQLite**. Có giao
-diện HTML + JavaScript, FastAPI, upload ảnh/video, lịch sử, thống kê, sửa kết
-quả và chụp từ webcam. Có thêm chế độ đọc **nhiều biển trong một ảnh** ở lớp
-ứng dụng, không thay hợp đồng WP1 một biển. Đây là baseline, chưa đạt toàn bộ
-mục tiêu accuracy.
+Pipeline OpenCV + machine learning, chạy hoàn toàn local:
 
-**Đã sửa lỗi cắt nhầm logo và mất dòng ký tự ngày 24/10/2026.** Trên 478
-crop test: đúng nguyên chuỗi 48,74% → 69,46%, recall box ký tự 76,79% →
-92,57%. Giữ nguyên HOG/SVM; tập trung sửa xử lý ảnh và chọn phương án nhị
-phân. Xem [báo cáo sửa xử lý ảnh](reports/image_processing_fix.md).
+**WP1 phát hiện biển → WP2 tách ký tự → WP3 HOG/LBP + classifier → WP4 sửa chuỗi,
+kiểm tra mẫu và lưu SQLite.**
 
-**Đã khôi phục WP1 độc lập và kiểm tra chéo nhánh WP1.** Lỗi tích hợp trước
-đó tự chạy WP2 để chọn lại vùng, làm F1 giảm từ 0,792 xuống 0,697. Mặc định
-WP1 hiện khớp từng box với nhánh `wp1/fix-char-density-deskew`; luồng ứng
-dụng có OCR dùng hàm chọn vùng riêng. [Điều tra và benchmark](reports/wp1_branch_investigation.md).
+Kèm giao diện web để upload ảnh/video, chụp webcam, xem lịch sử, thống kê và sửa
+kết quả. Đây là **baseline**, chưa đạt toàn bộ mục tiêu accuracy toàn cảnh; các số
+đo và giới hạn được ghi rõ bên dưới.
 
-## Chạy ứng dụng local
+## Demo nhanh bằng Podman
 
-```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m uvicorn api.main:app --host 127.0.0.1 --port 8000
-```
-
-Mở [giao diện](http://127.0.0.1:8000/) hoặc [OpenAPI](http://127.0.0.1:8000/docs).
-Có thể dùng `.\run_local.ps1`. Ctrl+C để dừng server. Phiên bản thư viện đã
-kiểm chứng: `requirements-lock.txt` (Python 3.12). SQLite và ảnh runtime nằm
-dưới `outputs/runtime/`, đã gitignore. Webcam mở theo nút bấm/quyền trình duyệt
-và gửi từng ảnh chụp. Video mặc định lấy mẫu mỗi 5 frame, voting 20 quan sát;
-mỗi frame đã xử lý đều lưu một bản ghi, kể cả không có biển.
-
-## OCR và đánh giá các giai đoạn
-
-Bộ OCR winter2897 do người dùng duyệt có 3.188 ảnh, 25.781 ký tự, 36 lớp.
-Split theo SHA256 ảnh nguồn khoảng 70/15/15; bảng phông chữ chỉ dùng train.
-O/Q/W có 4/2/4 mẫu và không có valid/test độc lập trong split hiện tại.
-[Nguồn dữ liệu](reports/data_sources.md), [audit](reports/wp3_dataset_audit.json),
-[split](reports/wp3_data_preparation.json).
-
-Đã huấn luyện 5 model: SVM+HOG, SVM+LBP, SVM+HOG+LBP, kNN, Random Forest.
-Service chọn SVM+HOG+LBP theo valid; accuracy trên **ký tự test cắt theo nhãn**
-là 96,53%. Đây chưa phải accuracy đọc nguyên biển.
-Sau sửa, trên 478 crop test, OpenCV + HOG/SVM chọn phương án nhị phân đạt
-69,46% đúng chuỗi, CER 9,36%, recall/precision box ký tự 92,57%/97,15%.
-Đúng chuỗi chưa đạt 75%; không suy accuracy toàn cảnh từ ảnh crop này.
-
-- [WP2 segmentation](reports/wp2_evaluation.md).
-- [So sánh classifier](reports/wp3_comparison.md), [ablation](reports/wp3_ablation.md).
-- [Đánh giá chuỗi/CER/WER](reports/wp3_sequence_evaluation.md).
-- [Robustness](reports/wp3_robustness.md), [confusion matrix](reports/wp3_confusion_matrix.png).
-- [Hợp đồng WP1–WP4 và HTTP](docs/api.md).
-- [Kiểm tra ứng dụng local WP4](reports/wp4_evaluation.md).
-
-Benchmark baseline trước sửa là 176,9 ms/ảnh, lưu 169/169 kết quả
-([số lịch sử](reports/baseline_local_latency.json)). Số này không đại diện
-luồng hiện tại. Benchmark hiện tại tách WP1 độc lập khỏi bộ chọn vùng của
-ứng dụng; xem bảng bên dưới và phạm vi thời gian trong báo cáo điều tra.
-
-```powershell
-.\.venv\Scripts\python.exe scripts\prepare_wp3_data.py data\external\winter2897\voc_plate_ocr_dataset.zip
-.\.venv\Scripts\python.exe scripts\train_wp3.py
-.\.venv\Scripts\python.exe scripts\evaluate_wp2_wp3.py
-```
-
-Các lệnh chuẩn bị/huấn luyện dành cho tái lập, không cần chạy lại khi artifact
-đã có. Importer từ chối ghi đè `labels.csv`; dùng output mới cho phiên bản
-dữ liệu khác. HOG ký tự 32×32 có 324 chiều, LBP 10 chiều, HOG+LBP 334 chiều.
-Artifact `wp1_svm.pkl` giữ nguyên và chỉ lọc vùng biển/background.
-
-Theo lựa chọn người dùng, bảng mã đăng ký dùng 34 địa phương và mã cơ quan 80,
-có [nguồn](data/provinces.sources.md). `is_valid` chỉ kiểm tra mẫu hỗ trợ và
-mã trong bảng. Loại xe giữ `unknown` nếu ô tô/xe máy đều phù hợp chuỗi.
-Chưa có tập ảnh giao thông gốc kèm chuỗi thật độc lập để xác nhận mục tiêu
-WP4 end-to-end ≥70%.
-
-Đã có Dockerfile backend/frontend, nginx và compose. Người dùng yêu cầu dừng
-sửa Docker Desktop nên build container chưa được xác nhận. Mục tiêu local
-dùng SQLite; PostgreSQL và hosting production chưa triển khai.
-
-## Kết quả WP1
-
-Đo cùng 169 ảnh / 172 box, IoU ≥0,5, tối đa một biển mỗi ảnh. Phải phân
-biệt WP1 độc lập và bộ chọn vùng dùng thêm thông tin từ WP2–WP4:
-
-| Phạm vi | Precision | Recall | F1 |
-|---|---:|---:|---:|
-| WP1 độc lập, đã khôi phục | 0,879 | 0,721 | 0,792 |
-| Ứng dụng: OpenCV + segmentation + HOG/SVM chọn vùng | 0,857 | 0,802 | 0,829 |
-
-WP1 độc lập đạt Precision ≥0,85 nhưng chưa đạt Recall ≥0,80 và F1 ≥0,82.
-Thời gian trung bình WP1 đầy đủ là 179,7 ms/ảnh, gồm đọc ảnh và warp/deskew;
-P95 298,1 ms. [Đánh giá WP1](reports/wp1_evaluation.md),
-[đối chiếu nhánh và phạm vi đo](reports/wp1_branch_investigation.md).
-
-Bộ chọn vùng ứng dụng trung bình 1.658,9 ms/ảnh, P95 4.776,9 ms, chưa gồm
-HTTP/ghi ảnh/SQLite; chưa đạt 1 giây. Báo cáo 0,841 trước đó không tái lập
-được trong đợt đối chứng này; không dùng làm số hiện hành.
-
-Để đo đầy đủ và tái lập cùng điều kiện, chạy:
-
-```powershell
-.\.venv\Scripts\python.exe scripts\benchmark_wp1.py --mode standalone --label WP1 --output outputs\wp1.json
-.\.venv\Scripts\python.exe scripts\benchmark_wp1.py --mode application --label app --output outputs\application.json
-```
-
-Chạy từng lệnh tuần tự. `evaluate_wp1.py` vẫn đo riêng detector; không gọi
-thời gian chọn vùng kèm OCR là thời gian riêng của detector OpenCV. F1 trên
-box COCO cũng không phải accuracy đọc đúng nội dung biển.
-
-Tiến độ WP1–WP4: [reports/implementation_status.md](reports/implementation_status.md).
-WP2–WP4 đã có mã baseline và báo cáo; các mục chưa đạt được ghi rõ trong
-bảng tiến độ. Thử nới ngưỡng diện tích WP1 trên valid làm F1 giảm, nên giữ
-mặc định: [báo cáo thử nghiệm](reports/wp1_validation_tuning.md).
-
-## Ảnh có nhiều biển
-
-`src/multi_plate.py` là lớp ứng dụng: lấy proposal WP1 (thêm tile cho ảnh lớn),
-chạy WP2–WP4 cho từng vùng, lọc theo confidence/định dạng và khử trùng lặp.
-WP1 độc lập vẫn giữ `detect_plate()` trả tối đa một biển. Có thêm
-`detect_plates_image()` để lấy danh sách proposal WP1 thuần, không OCR.
+Yêu cầu: Linux, Podman và `podman-compose`. Trên Fedora:
 
 ```bash
-python scripts/demo_multi_plate.py "duong-dan-anh.jpg"
-python scripts/evaluate_multi_plate.py --min-plate-area 0.01 \
-  --output reports/wp_multi_plate_evaluation_prominent.json
+sudo dnf install podman podman-compose
 ```
 
-Demo ghi ảnh đánh dấu, crop từng biển và `result.json` dưới
-`outputs/multi_plate/`. Trên web, bật **Ảnh có nhiều biển số** trước khi upload;
-API tương ứng là `POST /api/upload/image/multi` với form `max_plates`.
-
-Đo box trên valid, IoU ≥ 0,5, không có nhãn chuỗi:
-
-| Tập | Ảnh | Box GT | TP / FP / FN | Precision | Recall | F1 |
-|---|---:|---:|---:|---:|---:|---:|
-| Mọi box | 118 | 286 | 94 / 9 / 192 | 0,913 | 0,329 | 0,483 |
-| Box ≥1% diện tích ảnh | 23 | 47 | 28 / 2 / 19 | 0,933 | 0,596 | 0,727 |
-
-Toàn bộ valid có nhiều biển nền rất nhỏ nên recall thấp; tập prominent mới phản
-ánh biển chính. Top-1 trên tập prominent chỉ đạt F1 0,523, nên thứ hạng biển
-phụ vẫn là hạn chế. Test chỉ có 3 ảnh / 6 box nhiều biển, không dùng để chỉnh
-threshold. Demo thật 2 biển đọc đúng cả hai; collage 4 ảnh tìm đủ 8/8 box nhưng
-chỉ 4/8 chuỗi đúng định dạng. Đây là kiểm tra chức năng, không phải benchmark.
-
-Chẩn đoán đầy đủ vì sao WP1/OCR còn thấp, gồm top-10 oracle và giới hạn
-diện tích 30%: [reports/multi_plate_diagnosis.md](reports/multi_plate_diagnosis.md).
-
-## Cài đặt
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-```
-
-## Chạy demo
-
-Chạy trên một ảnh đầu vào:
-
-```powershell
-.\.venv\Scripts\python.exe run_pipeline.py 'duong-dan-anh.jpg'
-```
-
-Lệnh này chạy WP1→WP4, in JSON và lưu SQLite/ảnh runtime. Có thể truyền
-`--vehicle-type car` hoặc `motorcycle` nếu đã biết loại xe. Để chỉ chạy WP1:
-
-```powershell
-.\.venv\Scripts\python.exe run_wp1.py 'duong-dan-anh.jpg'
-```
-
-Lệnh trên ghi `outputs/plate_crop.png` và `outputs/plate_normalized.png`, đồng thời in `bbox`, `angle`, `confidence`.
-
-Giao diện Python:
-
-```python
-from src.pipeline_wp1 import detect_plate
-result = detect_plate(image_path)  # None nếu không có ứng viên
-```
-
-`detect_plate` trả về dict gồm `plate_crop`, `plate_normalized` (mảng BGR), `bbox=[x1,y1,x2,y2]` theo tọa độ ảnh gốc, `angle` theo độ và `confidence` là điểm heuristic từ 0 đến 1.
-
-Đọc nhiều biển trong một ảnh:
+Chạy từ thư mục gốc của repo:
 
 ```bash
-python scripts/demo_multi_plate.py "duong-dan-anh.jpg" --max-plates 10
+mkdir -p outputs
+cp .env.example .env      # tuỳ chọn: đổi cổng / giới hạn upload
+podman-compose up --build -d
+podman-compose ps         # chờ backend chuyển sang healthy
 ```
 
-Kết quả gồm `count`, `elapsed_ms`, `annotated_image` và danh sách `plates` với
-`bbox`, `plate_text`, `is_valid`, `recognition_confidence`, `status`. Dùng
-`--text-regions auto|on|off` để điều khiển fallback vùng ký tự; mặc định chỉ
-fallback khi contour không tìm thấy biển.
+Mở các địa chỉ sau:
 
-## Đánh giá
+| Địa chỉ | Nội dung |
+|---|---|
+| <http://127.0.0.1:8080> | Giao diện web qua nginx (khuyên dùng) |
+| <http://127.0.0.1:8000> | Backend FastAPI, phục vụ cùng giao diện |
+| <http://127.0.0.1:8000/docs> | OpenAPI / Swagger UI |
+| <http://127.0.0.1:8000/api/health> | Trạng thái server và model OCR |
 
-Đo trên nhãn COCO:
-
-```powershell
-.\.venv\Scripts\python.exe evaluate_wp1.py 'Vietnam License Plate.v2i.coco\test'
-.\.venv\Scripts\python.exe -m pytest -q
-```
-
-Chẩn đoán lỗi WP1 và đo nhiều biển:
+Lần build đầu mất vài phút vì cài dependency. Dừng hệ thống:
 
 ```bash
+podman-compose down
+```
+
+SQLite, ảnh upload và crop nằm trong `outputs/` trên host nên `down` không làm mất
+dữ liệu. Chỉ bind vào `127.0.0.1`, không mở ra mạng LAN.
+
+> Dùng Docker cũng được với cùng file compose: thay `podman-compose` bằng
+> `docker compose`.
+
+## Các cách demo
+
+### 1. Demo trên web (nhanh nhất)
+
+Mở <http://127.0.0.1:8080>, sau đó:
+
+1. **Ảnh đơn**: chọn ảnh biển số, bấm nhận diện. Kết quả hiện chuỗi đọc được,
+   độ tin cậy, box, crop và các ký tự đã tách.
+2. **Nhiều biển trong một ảnh**: bật checkbox **Ảnh có nhiều biển số** rồi upload.
+   Ảnh mẫu: [`demo/multi_plate_collage_input.jpg`](demo/multi_plate_collage_input.jpg)
+   — collage 4 ảnh, tìm đủ 8/8 box nhưng chất lượng đọc không đồng đều.
+3. **Video**: upload `.mp4/.avi/.mov/.mkv/.webm`. Mặc định lấy mẫu mỗi 5 frame và
+   voting trên 20 quan sát; mỗi frame đã xử lý đều được lưu lịch sử.
+4. **Webcam**: bấm mở camera, cấp quyền trình duyệt, chụp từng khung hình.
+   Webcam chỉ hoạt động với `localhost` hoặc `https`; nếu truy cập bằng IP LAN qua
+   HTTP, trình duyệt sẽ chặn `getUserMedia`.
+5. **Lịch sử / thống kê**: tìm kiếm, xem lại, sửa hoặc xoá bản ghi; kiểm tra số
+   liệu tổng hợp.
+
+Kết quả mẫu đã tạo sẵn (không cần chạy):
+
+- [`demo/multi_plate_real_result.jpg`](demo/multi_plate_real_result.jpg) — ảnh thật
+  2 biển với box, crop và chuỗi đọc được.
+- [`demo/multi_plate_collage_result.jpg`](demo/multi_plate_collage_result.jpg) —
+  collage 4 ảnh với box đánh số.
+- [`demo/wp1_before_after.png`](demo/wp1_before_after.png) — minh hoạ WP1.
+- [`demo/hog_character.png`](demo/hog_character.png) — minh hoạ đặc trưng HOG.
+
+### 2. Demo bằng API
+
+Upload một ảnh:
+
+```bash
+curl -s -F "file=@demo/multi_plate_collage_input.jpg" \
+  http://127.0.0.1:8000/api/upload/image | python3 -m json.tool
+```
+
+Upload ảnh nhiều biển:
+
+```bash
+curl -s -F "file=@demo/multi_plate_collage_input.jpg" \
+  -F "max_plates=10" \
+  http://127.0.0.1:8000/api/upload/image/multi | python3 -m json.tool
+```
+
+Upload video (giữ nguyên `stride=5` mặc định):
+
+```bash
+curl -s -F "file=@duong-dan-video.mp4" -F "stride=5" \
+  http://127.0.0.1:8000/api/upload/video | python3 -m json.tool
+```
+
+Các endpoint chính: `GET /api/health`, `POST /api/upload/image`,
+`POST /api/upload/image/multi`, `POST /api/upload/video`,
+`GET/POST/PATCH/DELETE /api/plates`, `GET /api/stats`.
+Chi tiết hợp đồng và mã lỗi: [docs/api.md](docs/api.md).
+
+### 3. Demo bằng CLI trong container
+
+Ảnh mẫu đã có trong container tại `/app/demo`:
+
+```bash
+# Một biển mạnh nhất, chạy đủ WP1 → WP4
+podman-compose exec backend python run_pipeline.py \
+  /app/demo/multi_plate_collage_input.jpg
+
+# Nhiều biển: ghi annotated.jpg, crop từng biển và result.json
+podman-compose exec backend python scripts/demo_multi_plate.py \
+  /app/demo/multi_plate_collage_input.jpg
+```
+
+Kết quả CLI nằm trên host tại `outputs/multi_plate/<tên-ảnh>/`. Muốn thử ảnh của
+bạn, copy vào thư mục `demo/` (đang được mount read-only vào container):
+
+```bash
+cp anh-cua-ban.jpg demo/
+podman-compose exec backend python scripts/demo_multi_plate.py \
+  /app/demo/anh-cua-ban.jpg --max-plates 10
+```
+
+Chỉ chạy WP1:
+
+```bash
+podman-compose exec backend python run_wp1.py /app/demo/anh-cua-ban.jpg
+```
+
+## Chạy trực tiếp trên máy (không dùng container)
+
+Cần Python 3.12. Dùng `requirements-lock.txt` để tái lập đúng phiên bản đã kiểm tra:
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-lock.txt
+python -m uvicorn api.main:app --host 127.0.0.1 --port 8000
+```
+
+Windows PowerShell:
+
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements-lock.txt
+python -m uvicorn api.main:app --host 127.0.0.1 --port 8000
+```
+
+Hoặc dùng `.\run_local.ps1` trên Windows. Mở
+<http://127.0.0.1:8000/> và <http://127.0.0.1:8000/docs>.
+
+## Podman: cấu hình và vận hành
+
+### Thành phần
+
+```text
+:8080  nginx (web/) ──/api/, /files/──> backend FastAPI :8000
+                                        ├── giao diện web tại /
+                                        ├── OpenAPI tại /docs
+                                        └── SQLite + uploads trong outputs/
+```
+
+| Service | Vai trò | Cổng mặc định |
+|---|---|---|
+| `backend` | FastAPI, WP1–WP4, SQLite, giao diện dự phòng | `8000` |
+| `frontend` | nginx phục vụ file tĩnh và reverse proxy | `8080` |
+
+Dockerfile backend dùng `requirements-lock.txt` (Python 3.12). Image có sẵn model,
+script demo và test. `docker-compose.yml` mount:
+
+- `./outputs:/app/outputs:Z` — dữ liệu runtime và kết quả CLI (nhãn `:Z` cho SELinux).
+- `./demo:/app/demo:ro,Z` — ảnh mẫu, chỉ đọc (nhãn `:Z` cho SELinux).
+
+### Đổi cổng hoặc giới hạn upload
+
+```bash
+cp .env.example .env
+# sửa ALPR_WEB_PORT, ALPR_API_PORT, ALPR_MAX_UPLOAD_MB
+podman-compose up -d
+```
+
+Kiểm tra trạng thái và log:
+
+```bash
+podman-compose ps
+podman-compose logs -f backend
+curl -s http://127.0.0.1:8000/api/health | python3 -m json.tool
+```
+
+Sau khi sửa code, build lại:
+
+```bash
+podman-compose up --build -d
+```
+
+### Xử lý sự cố thường gặp
+
+| Hiện tượng | Cách xử lý |
+|---|---|
+| `podman-compose: command not found` | Cài `podman-compose` (Fedora: `sudo dnf install podman-compose`) |
+| Cổng bận | Đổi `ALPR_WEB_PORT` / `ALPR_API_PORT` trong `.env` |
+| Backend mãi không `healthy` | Xem `podman-compose logs backend`; thử `podman-compose build --no-cache` |
+| `Permission denied` khi ghi `outputs/` | Kiểm tra SELinux; mount đã có `:Z`. Có thể `podman unshare chown -R 0:0 outputs` rồi chạy lại |
+| Webcam không mở | Dùng `http://127.0.0.1:8080` hoặc HTTPS, không dùng IP LAN qua HTTP |
+| Muốn reset toàn bộ dữ liệu | `podman-compose down` rồi xoá `outputs/runtime/` |
+
+## Kiến trúc mã nguồn
+
+```text
+api/main.py              FastAPI, upload, CRUD, static files
+src/pipeline_wp1.py      phát hiện biển, warp/deskew
+src/pipeline_wp2.py      tách dòng và ký tự
+src/pipeline_wp3.py      nhận diện ký tự bằng HOG/LBP + classifier
+src/pipeline_wp4.py      sửa chuỗi, validate tỉnh/mẫu, lưu kết quả
+src/multi_plate.py       lớp ứng dụng đọc nhiều biển trong một ảnh
+src/service.py           ghép WP1–WP4, lưu SQLite và ảnh runtime
+web/                     giao diện HTML/CSS/JS
+models/                  artifact WP1 + OCR đã huấn luyện
+scripts/                 demo, benchmark, đánh giá, huấn luyện
+data/                    bảng mã tỉnh và dữ liệu hỗ trợ
+reports/                 số đo, audit, chẩn đoán
+docs/                    báo cáo đồ án, thuyết trình, hợp đồng API
+```
+
+Luồng xử lý chi tiết và hợp đồng giữa các tầng: [docs/api.md](docs/api.md).
+
+## Kết quả hiện tại
+
+Các số dưới đây là baseline, đo trên dữ liệu sẵn có — **không phải accuracy toàn
+cảnh trên ảnh giao thông độc lập**.
+
+| Hạng mục | Kết quả | Ghi chú |
+|---|---:|---|
+| WP1 độc lập | P 0,879 / R 0,721 / F1 0,792 | 169 ảnh, 172 box, IoU ≥ 0,5 |
+| Bộ chọn vùng của ứng dụng | F1 0,829 | có thêm tín hiệu WP2–WP4 |
+| OCR trên ký tự test | 96,53% | 36 lớp; accuracy ký tự, không phải nguyên biển |
+| Chuỗi đúng trên 478 crop test | 69,46% | CER 9,36%; chưa đạt mục tiêu 75% |
+| Multi-plate, box ≥1% diện tích | F1 0,727 | 23 ảnh / 47 box |
+| Multi-plate, mọi box | F1 0,483 | recall thấp vì nhiều biển rất nhỏ |
+
+Sau đợt sửa xử lý ảnh ngày 24/10/2026, đúng nguyên chuỗi trên 478 crop test tăng
+48,74% → 69,46%; recall box ký tự tăng 76,79% → 92,57%. WP1 độc lập đã được
+khôi phục, tách khỏi bộ chọn vùng có hỗ trợ OCR của ứng dụng.
+
+Thời gian tham khảo: WP1 độc lập 179,7 ms/ảnh (P95 298,1 ms); bộ chọn vùng kèm
+OCR 1.658,9 ms/ảnh (P95 4.776,9 ms), chưa gồm HTTP/ghi ảnh/SQLite. Chưa đạt mục
+tiêu 1 giây cho toàn luồng.
+
+Đọc thêm:
+
+- [Tổng hợp tiến độ WP1–WP4](reports/implementation_status.md)
+- [Đánh giá WP1](reports/wp1_evaluation.md) và
+  [đối chiếu nhánh WP1](reports/wp1_branch_investigation.md)
+- [WP2 segmentation](reports/wp2_evaluation.md)
+- [So sánh classifier](reports/wp3_comparison.md),
+  [ablation](reports/wp3_ablation.md),
+  [đánh giá chuỗi/CER](reports/wp3_sequence_evaluation.md)
+- [Chẩn đoán multi-plate](reports/multi_plate_diagnosis.md)
+- [Báo cáo đồ án](docs/bao_cao_do_an.md) và
+  [kịch bản thuyết trình 20 phút](docs/thuyet_trinh_20p.md)
+
+## Kiểm thử và tái lập
+
+Chạy test local:
+
+```bash
+source .venv/bin/activate
+python -m pytest -q
+```
+
+Chạy test trong container:
+
+```bash
+podman-compose exec backend python -m pytest -q
+```
+
+Benchmark WP1 và ứng dụng (cần dataset COCO local):
+
+```bash
+python scripts/benchmark_wp1.py --mode standalone --label WP1 \
+  --output outputs/wp1.json
+python scripts/benchmark_wp1.py --mode application --label app \
+  --output outputs/application.json
+```
+
+Đánh giá trên nhãn COCO:
+
+```bash
+python evaluate_wp1.py "Vietnam License Plate.v2i.coco/test"
 python scripts/diagnose_wp1_failures.py
-python scripts/evaluate_multi_plate.py --min-plate-area 0.01 \
-  --output reports/wp_multi_plate_evaluation_prominent.json
 ```
 
-Xem [khảo sát dataset](eda_report.md).
+Huấn luyện lại OCR (dataset ngoài repo, không cần cho demo):
 
-Các model cần chạy được giữ trong Git; dataset tải thêm, runtime, ảnh người
-dùng và model thử nghiệm được ignore. Xem [chính sách artifact](reports/artifact_policy.md)
-và [model đi kèm](models/README.md).
-
-## Ảnh minh họa
-
-- [Ảnh before/after](demo/wp1_before_after.png): ảnh gốc, box dự đoán, vùng biển đã cắt, chỉnh phối cảnh, chuyển xám, CLAHE và lọc bilateral.
-- [Ảnh minh họa HOG](demo/hog_character.png): giải thích gradient, histogram theo ô 8×8 cho WP3.
-- [Demo 2 biển thật](demo/multi_plate_real_result.jpg) và
-  [collage 4 ảnh](demo/multi_plate_collage_result.jpg): box đánh số và chuỗi đọc được.
-- Ảnh giao diện local: `reports/local_web_demo.png` (tạo local, không đưa lên Git).
-- Video kết quả thật có chú thích: `demo/video_demo.mp4` (tạo local, không đưa lên Git). Cài `requirements-demo.txt`,
-  rồi chạy `.\.venv\Scripts\python.exe -m demo.make_video_demo` sau khi xử lý
-  video qua API. Đây là demo inference; quay kịch bản web/webcam hoàn chỉnh còn lại.
-
-Tạo lại hoặc thay ảnh đầu vào:
-
-```powershell
-.\.venv\Scripts\python.exe -m demo.make_wp1_demo
-.\.venv\Scripts\python.exe -m demo.make_wp1_demo --image 'duong-dan-anh.jpg' --output 'demo\anh-khac.png'
+```bash
+python scripts/prepare_wp3_data.py data/external/winter2897/voc_plate_ocr_dataset.zip
+python scripts/train_wp3.py
+python scripts/evaluate_wp2_wp3.py
 ```
+
+Dataset, runtime, ảnh người dùng và model thử nghiệm được gitignore; model cần cho
+ứng dụng nằm trong Git. Xem [chính sách artifact](reports/artifact_policy.md) và
+[danh sách model](models/README.md).
+
+## Giới hạn đã biết
+
+- Baseline phục vụ demo local, **chưa dùng cho production**: không có xác thực,
+  phân quyền hay HTTPS; chỉ nên chạy trên máy cá nhân.
+- Chưa có tập ảnh giao thông gốc kèm chuỗi thật độc lập để xác nhận mục tiêu
+  end-to-end ≥70%.
+- Multi-plate còn yếu với biển nhỏ hoặc ảnh đông xe; thứ hạng biển phụ chưa ổn định.
+- Video chưa có nhãn OCR để đo accuracy; kết quả video mang tính kiểm tra chức năng.
+- SQLite là mục tiêu local; PostgreSQL và hosting production chưa triển khai.
+- Webcam cần secure context của trình duyệt (localhost hoặc HTTPS).
+
+Kịch bản demo/thuyết trình chi tiết: [demo/README.md](demo/README.md).

@@ -503,7 +503,7 @@ Hóa ra: top-1 biển phụ chỉ F1 0,523
 | Multi-plate F1 thấp? | D | Valid có nhiều biển nền rất nhỏ; prominent 0,727; top-1 0,523 |
 | Latency 1,6 giây? | D | Bộ chọn vùng chạy OCR nhiều lần; WP1 riêng 179,7 ms |
 | Sao không tune cho đẹp? | D | Chọn trên valid, test chỉ báo cáo |
-| Docker chạy chưa? | D | Cấu hình có, build chưa xác nhận do môi trường |
+| Docker/Podman chạy chưa? | D | Podman rootless đã build/chạy, healthcheck backend/frontend đạt; Docker Desktop không dùng |
 | Xe máy có tốt không? | B | Category 2 recall 0,649 vs 0,779; chưa có nhãn loại xe chính thức |
 | Confidence có phải xác suất? | A | Không; là điểm xếp hạng heuristic, chưa hiệu chuẩn |
 

@@ -1049,12 +1049,14 @@ Mở `http://127.0.0.1:8000/` hoặc `http://127.0.0.1:8000/docs`.
 | Thiếu model joblib | Pipeline sập | `reclassifier` trả `None`, fallback heuristic |
 | Ảnh lớn nhiều biển | Bỏ sót biển nhỏ | Tile 1600 px, overlap 20% |
 
-## 4.14. Docker
+## 4.14. Podman
 
 Có `Dockerfile`, `web/Dockerfile`, `nginx.conf`, `docker-compose.yml`.
-Cấu hình đã kiểm tra nhưng **chưa build thành công** do Docker Desktop lỗi
-trong môi trường phát triển; người dùng yêu cầu dừng sửa Docker. Mục tiêu
-hiện tại là local + SQLite, chưa phải production.
+Cấu hình đã build và chạy thành công bằng Podman rootless 5.8 +
+`podman-compose` 1.6 trên Fedora: backend FastAPI và frontend nginx đều đạt
+healthcheck, test 58/58 đạt trong container. Docker Desktop không dùng trong
+môi trường phát triển. Mục tiêu hiện tại là local + SQLite, chưa phải
+production.
 
 ---
 
@@ -1325,7 +1327,7 @@ Về độ chính xác, kết quả **đạt một phần mục tiêu**:
 4. **Mất cân bằng lớp.** O/Q/W chỉ có 4/2/4 mẫu, không có test độc lập.
 5. **Chưa có nhãn loại xe/dòng chính thức.** Không kết luận riêng xe máy.
 6. **Latency chưa đạt 1 giây** với bộ chọn vùng hiện tại.
-7. **Docker chưa build**, PostgreSQL/hosting chưa triển khai.
+7. **Podman đã chạy được**, PostgreSQL/hosting production chưa triển khai.
 8. **Webcam chưa kiểm tra camera vật lý**, chỉ kiểm tra mã và quyền trình
    duyệt.
 
@@ -1357,7 +1359,7 @@ Về độ chính xác, kết quả **đạt một phần mục tiêu**:
 
 **Ưu tiên 5 — vận hành:**
 
-- Build Docker, thêm PostgreSQL nếu cần production.
+- Dùng Podman/CI cho môi trường demo, thêm PostgreSQL nếu cần production.
 - Hiệu chuẩn confidence/status.
 - Theo dõi nhiều xe (multi-object tracking).
 

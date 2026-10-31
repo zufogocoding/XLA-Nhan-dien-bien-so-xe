@@ -3,21 +3,36 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      ALPR_MAX_UPLOAD_MB: ${ALPR_MAX_UPLOAD_MB:-256}
     volumes:
-      - ./outputs/runtime:/app/outputs/runtime
+      # Keep SQLite, uploads and crops on the host. :Z relabels the directory
+      # for SELinux (Fedora/RHEL), which is required for rootless Podman.
+      - ./outputs:/app/outputs:Z
+      - ./demo:/app/demo:ro,Z
     ports:
-      - "127.0.0.1:8000:8000"
+      - "127.0.0.1:${ALPR_API_PORT:-8000}:8000"
+    restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health')"]
       interval: 15s
       timeout: 5s
+      start_period: 20s
       retries: 5
+
   frontend:
     build:
       context: .
       dockerfile: web/Dockerfile
     ports:
-      - "127.0.0.1:8080:80"
+      - "127.0.0.1:${ALPR_WEB_PORT:-8080}:80"
     depends_on:
       backend:
         condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 5s
+      start_period: 5s
+      retries: 3

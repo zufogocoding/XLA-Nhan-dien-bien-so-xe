@@ -2,7 +2,8 @@
 
 ## Chạy local
 
-`.\.venv\Scripts\python.exe -m uvicorn api.main:app --host 127.0.0.1 --port 8000`
+`python -m uvicorn api.main:app --host 127.0.0.1 --port 8000` (hoặc
+`podman-compose up --build`, xem [README](../README.md)).
 
 Ứng dụng và OpenAPI: `http://127.0.0.1:8000/`, `http://127.0.0.1:8000/docs`.
 SQLite: `outputs/runtime/plates.sqlite3`; ảnh upload/crop/ký tự nằm dưới
@@ -166,11 +167,11 @@ Upload mặc định tối đa 256 MB, chỉnh qua `ALPR_MAX_UPLOAD_MB`. Runtime
 chỉnh qua `ALPR_RUNTIME_DIR`. Webcam dùng quyền trình duyệt khi người dùng
 bấm mở và gửi ảnh chụp tới cùng endpoint ảnh; chưa phải stream webcam tự động.
 
-## Docker
+## Podman
 
-`docker compose up --build -d`: backend tại 127.0.0.1:8000, frontend nginx tại
+`podman-compose up --build -d`: backend tại 127.0.0.1:8000, frontend nginx tại
 127.0.0.1:8080. Runtime bind mount giữ DB/ảnh khi tái tạo container. Frontend
 proxy `/api` và `/files` tới backend. Đây là cấu hình local SQLite đã được
 người dùng chọn; PostgreSQL/hosting production chưa được triển khai.
-Docker build chưa được xác nhận vì Docker Desktop lỗi lúc khởi động; người
-dùng đã yêu cầu dừng sửa Docker và tiếp tục chạy Python local.
+Cấu hình đã được build và chạy kiểm tra bằng Podman rootless trên Fedora
+(Podman 5.8, `podman-compose` 1.6); Docker Compose dùng cùng file compose.

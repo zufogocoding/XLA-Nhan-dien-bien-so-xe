@@ -19,8 +19,6 @@ data/plates.json
 dataset_raw
 datasets
 reports
-tests
-demo
 models/knn.pkl
 models/rf.pkl
 models/svm_lbp.pkl

@@ -13,10 +13,14 @@ trong WP4.
 
 Tạo lại sau khi upload video qua API và cập nhật báo cáo smoke test:
 
-```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements-demo.txt
-.\.venv\Scripts\python.exe -m demo.make_video_demo
+```bash
+python -m pip install -r requirements-demo.txt
+python -m demo.make_video_demo
 ```
+
+Trong container, chạy `podman-compose exec backend python -m demo.make_video_demo`
+sau khi đã upload video. Hướng dẫn Podman đầy đủ nằm ở
+[README chính](../README.md#demo-nhanh-bằng-podman).
 
 Ảnh giao diện bản local đã kiểm tra: `../reports/local_web_demo.png`.
 Kết quả kiểm tra video xuất ra: `../reports/local_video_demo_validation.json`.

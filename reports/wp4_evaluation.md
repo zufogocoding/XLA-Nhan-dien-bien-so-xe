@@ -67,6 +67,7 @@ GT làm accuracy toàn biển.
 260 frame ở 1200×600/27 fps. Chưa quay đầy đủ giới thiệu → upload ảnh →
 upload video → webcam → dashboard bằng OBS/biên tập theo WP4.
 
-Dockerfile, nginx và compose có sẵn; config đã kiểm tra, chưa build thành
-công do Docker Desktop lỗi. Người dùng yêu cầu dừng sửa Docker. Mục tiêu
-hiện tại local/SQLite; chưa có PostgreSQL/hosting production.
+Dockerfile, nginx và compose có sẵn; cấu hình đã kiểm tra và ngày 31/10/2026
+đã build/chạy thành công bằng Podman rootless (backend + frontend healthy).
+Docker Desktop không dùng trong môi trường này. Mục tiêu hiện tại
+local/SQLite; chưa có PostgreSQL/hosting production.
